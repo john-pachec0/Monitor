@@ -1,0 +1,173 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Untwist",
+      "type": "shell",
+      "command": "xcodebuild",
+      "args": [
+        "-workspace",
+        "Untwist.xcworkspace",
+        "-scheme",
+        "Untwist",
+        "-destination",
+        "platform=iOS Simulator,name=iPhone 17",
+        "build"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": {
+        "owner": "swift",
+        "fileLocation": "absolute",
+        "pattern": {
+          "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "severity": 4,
+          "message": 5
+        }
+      }
+    },
+    {
+      "label": "Clean Build Folder",
+      "type": "shell",
+      "command": "xcodebuild",
+      "args": [
+        "-workspace",
+        "Untwist.xcworkspace",
+        "-scheme",
+        "Untwist",
+        "-destination",
+        "platform=iOS Simulator,name=iPhone 17",
+        "clean"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Test Untwist",
+      "type": "shell",
+      "command": "xcodebuild",
+      "args": [
+        "-workspace",
+        "Untwist.xcworkspace",
+        "-scheme",
+        "Untwist",
+        "-destination",
+        "platform=iOS Simulator,name=iPhone 17",
+        "test"
+      ],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Tuist Generate",
+      "type": "shell",
+      "command": "/Users/japacheco/.local/share/mise/installs/tuist/4.102.0/bin/tuist",
+      "args": [
+        "generate",
+        "--no-open"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Archive Untwist",
+      "type": "shell",
+      "command": "xcodebuild",
+      "args": [
+        "-workspace",
+        "Untwist.xcworkspace",
+        "-scheme",
+        "Untwist",
+        "-destination",
+        "generic/platform=iOS",
+        "-archivePath",
+        "./build/Untwist.xcarchive",
+        "archive",
+        "CODE_SIGN_IDENTITY=Apple Development",
+        "DEVELOPMENT_TEAM=YOUR_TEAM_ID"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Archive for TestFlight",
+      "type": "shell",
+      "command": "xcodebuild",
+      "args": [
+        "-workspace",
+        "Untwist.xcworkspace",
+        "-scheme",
+        "Untwist",
+        "-destination",
+        "generic/platform=iOS",
+        "-archivePath",
+        "./build/Untwist.xcarchive",
+        "archive",
+        "-allowProvisioningUpdates"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Terraform Plan",
+      "type": "shell",
+      "command": "terraform",
+      "args": ["plan"],
+      "options": {
+        "cwd": "${workspaceFolder}/terraform"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Terraform Apply",
+      "type": "shell",
+      "command": "terraform",
+      "args": ["apply"],
+      "options": {
+        "cwd": "${workspaceFolder}/terraform"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Start Admin Dashboard",
+      "type": "shell",
+      "command": "make",
+      "args": ["admin-dash-open"],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "recommendations": [
+    // iOS Development
+    "sweetpad.sweetpad",
+    "vadimcn.vscode-lldb",
+    "vknabel.vscode-swift-format",
+
+    // Swift Language Support
+    "sswg.swift-lang",
+
+    // Git & Version Control
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github",
+
+    // Terraform
+    "hashicorp.terraform",
+
+    // Markdown
+    "yzhang.markdown-all-in-one",
+
+    // Utilities
+    "streetsidesoftware.code-spell-checker",
+    "usernamehw.errorlens",
+    "christian-kohler.path-intellisense"
+  ]
+}

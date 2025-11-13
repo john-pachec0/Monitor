@@ -1,0 +1,192 @@
+{
+  // SwiftUI + SwiftData Snippets for Untwist
+
+  "SwiftUI View": {
+    "prefix": "view",
+    "body": [
+      "struct ${1:ViewName}: View {",
+      "    var body: some View {",
+      "        ${2:// Content}",
+      "    }",
+      "}"
+    ],
+    "description": "SwiftUI View template"
+  },
+
+  "SwiftData Query": {
+    "prefix": "query",
+    "body": [
+      "@Query private var ${1:items}: [${2:ModelType}]"
+    ],
+    "description": "SwiftData query property"
+  },
+
+  "Bindable Model": {
+    "prefix": "bindable",
+    "body": [
+      "@Bindable var ${1:model}: ${2:ModelType}"
+    ],
+    "description": "Bindable model property"
+  },
+
+  "Theme Card Style": {
+    "prefix": "card",
+    "body": [
+      ".padding(Theme.Spacing.${1:md})",
+      ".background(Theme.Colors.cardBackground)",
+      ".cornerRadius(Theme.CornerRadius.${2:md})",
+      ".shadow(",
+      "    color: Theme.Shadows.card.color,",
+      "    radius: Theme.Shadows.card.radius,",
+      "    x: Theme.Shadows.card.x,",
+      "    y: Theme.Shadows.card.y",
+      ")"
+    ],
+    "description": "Untwist card styling"
+  },
+
+  "Theme Button Style": {
+    "prefix": "button",
+    "body": [
+      "Button {",
+      "    ${1:// Action}",
+      "} label: {",
+      "    ${2:Text(\"Button\")}",
+      "}",
+      ".primaryButtonStyle()"
+    ],
+    "description": "Untwist primary button"
+  },
+
+  "Navigation Link": {
+    "prefix": "navlink",
+    "body": [
+      "NavigationLink(destination: ${1:DestinationView}()) {",
+      "    ${2:// Label}",
+      "}",
+      ".buttonStyle(.plain)"
+    ],
+    "description": "SwiftUI NavigationLink"
+  },
+
+  "State Property": {
+    "prefix": "state",
+    "body": [
+      "@State private var ${1:propertyName}: ${2:Type} = ${3:initialValue}"
+    ],
+    "description": "SwiftUI State property"
+  },
+
+  "Environment Property": {
+    "prefix": "env",
+    "body": [
+      "@Environment(\\.${1:keyPath}) private var ${2:propertyName}"
+    ],
+    "description": "SwiftUI Environment property"
+  },
+
+  "Theme Typography": {
+    "prefix": "font",
+    "body": [
+      ".font(Theme.Typography.${1|largeTitle,title,title2,title3,headline,subheadline,body,callout,caption,footnote|})"
+    ],
+    "description": "Untwist theme typography"
+  },
+
+  "Theme Colors": {
+    "prefix": "color",
+    "body": [
+      "Theme.Colors.${1|primary,secondary,text,textSecondary,textTertiary,background,cardBackground,error,warning,success|}"
+    ],
+    "description": "Untwist theme colors"
+  },
+
+  "Theme Spacing": {
+    "prefix": "spacing",
+    "body": [
+      "Theme.Spacing.${1|xs,sm,md,lg,xl,xxl|}"
+    ],
+    "description": "Untwist theme spacing"
+  },
+
+  "VStack with Theme Spacing": {
+    "prefix": "vstack",
+    "body": [
+      "VStack(spacing: Theme.Spacing.${1:md}) {",
+      "    ${2:// Content}",
+      "}"
+    ],
+    "description": "VStack with theme spacing"
+  },
+
+  "HStack with Theme Spacing": {
+    "prefix": "hstack",
+    "body": [
+      "HStack(spacing: Theme.Spacing.${1:md}) {",
+      "    ${2:// Content}",
+      "}"
+    ],
+    "description": "HStack with theme spacing"
+  },
+
+  "Alert": {
+    "prefix": "alert",
+    "body": [
+      ".alert(\"${1:Title}\", isPresented: \\$${2:showAlert}) {",
+      "    Button(\"${3:OK}\", role: .cancel) { }",
+      "    Button(\"${4:Action}\") {",
+      "        ${5:// Action}",
+      "    }",
+      "} message: {",
+      "    Text(\"${6:Message}\")",
+      "}"
+    ],
+    "description": "SwiftUI Alert modifier"
+  },
+
+  "Sheet": {
+    "prefix": "sheet",
+    "body": [
+      ".sheet(isPresented: \\$${1:showSheet}) {",
+      "    ${2:SheetView}()",
+      "}"
+    ],
+    "description": "SwiftUI Sheet modifier"
+  },
+
+  "Navigation Destination": {
+    "prefix": "navdest",
+    "body": [
+      ".navigationDestination(isPresented: \\$${1:showDestination}) {",
+      "    ${2:DestinationView}()",
+      "}"
+    ],
+    "description": "SwiftUI navigation destination"
+  },
+
+  "SwiftData Model": {
+    "prefix": "model",
+    "body": [
+      "@Model",
+      "class ${1:ModelName} {",
+      "    var ${2:property}: ${3:Type}",
+      "    ",
+      "    init(${2:property}: ${3:Type}) {",
+      "        self.${2:property} = ${2:property}",
+      "    }",
+      "}"
+    ],
+    "description": "SwiftData model class"
+  },
+
+  "Preview": {
+    "prefix": "preview",
+    "body": [
+      "#Preview {",
+      "    ${1:ViewName}()",
+      "        .modelContainer(for: ${2:ModelType}.self, inMemory: true)",
+      "}"
+    ],
+    "description": "SwiftUI Preview with SwiftData"
+  }
+}

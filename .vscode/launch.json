@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug Untwist on Simulator",
+      "program": "${workspaceFolder}/build/Debug-iphonesimulator/Untwist.app",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build Untwist",
+      "terminal": "integrated"
+    },
+    {
+      "type": "lldb",
+      "request": "attach",
+      "name": "Attach to Untwist Process",
+      "program": "${workspaceFolder}/build/Debug-iphonesimulator/Untwist.app",
+      "waitFor": true
+    }
+  ]
+}

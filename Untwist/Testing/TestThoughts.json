@@ -1,0 +1,244 @@
+{
+  "thoughts": [
+    {
+      "theme": "work",
+      "content": "I'm going to fail this presentation tomorrow and everyone will think I'm incompetent",
+      "distortions": ["fortune_telling", "catastrophizing", "mind_reading"],
+      "reframe": "I've prepared well and even if I make some mistakes, that's normal. My colleagues are supportive and understand that presentations can be challenging.",
+      "emotionBefore": 8,
+      "emotionAfter": 4
+    },
+    {
+      "theme": "work",
+      "content": "My coworkers probably think I'm stupid because I asked that question in the meeting",
+      "distortions": ["mind_reading", "labeling", "overgeneralization"],
+      "reframe": "Asking questions shows I'm engaged and want to understand. I have no evidence anyone thinks poorly of me, and clarifying questions are valuable.",
+      "emotionBefore": 7,
+      "emotionAfter": 3
+    },
+    {
+      "theme": "work",
+      "content": "I made a mistake in the report. I'm such an idiot and my boss will be disappointed",
+      "distortions": ["labeling", "personalization", "catastrophizing"],
+      "reframe": "Everyone makes mistakes. I caught it and can fix it. One error doesn't define my capabilities or my boss's view of me.",
+      "emotionBefore": 8,
+      "emotionAfter": 5
+    },
+    {
+      "theme": "work",
+      "content": "I'm falling behind on this project. I'll never catch up and I'm going to get fired",
+      "distortions": ["fortune_telling", "catastrophizing", "all_or_nothing"],
+      "reframe": "I can break this down into smaller tasks and make steady progress. Being behind doesn't mean failure, and I can ask for help if needed.",
+      "emotionBefore": 9,
+      "emotionAfter": 5
+    },
+    {
+      "theme": "work",
+      "content": "My boss didn't reply to my email yet. They must be upset with my work",
+      "distortions": ["mind_reading", "fortune_telling", "catastrophizing"],
+      "reframe": "There are many reasons for a delayed response. I have no evidence of dissatisfaction, and assuming the worst isn't helpful.",
+      "emotionBefore": 7,
+      "emotionAfter": 3
+    },
+    {
+      "theme": "work",
+      "content": "I should be further along in my career by now. I'm a complete failure",
+      "distortions": ["should_statements", "labeling", "all_or_nothing"],
+      "reframe": "Everyone's career path is different. I've accomplished meaningful things, and comparing myself to arbitrary timelines isn't fair or productive.",
+      "emotionBefore": 8,
+      "emotionAfter": 4
+    },
+    {
+      "theme": "work",
+      "content": "My colleague got promoted and I didn't. I'm never going to advance in my job",
+      "distortions": ["overgeneralization", "fortune_telling", "mental_filter"],
+      "reframe": "Promotions depend on many factors and timing. My turn will come, and I can focus on continuing to develop my skills.",
+      "emotionBefore": 7,
+      "emotionAfter": 4
+    },
+    {
+      "theme": "social",
+      "content": "Everyone at the party will think I'm boring and awkward",
+      "distortions": ["fortune_telling", "mind_reading", "all_or_nothing"],
+      "reframe": "I don't know what people will think, and it's okay to be myself. Most people are focused on their own experience, not judging me.",
+      "emotionBefore": 8,
+      "emotionAfter": 5
+    },
+    {
+      "theme": "social",
+      "content": "I said something weird in that conversation. They probably think I'm strange now",
+      "distortions": ["mind_reading", "catastrophizing", "overgeneralization"],
+      "reframe": "Everyone says things that feel awkward sometimes. It's likely they've already forgotten about it, and one comment doesn't define how they see me.",
+      "emotionBefore": 7,
+      "emotionAfter": 3
+    },
+    {
+      "theme": "social",
+      "content": "My friend hasn't texted me back in two days. They must be mad at me",
+      "distortions": ["mind_reading", "personalization", "catastrophizing"],
+      "reframe": "People get busy. There's no evidence they're upset, and assuming the worst damages my peace of mind unnecessarily.",
+      "emotionBefore": 7,
+      "emotionAfter": 4
+    },
+    {
+      "theme": "social",
+      "content": "I wasn't invited to that gathering. Nobody actually likes me",
+      "distortions": ["overgeneralization", "mental_filter", "personalization"],
+      "reframe": "Not being invited to one event doesn't mean people dislike me. There could be many reasons, and I have other friends who value my company.",
+      "emotionBefore": 8,
+      "emotionAfter": 5
+    },
+    {
+      "theme": "social",
+      "content": "If I go to the meetup, I'll say something embarrassing and everyone will judge me",
+      "distortions": ["fortune_telling", "catastrophizing", "mind_reading"],
+      "reframe": "I can't predict the future, and even if I'm nervous, that's okay. Most people are welcoming and understanding of social discomfort.",
+      "emotionBefore": 8,
+      "emotionAfter": 4
+    },
+    {
+      "theme": "social",
+      "content": "I should be more outgoing and confident. There's something wrong with me",
+      "distortions": ["should_statements", "labeling", "emotional_reasoning"],
+      "reframe": "Personality traits vary naturally. Being more reserved is valid, and I don't need to change who I am to be acceptable.",
+      "emotionBefore": 7,
+      "emotionAfter": 4
+    },
+    {
+      "theme": "health",
+      "content": "I have a headache. It's probably a brain tumor and I'm going to die",
+      "distortions": ["catastrophizing", "fortune_telling", "emotional_reasoning"],
+      "reframe": "Headaches are common and usually benign. If it persists, I can see a doctor, but jumping to worst-case scenarios isn't helpful.",
+      "emotionBefore": 9,
+      "emotionAfter": 5
+    },
+    {
+      "theme": "health",
+      "content": "My chest feels tight. I must be having a heart attack",
+      "distortions": ["catastrophizing", "emotional_reasoning", "fortune_telling"],
+      "reframe": "Anxiety can cause physical sensations like chest tightness. I can take deep breaths and see if it subsides. If I'm truly concerned, I can get checked.",
+      "emotionBefore": 9,
+      "emotionAfter": 6
+    },
+    {
+      "theme": "health",
+      "content": "I read about this disease online. I definitely have all the symptoms",
+      "distortions": ["catastrophizing", "emotional_reasoning", "mental_filter"],
+      "reframe": "Many symptoms are common to multiple conditions. Medical information online can be misleading, and if I'm concerned, I should consult a professional.",
+      "emotionBefore": 8,
+      "emotionAfter": 4
+    },
+    {
+      "theme": "health",
+      "content": "I feel exhausted all the time. Something must be seriously wrong with me",
+      "distortions": ["catastrophizing", "emotional_reasoning", "fortune_telling"],
+      "reframe": "Fatigue can have many causes like stress, sleep, or lifestyle. I can track my symptoms and discuss with a doctor if it continues.",
+      "emotionBefore": 7,
+      "emotionAfter": 4
+    },
+    {
+      "theme": "perfectionism",
+      "content": "I got a B on the exam. I'm a complete failure",
+      "distortions": ["all_or_nothing", "labeling", "overgeneralization"],
+      "reframe": "A B is a good grade. One test doesn't define my abilities, and perfectionism only increases my stress without adding value.",
+      "emotionBefore": 8,
+      "emotionAfter": 4
+    },
+    {
+      "theme": "perfectionism",
+      "content": "My apartment is messy. I should have everything organized perfectly or I'm lazy",
+      "distortions": ["should_statements", "all_or_nothing", "labeling"],
+      "reframe": "Everyone's home gets messy sometimes. I can clean gradually, and having a lived-in space doesn't make me lazy.",
+      "emotionBefore": 6,
+      "emotionAfter": 3
+    },
+    {
+      "theme": "perfectionism",
+      "content": "I made a typo in that message. They'll think I'm careless and unprofessional",
+      "distortions": ["catastrophizing", "mind_reading", "all_or_nothing"],
+      "reframe": "Small mistakes happen to everyone. One typo doesn't determine how professional I am, and most people understand that.",
+      "emotionBefore": 6,
+      "emotionAfter": 3
+    },
+    {
+      "theme": "perfectionism",
+      "content": "If I can't do this project perfectly, there's no point in trying at all",
+      "distortions": ["all_or_nothing", "fortune_telling", "should_statements"],
+      "reframe": "Done is better than perfect. I can do my best without requiring perfection, and trying has value even if the outcome isn't flawless.",
+      "emotionBefore": 7,
+      "emotionAfter": 4
+    },
+    {
+      "theme": "relationship",
+      "content": "My partner seems distant today. They're definitely going to break up with me",
+      "distortions": ["mind_reading", "fortune_telling", "catastrophizing"],
+      "reframe": "People have off days for many reasons. I can ask how they're doing instead of assuming the worst about our relationship.",
+      "emotionBefore": 8,
+      "emotionAfter": 4
+    },
+    {
+      "theme": "relationship",
+      "content": "We had an argument. Our relationship is ruined and it's all my fault",
+      "distortions": ["all_or_nothing", "personalization", "catastrophizing"],
+      "reframe": "Disagreements are normal in relationships. We can talk through this, and it takes two people to have an argument.",
+      "emotionBefore": 8,
+      "emotionAfter": 5
+    },
+    {
+      "theme": "financial",
+      "content": "I spent money on something I didn't need. I'm terrible with money and I'll end up broke",
+      "distortions": ["overgeneralization", "fortune_telling", "labeling"],
+      "reframe": "One purchase doesn't define my financial habits. I can learn from this and make different choices going forward.",
+      "emotionBefore": 7,
+      "emotionAfter": 4
+    },
+    {
+      "theme": "general",
+      "content": "Everything always goes wrong for me. Nothing ever works out",
+      "distortions": ["overgeneralization", "mental_filter", "all_or_nothing"],
+      "reframe": "I'm focusing only on negatives. Many things have gone well in my life, and temporary setbacks don't mean permanent failure.",
+      "emotionBefore": 8,
+      "emotionAfter": 5
+    },
+    {
+      "theme": "general",
+      "content": "I feel anxious, which means something bad is definitely going to happen",
+      "distortions": ["emotional_reasoning", "fortune_telling", "catastrophizing"],
+      "reframe": "Feelings aren't facts. Anxiety is just a sensation, not evidence that something bad will occur. I can feel anxious and still be safe.",
+      "emotionBefore": 7,
+      "emotionAfter": 4
+    },
+    {
+      "theme": "achievement",
+      "content": "I got the award, but it doesn't really count. They probably just felt sorry for me",
+      "distortions": ["disqualifying_positive", "mind_reading", "minimization"],
+      "reframe": "I earned this recognition through my work. Dismissing my achievement doesn't serve me, and I have no evidence people felt sorry for me.",
+      "emotionBefore": 6,
+      "emotionAfter": 3
+    },
+    {
+      "theme": "achievement",
+      "content": "I finished the marathon, but I wasn't fast enough. It doesn't really count",
+      "distortions": ["disqualifying_positive", "minimization", "should_statements"],
+      "reframe": "Completing a marathon is a significant accomplishment regardless of time. I should celebrate what I achieved rather than diminish it.",
+      "emotionBefore": 6,
+      "emotionAfter": 3
+    },
+    {
+      "theme": "responsibility",
+      "content": "My team missed the deadline. It's entirely my fault as the lead",
+      "distortions": ["personalization", "all_or_nothing", "should_statements"],
+      "reframe": "Many factors contribute to project outcomes. While I'm responsible as lead, the team shares accountability, and I did my best.",
+      "emotionBefore": 8,
+      "emotionAfter": 5
+    },
+    {
+      "theme": "responsibility",
+      "content": "My child got a bad grade. I'm a terrible parent",
+      "distortions": ["personalization", "labeling", "overgeneralization"],
+      "reframe": "Children's academic performance has many factors. One grade doesn't reflect my parenting, and I can support them without taking full blame.",
+      "emotionBefore": 7,
+      "emotionAfter": 4
+    }
+  ]
+}

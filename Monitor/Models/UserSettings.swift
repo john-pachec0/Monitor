@@ -8,6 +8,69 @@
 import Foundation
 import SwiftData
 
+// MARK: - Care Team Member
+
+@Model
+final class CareTeamMember {
+    var name: String
+    var role: CareTeamRole
+    var phone: String?
+    var email: String?
+    var notes: String?
+    var createdAt: Date
+
+    // Relationship to settings
+    var settings: UserSettings?
+
+    init(
+        name: String,
+        role: CareTeamRole,
+        phone: String? = nil,
+        email: String? = nil,
+        notes: String? = nil,
+        createdAt: Date = Date()
+    ) {
+        self.name = name
+        self.role = role
+        self.phone = phone
+        self.email = email
+        self.notes = notes
+        self.createdAt = createdAt
+    }
+}
+
+// MARK: - Care Team Roles
+
+enum CareTeamRole: String, Codable, CaseIterable, Identifiable {
+    case dietitian = "Dietitian/Nutritionist"
+    case therapist = "Therapist"
+    case psychiatrist = "Psychiatrist"
+    case medicalDoctor = "Medical Doctor"
+    case peerMentor = "Peer Mentor"
+    case other = "Other"
+
+    var id: String { rawValue }
+
+    var icon: String {
+        switch self {
+        case .dietitian:
+            return "leaf.fill"
+        case .therapist:
+            return "brain.head.profile"
+        case .psychiatrist:
+            return "cross.case.fill"
+        case .medicalDoctor:
+            return "stethoscope"
+        case .peerMentor:
+            return "person.2.fill"
+        case .other:
+            return "person.fill"
+        }
+    }
+}
+
+// MARK: - User Settings
+
 @Model
 final class UserSettings {
     var hasCompletedOnboarding: Bool
@@ -19,10 +82,11 @@ final class UserSettings {
     var dinnerReminderTime: Date
     var eveningCheckInTime: Date
 
-    // Care team information (optional)
-    var therapistName: String?
-    var therapistPhone: String?
-    var therapistEmail: String?
+    // Care team (relationship to CareTeamMember)
+    @Relationship(deleteRule: .cascade)
+    var careTeam: [CareTeamMember] = []
+
+    // Emergency contact (separate from care team)
     var emergencyContact: String?
     var emergencyPhone: String?
 
@@ -53,9 +117,6 @@ final class UserSettings {
         lunchReminderTime: Date? = nil,
         dinnerReminderTime: Date? = nil,
         eveningCheckInTime: Date? = nil,
-        therapistName: String? = nil,
-        therapistPhone: String? = nil,
-        therapistEmail: String? = nil,
         emergencyContact: String? = nil,
         emergencyPhone: String? = nil,
         notificationsEnabled: Bool = false,
@@ -101,9 +162,6 @@ final class UserSettings {
             self.eveningCheckInTime = calendar.date(from: DateComponents(hour: 20, minute: 0)) ?? Date()
         }
 
-        self.therapistName = therapistName
-        self.therapistPhone = therapistPhone
-        self.therapistEmail = therapistEmail
         self.emergencyContact = emergencyContact
         self.emergencyPhone = emergencyPhone
         self.notificationsEnabled = notificationsEnabled
@@ -124,7 +182,7 @@ final class UserSettings {
 
     /// Whether the user has configured care team information
     var hasCareTeamConfigured: Bool {
-        therapistName != nil || therapistPhone != nil || emergencyContact != nil
+        !careTeam.isEmpty || emergencyContact != nil
     }
 
     /// Whether any notifications are enabled
@@ -139,7 +197,7 @@ final class UserSettings {
         return formatter.string(from: reminderDate)
     }
 
-    /// Get suggested meal type based on current time of day
+    /// Get suggested time period based on current time of day
     func suggestedMealType(for date: Date = Date()) -> MealType {
         if let defaultType = defaultMealType {
             return defaultType
@@ -150,15 +208,15 @@ final class UserSettings {
 
         switch hour {
         case 5..<11:
-            return .breakfast
+            return .morning
         case 11..<15:
-            return .lunch
+            return .midday
         case 15..<18:
-            return .snack
+            return .afternoon
         case 18..<22:
-            return .dinner
+            return .evening
         default:
-            return .other
+            return .night
         }
     }
 }

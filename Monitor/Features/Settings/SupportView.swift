@@ -61,7 +61,7 @@ struct SupportView: View {
                 .font(Theme.Typography.title)
                 .foregroundColor(Theme.Colors.text)
 
-            Text("Monitor is free and always will be. No ads, no tracking, no data collection. Just a simple tool to help you reframe anxious thoughts.")
+            Text("Monitor is free and always will be. No ads, no tracking, no data collection. Just a simple tool to help you build awareness around eating and support your recovery journey.")
                 .font(Theme.Typography.body)
                 .foregroundColor(Theme.Colors.textSecondary)
                 .fixedSize(horizontal: false, vertical: true)
@@ -117,22 +117,22 @@ struct SupportView: View {
 
     private var researchSection: some View {
         VStack(alignment: .leading, spacing: Theme.Spacing.md) {
-            Text("Supporting CBT Research")
+            Text("Supporting Recovery & Research")
                 .font(Theme.Typography.title3)
                 .foregroundColor(Theme.Colors.text)
 
             VStack(alignment: .leading, spacing: Theme.Spacing.sm) {
                 HStack(alignment: .top, spacing: Theme.Spacing.sm) {
-                    Image(systemName: "brain.head.profile")
+                    Image(systemName: "heart.text.square")
                         .foregroundColor(Theme.Colors.primary)
                         .font(.title3)
 
                     VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
-                        Text("Advancing mental health research")
+                        Text("Advancing eating disorder awareness")
                             .font(Theme.Typography.headline)
                             .foregroundColor(Theme.Colors.text)
 
-                        Text("A portion of donations supports organizations advancing CBT and mental health research.")
+                        Text("A portion of donations supports organizations advancing eating disorder research and recovery resources.")
                             .font(Theme.Typography.subheadline)
                             .foregroundColor(Theme.Colors.textSecondary)
                             .fixedSize(horizontal: false, vertical: true)

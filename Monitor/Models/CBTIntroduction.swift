@@ -2,16 +2,16 @@
 //  CBTIntroduction.swift
 //  Monitor
 //
-//  Educational content introducing CBT concepts
+//  Educational content introducing self-monitoring and eating awareness
 //
 
 import Foundation
 
-/// Introduction to CBT and cognitive distortions
+/// Introduction to self-monitoring and eating awareness
 struct CBTIntroduction {
-    let title: String = "Understanding CBT"
-    let subtitle: String = "How your thoughts shape your feelings"
-    let icon: String = "brain.head.profile"
+    let title: String = "Understanding Self-Monitoring"
+    let subtitle: String = "Building awareness of your eating patterns"
+    let icon: String = "heart.text.square"
     let readingTimeMinutes: Int = 5
 
     /// A section of the introduction
@@ -24,7 +24,7 @@ struct CBTIntroduction {
 
     /// Simple visual representations
     enum VisualMetaphor {
-        case thoughtFeelingBehaviorCycle
+        case foodEmotionBehaviorCycle
     }
 
     let sections: [Section]
@@ -36,82 +36,82 @@ extension CBTIntroduction {
     /// The complete introduction content
     static let content = CBTIntroduction(sections: [
         Section(
-            id: "what-is-cbt",
-            heading: "What is CBT?",
+            id: "what-is-self-monitoring",
+            heading: "What is Self-Monitoring?",
             body: """
-Cognitive Behavioral Therapy (CBT) is one of the most researched and effective approaches for managing anxiety. Unlike other therapies that focus primarily on the past, CBT is about the here and now—specifically, how your thoughts influence your feelings and behaviors in this moment.
+Self-monitoring is one of the most researched and effective approaches for building awareness around eating behaviors and supporting recovery. Unlike restrictive diets or rigid food rules, self-monitoring is about noticing patterns—specifically, how your emotions, environment, and behaviors influence your relationship with food.
 
-Here's the core insight: your thoughts aren't facts. They're interpretations. When you're anxious, your brain automatically generates thoughts that feel true but often aren't accurate. "Everyone thinks I'm awkward." "I'm going to fail." "Something terrible is about to happen." These thoughts feel real because anxiety makes them vivid and convincing.
+Here's the core insight: eating behaviors don't happen in isolation. They're connected to feelings, thoughts, physical sensations, and circumstances. When you eat in autopilot mode, these connections remain invisible. But when you pause to observe and record what's happening, patterns emerge. "I always skip breakfast when I'm stressed." "I eat past fullness when I'm with certain people." "I restrict after social events."
 
-CBT gives you a practical toolkit to pause and examine these automatic thoughts. Not to force positivity or "just think happy thoughts," but to reality-check what your mind is telling you. To ask: "Is this thought accurate? Is there another way to see this situation?"
+Self-monitoring gives you a gentle tool to build this awareness. Not to judge yourself or enforce strict rules, but to observe with curiosity: "What's actually happening here? What am I feeling? What came before this?"
 
-The beautiful thing about CBT is that it's skills-based. Like learning to play an instrument or speak a new language, these are techniques you practice and get better at over time. You're not broken and you don't need to be fixed—you're learning a new way to relate to your thoughts.
+The beautiful thing about self-monitoring is that it's evidence-based and flexible. Like learning any new skill, awareness builds gradually through consistent practice. You're not broken and you don't need to be fixed—you're learning to understand your own patterns with compassion.
 
-And it works. Decades of research show that CBT significantly reduces anxiety and helps people develop lasting coping strategies. The skills you build become second nature.
+And it works. Decades of research show that self-monitoring significantly supports behavior change and helps people develop lasting, healthy relationships with food. The insights you gain become part of how you naturally relate to eating.
 
-That's what Monitor is here for: to help you practice these skills in real time, when anxious thoughts strike. Not to replace therapy (if you need professional support, please seek it), but to give you a pocket companion for the daily work of recognizing and reframing unhelpful thinking patterns.
+That's what Monitor is here for: to help you track meals, emotions, and behaviors in real time. Not to replace professional treatment (if you need support, please seek it), but to give you a private companion for the daily practice of noticing and reflecting on your eating patterns.
 
 Let's look at how this actually works.
 """,
             visualMetaphor: nil
         ),
         Section(
-            id: "thought-feeling-behavior",
-            heading: "The Thought → Feeling → Behavior Connection",
+            id: "food-emotion-behavior",
+            heading: "The Food → Emotion → Behavior Connection",
             body: """
-At the heart of CBT is a simple but powerful idea: your thoughts, feelings, and behaviors are connected in a continuous cycle. Understanding this cycle is the key to breaking free from anxiety patterns.
+At the heart of self-monitoring is a simple but powerful idea: your emotions, eating behaviors, and physical sensations are connected in a continuous cycle. Understanding this cycle is the key to building awareness and making sustainable changes.
 
 Here's how it works:
 
-**A situation happens** → **You have a thought about it** → **That thought generates a feeling** → **The feeling influences your behavior** → **Your behavior reinforces the original thought**
+**A situation happens** → **You experience an emotion** → **That emotion influences your eating behavior** → **The eating behavior affects how you feel** → **Your feelings influence future eating behaviors**
 
 Let's see this in action:
 
-**Example: A friend doesn't text you back**
+**Example: You have a stressful day at work**
 
-• **Automatic thought**: "They're mad at me. I must have said something wrong."
-• **Feeling**: Anxious, worried, maybe a little ashamed
-• **Behavior**: You replay the conversation obsessively, withdraw, or send three follow-up texts
-• **Result**: Your anxiety increases. You feel more certain they're upset. The cycle continues.
+• **Emotion**: Overwhelmed, frustrated, exhausted
+• **Eating behavior**: Skip lunch because you're "too busy," then eat quickly at your desk later without noticing fullness cues
+• **Physical result**: Still hungry, unsatisfied, tired
+• **Emotional result**: Frustrated with yourself, disconnected from your body. The cycle continues.
 
-Now watch what happens when we shift the thought:
+Now watch what happens when we bring awareness to the pattern:
 
-• **Alternative thought**: "They're probably busy. People miss texts all the time."
-• **Feeling**: Still a little uncertain, but much calmer
-• **Behavior**: You go about your day and respond when they eventually reply
-• **Result**: Anxiety doesn't escalate. The cycle breaks.
+• **Emotion**: Overwhelmed, frustrated, exhausted
+• **New awareness**: "I notice I'm stressed and haven't eaten in 6 hours"
+• **Behavior**: Take a real break, eat a meal slowly, check in with hunger/fullness
+• **Result**: Feel more grounded, nourished, connected to your body. The cycle shifts.
 
-Notice: the situation didn't change. What changed was your interpretation—and that shift changed everything else.
+Notice: the stressful day didn't change. What changed was the awareness—and that shift changed everything else.
 
-This is why CBT focuses on thoughts. Not because feelings don't matter (they absolutely do), but because thoughts are often the entry point we can influence. You can't always control what you feel, but you can learn to notice and reshape the thoughts that fuel those feelings.
+This is why self-monitoring focuses on observation. Not because judgment helps (it doesn't), but because awareness is the entry point for change. You can't always control what you feel, but you can learn to notice patterns and respond with intention rather than autopilot.
 
-The good news? This cycle works both ways. Changing your thoughts can shift your feelings. Changing your behavior can challenge your thoughts. You have multiple points of entry to break anxious patterns.
+The good news? This cycle works in multiple directions. Changing your awareness can shift your behaviors. Changing your behaviors can shift how you feel. You have multiple points of entry to create new patterns.
 
-That's the power of this work.
+That's the power of this practice.
 """,
-            visualMetaphor: .thoughtFeelingBehaviorCycle
+            visualMetaphor: .foodEmotionBehaviorCycle
         ),
         Section(
-            id: "cognitive-distortions",
-            heading: "Introducing Cognitive Distortions",
+            id: "eating-patterns",
+            heading: "Recognizing Eating Patterns",
             body: """
-So if thoughts drive feelings, where do anxious thoughts come from? Often, they arise from cognitive distortions—common thinking patterns that distort reality in anxiety-producing ways.
+So if behaviors are connected to emotions, where do unhelpful eating patterns come from? Often, they develop as coping mechanisms—ways your mind and body have learned to manage difficult emotions, stress, or uncomfortable situations.
 
-Think of distortions as mental shortcuts your brain takes when you're stressed or anxious. Your brain is trying to keep you safe by predicting threats, but these shortcuts often misfire. They magnify negatives, minimize positives, and jump to worst-case conclusions. They're not signs of weakness or character flaws—they're universal human thinking patterns that everyone experiences, especially under stress.
+Think of eating patterns as habits that formed over time, often unconsciously. Your brain is trying to help you cope, but these patterns can become automatic and disconnected from physical hunger. They might involve restricting, bingeing, emotional eating, or rigid food rules. They're not signs of weakness or lack of willpower—they're learned responses that everyone develops in different ways.
 
-Here are a few you might recognize:
+Here are a few patterns you might recognize:
 
-• **Catastrophizing**: Taking a small worry and spiraling it into disaster. "I made a typo in that email" becomes "I'm going to get fired and lose everything."
+• **Stress Eating**: Using food for comfort when overwhelmed. "I had a hard day, so I deserve to eat this entire box of cookies without stopping."
 
-• **Mind Reading**: Assuming you know what others are thinking. "She didn't smile at me, so she must think I'm annoying."
+• **Restriction Cycles**: Severely limiting food intake, which often leads to eventual overeating or bingeing. "I'll just skip meals today to make up for yesterday."
 
-• **All-or-Nothing Thinking**: Seeing things in black and white extremes. "I made one mistake, so I'm a complete failure."
+• **All-or-Nothing Eating**: Categorizing foods as "good" or "bad" and feeling shame around certain choices. "I ate one cookie, so today is ruined. I might as well eat everything."
 
-The tricky thing about distortions is that they feel true in the moment. Your anxious brain presents them as facts, not interpretations. That's why learning to recognize them is so powerful—it's like turning on a light in a dark room. Suddenly, you can see what's actually there instead of what your anxiety is telling you is there.
+The tricky thing about these patterns is that they feel automatic and necessary in the moment. Your brain presents them as the only option, not as learned behaviors you can change. That's why recognizing patterns is so powerful—it's like turning on a light. Suddenly, you can see the pattern for what it is, rather than living inside it unaware.
 
-In the Learn tab, we've organized 13 of the most common cognitive distortions into categories. Each one includes examples, reflection questions, and reframing strategies. You don't need to memorize them all at once. As you use Monitor to capture and review your thoughts, you'll start to notice patterns. "Oh, I do that catastrophizing thing a lot." "I always assume people are judging me—that's mind reading."
+As you use Monitor to track your meals and emotions, you'll start to notice your unique patterns. "I always skip breakfast when I'm anxious." "I eat past fullness when I'm with my family." "I have strict rules on weekdays but lose control on weekends."
 
-Recognition is the first step. Once you spot a distortion, you can start to challenge it.
+Recognition is the first step. Once you see a pattern, you can start to understand it, get curious about what drives it, and gradually build new responses.
 """,
             visualMetaphor: nil
         ),
@@ -119,27 +119,27 @@ Recognition is the first step. Once you spot a distortion, you can start to chal
             id: "how-to-use",
             heading: "How to Use This Toolkit",
             body: """
-Monitor is designed around the way anxiety actually works—it strikes when you're stressed, and the last thing you need is a complicated process. Here's how to make this toolkit work for you.
+Monitor is designed around the reality of daily life—eating happens multiple times a day, and the last thing you need is a complicated tracking system. Here's how to make this toolkit work for you.
 
-**1. Capture Quickly, Review Later**
+**1. Log Meals As They Happen**
 
-When an anxious thought hits, you don't need to process it right away. In fact, trying to "fix" it while you're anxious often makes things worse. Instead, just capture it. Write it down in 10 seconds and move on. This act alone—externalizing the thought instead of ruminating on it—can provide immediate relief.
+When you eat, take a moment to record it. You don't need to write an essay—just note what you ate, how you felt before and after, and any relevant context. This simple act of pausing creates awareness. It shifts eating from autopilot to intentional.
 
-**2. Set a "Worry Time"**
+**2. Set a Daily Review Time**
 
-Research shows that scheduling a specific time each day to review your worries actually reduces all-day anxiety. Instead of ruminating constantly, your brain learns: "We'll deal with this later at 7pm." During your worry time, work through your captured thoughts using the guided review process. You'll identify distortions, challenge unhelpful thinking, and create more balanced perspectives.
+Research shows that scheduling a specific time each day to review your eating patterns builds lasting awareness and supports behavior change. Instead of constantly judging yourself throughout the day, you create dedicated time to reflect. During your review time, look for patterns: "What emotions came up today?" "Did I honor my hunger cues?" "What situations triggered difficult behaviors?"
 
-**3. Practice the Skills**
+**3. Practice Observation Without Judgment**
 
-The first time you challenge a thought, it might feel awkward or unconvincing. That's normal. CBT skills strengthen with practice. Each time you go through the process—capture, identify, reframe—you're building new mental pathways. Over weeks and months, these skills become more automatic.
+The first time you track a binge or restrictive day, it might feel uncomfortable. That's normal. The goal isn't perfection—it's honest awareness. Each time you record an entry without shame, you're building a new relationship with food. Over weeks and months, this non-judgmental observation becomes more natural.
 
-**4. Use the Learn Tab as a Reference**
+**4. Look for Patterns Over Time**
 
-Stuck on what distortion fits your thought? Not sure how to reframe? The Learn tab is your guidebook. Each cognitive distortion includes clear examples and reframing strategies. You don't need to memorize everything—just explore as you go.
+One meal doesn't tell the whole story. But seven days of entries? That reveals patterns you couldn't see day-to-day. "I always skip meals when I'm stressed." "I eat past fullness every Sunday dinner." These insights guide where to focus your growth.
 
 **5. Be Patient and Compassionate with Yourself**
 
-This is a practice, not a test. Some thoughts will be easier to reframe than others. Some days you'll forget to use the app. That's all okay. What matters is that you keep coming back to it. Healing isn't linear, and small consistent steps add up to real change.
+This is a practice, not a test. Some days you'll track everything with ease. Other days you'll forget or feel resistant. That's all okay. What matters is that you keep coming back to it. Recovery isn't linear, and small consistent steps add up to real change.
 
 You're not alone in this work. Let's get started.
 """,

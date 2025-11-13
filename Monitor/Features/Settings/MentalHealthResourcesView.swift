@@ -2,7 +2,7 @@
 //  MentalHealthResourcesView.swift
 //  Monitor
 //
-//  Mental health resources and important disclaimers
+//  Health and recovery resources with important disclaimers
 //
 
 import SwiftUI
@@ -31,21 +31,21 @@ struct MentalHealthResourcesView: View {
 
                         // Crisis Resources
                         VStack(alignment: .leading, spacing: Theme.Spacing.md) {
-                            Text("If you're in crisis or experiencing suicidal thoughts:")
+                            Text("If you're in crisis or need immediate support:")
                                 .font(Theme.Typography.headline)
                                 .foregroundColor(Theme.Colors.text)
 
                             VStack(alignment: .leading, spacing: Theme.Spacing.sm) {
                                 CrisisResourceRow(
-                                    icon: "phone.fill",
-                                    title: "Call 988",
-                                    subtitle: "Suicide & Crisis Lifeline"
+                                    icon: "message.fill",
+                                    title: "Text \"NEDA\" to 741741",
+                                    subtitle: "National Eating Disorders Association"
                                 )
 
                                 CrisisResourceRow(
-                                    icon: "message.fill",
-                                    title: "Text \"HOME\" to 741741",
-                                    subtitle: "Crisis Text Line"
+                                    icon: "phone.fill",
+                                    title: "Call 988",
+                                    subtitle: "Suicide & Crisis Lifeline"
                                 )
 
                                 CrisisResourceRow(
@@ -65,7 +65,7 @@ struct MentalHealthResourcesView: View {
                                 .font(Theme.Typography.headline)
                                 .foregroundColor(Theme.Colors.text)
 
-                            Text("Monitor is a journaling tool based on cognitive behavioral therapy strategies. It's designed to help you recognize and reframe anxious thought patterns.")
+                            Text("Monitor is a self-monitoring tool for tracking eating patterns and building awareness around food and nutrition. It's designed to help you recognize patterns, behaviors, and emotional connections to eating in a mindful, non-judgmental way.")
                                 .font(Theme.Typography.body)
                                 .foregroundColor(Theme.Colors.textSecondary)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -78,11 +78,11 @@ struct MentalHealthResourcesView: View {
                                 .foregroundColor(Theme.Colors.text)
 
                             VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
-                                DisclaimerBullet(text: "A substitute for professional therapy or counseling")
-                                DisclaimerBullet(text: "Medical or mental health advice")
-                                DisclaimerBullet(text: "A diagnostic tool")
-                                DisclaimerBullet(text: "Designed for crisis situations")
-                                DisclaimerBullet(text: "Suitable for treating serious mental health conditions")
+                                DisclaimerBullet(text: "A substitute for professional treatment, therapy, or medical care")
+                                DisclaimerBullet(text: "Medical, nutritional, or mental health advice")
+                                DisclaimerBullet(text: "A diagnostic tool or meal plan creator")
+                                DisclaimerBullet(text: "Designed for crisis situations or acute care")
+                                DisclaimerBullet(text: "Suitable for treating eating disorders or serious conditions without professional support")
                             }
                         }
 
@@ -93,7 +93,7 @@ struct MentalHealthResourcesView: View {
                                     .foregroundColor(Theme.Colors.primary)
                                     .font(.title3)
 
-                                Text("If you have a diagnosed mental health condition or are under professional care, please consult your provider before using this app.")
+                                Text("If you have a diagnosed eating disorder or are under professional care, please consult your provider before using this app. This tool works best as a supplement to professional treatment.")
                                     .font(Theme.Typography.subheadline)
                                     .foregroundColor(Theme.Colors.textSecondary)
                                     .fixedSize(horizontal: false, vertical: true)
@@ -108,7 +108,7 @@ struct MentalHealthResourcesView: View {
                     .padding(Theme.Spacing.md)
                 }
             }
-            .navigationTitle("Mental Health Resources")
+            .navigationTitle("Health & Recovery Resources")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

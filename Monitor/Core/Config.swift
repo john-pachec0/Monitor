@@ -29,4 +29,27 @@ enum Config {
 
     /// Feedback API endpoint
     static let feedbackEndpoint = "https://api.Monitor.app/feedback"
+
+    // MARK: - Photo Settings
+    static let maxPhotoSizeKB = 500
+    static let maxPhotoDimension: CGFloat = 2000
+
+    // MARK: - Data Settings
+    static let defaultAutoArchiveDays = 90
+    static let maxEntriesPerDay = 20
+
+    // MARK: - Export Settings
+    static let pdfPageMargin: CGFloat = 50
+    static let pdfRowHeight: CGFloat = 30
+    static let pdfPhotoSize: CGFloat = 100
+
+    // MARK: - UI Settings
+    static let animationDuration = 0.3
+    static let toastDuration = 2.0
+    static let maxTextFieldLength = 500
+
+    // MARK: - Validation
+    static let minFoodDescriptionLength = 3
+    static let maxLocationLength = 100
+    static let maxContextLength = 1000
 }

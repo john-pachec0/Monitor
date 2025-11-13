@@ -48,7 +48,7 @@ final class MealEntry {
     init(
         id: UUID = UUID(),
         timestamp: Date = Date(),
-        mealType: MealType = .other,
+        mealType: MealType = .morning,
         foodAndDrink: String,
         location: String = "",
         imageData: Data? = nil,

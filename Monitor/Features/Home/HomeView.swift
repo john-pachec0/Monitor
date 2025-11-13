@@ -59,7 +59,7 @@ struct HomeView: View {
                 // Journal icon on right side
                 journalIconButton
                     .padding(.trailing, Theme.Spacing.md)
-                    .padding(.bottom, 180) // Position above capture button
+                    .padding(.bottom, 100) // Position just above capture button, below care team
             }
             .sheet(isPresented: $showingCapture) {
                 CaptureMealView(onSaved: {
@@ -85,38 +85,46 @@ struct HomeView: View {
     // MARK: - Subviews
 
     private var mainContent: some View {
-        VStack(spacing: Theme.Spacing.xl) {
-            Spacer()
-                .frame(maxHeight: 60)
+        ScrollView {
+            VStack(spacing: Theme.Spacing.xl) {
+                Spacer()
+                    .frame(maxHeight: 60)
 
-            Image(systemName: "fork.knife")
-                .font(.system(size: 80))
-                .foregroundColor(Theme.Colors.textTertiary.opacity(0.6))
-                .padding(.bottom, Theme.Spacing.sm)
-                .symbolEffect(.pulse, options: .repeating.speed(0.3))
-                .accessibilityLabel("Monitor Home")
-                .accessibilityHidden(true)
+                Image(systemName: "bolt.fill")
+                    .font(.system(size: 80))
+                    .foregroundColor(Theme.Colors.textTertiary.opacity(0.6))
+                    .padding(.bottom, Theme.Spacing.sm)
+                    .symbolEffect(.pulse, options: .repeating.speed(0.3))
+                    .accessibilityLabel("Monitor Home")
+                    .accessibilityHidden(true)
 
-            Text(entries.isEmpty ? "Welcome to Monitor" : "Ready to log?")
-                .font(Theme.Typography.largeTitle)
-                .foregroundColor(Theme.Colors.text)
-                .multilineTextAlignment(.center)
-                .animation(.none, value: entries.count)
+                Text(entries.isEmpty ? "Welcome to Monitor" : "Ready to log?")
+                    .font(Theme.Typography.largeTitle)
+                    .foregroundColor(Theme.Colors.text)
+                    .multilineTextAlignment(.center)
+                    .animation(.none, value: entries.count)
 
-            Text(entries.isEmpty ?
-                "Track your meals and feelings in a non-judgmental space. Share with your care team when you're ready." :
-                "Log your meals as you eat. Review and reflect when it feels right.")
-                .font(Theme.Typography.body)
-                .foregroundColor(Theme.Colors.textSecondary)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, Theme.Spacing.xl)
-                .animation(.none, value: entries.count)
-                .fixedSize(horizontal: false, vertical: true)
+                Text(entries.isEmpty ?
+                    "Track your meals and feelings in a non-judgmental space. Share with your care team when you're ready." :
+                    "Log your meals as you eat. Review and reflect when it feels right.")
+                    .font(Theme.Typography.body)
+                    .foregroundColor(Theme.Colors.textSecondary)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, Theme.Spacing.xl)
+                    .animation(.none, value: entries.count)
+                    .fixedSize(horizontal: false, vertical: true)
 
-            Spacer()
-                .frame(minHeight: 100)
+                // Care Team Panel
+                if let settings = userSettings, !settings.careTeam.isEmpty {
+                    careTeamPanel
+                        .padding(.top, Theme.Spacing.lg)
+                }
+
+                Spacer()
+                    .frame(minHeight: 100)
+            }
+            .padding(.top, Theme.Spacing.md)
         }
-        .padding(.top, Theme.Spacing.md)
     }
 
     private var captureButton: some View {
@@ -143,6 +151,28 @@ struct HomeView: View {
         }
         .accessibilityLabel("Log a meal")
         .accessibilityHint("Opens form to record a meal")
+    }
+
+    // MARK: - Care Team Panel
+
+    private var careTeamPanel: some View {
+        VStack(alignment: .leading, spacing: Theme.Spacing.sm) {
+            Text("Your Care Team")
+                .font(Theme.Typography.headline)
+                .foregroundColor(Theme.Colors.text)
+                .padding(.horizontal, Theme.Spacing.md)
+
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: Theme.Spacing.md) {
+                    if let settings = userSettings {
+                        ForEach(settings.careTeam.sorted(by: { $0.createdAt < $1.createdAt }), id: \.name) { member in
+                            CareTeamCard(member: member)
+                        }
+                    }
+                }
+                .padding(.horizontal, Theme.Spacing.md)
+            }
+        }
     }
 
     // MARK: - Journal Icon
@@ -179,6 +209,109 @@ struct HomeView: View {
 
     private var journalColor: Color {
         entries.isEmpty ? Theme.Colors.textTertiary.opacity(0.5) : Theme.Colors.textSecondary
+    }
+}
+
+// MARK: - Care Team Card
+
+struct CareTeamCard: View {
+    let member: CareTeamMember
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: Theme.Spacing.sm) {
+            // Role icon and name
+            HStack(spacing: Theme.Spacing.xs) {
+                Image(systemName: member.role.icon)
+                    .font(.title3)
+                    .foregroundColor(Theme.Colors.primary)
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(member.name)
+                        .font(Theme.Typography.headline)
+                        .foregroundColor(Theme.Colors.text)
+                        .lineLimit(1)
+
+                    Text(member.role.rawValue)
+                        .font(Theme.Typography.caption)
+                        .foregroundColor(Theme.Colors.textSecondary)
+                }
+            }
+
+            Divider()
+
+            // Contact info
+            VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
+                if let phone = member.phone, !phone.isEmpty {
+                    Menu {
+                        if let url = URL(string: "tel:\(phone.replacingOccurrences(of: " ", with: ""))") {
+                            Link(destination: url) {
+                                Label("Call \(phone)", systemImage: "phone.fill")
+                            }
+                        }
+                        if let url = URL(string: "sms:\(phone.replacingOccurrences(of: " ", with: ""))") {
+                            Link(destination: url) {
+                                Label("Message \(phone)", systemImage: "message.fill")
+                            }
+                        }
+                    } label: {
+                        HStack(spacing: Theme.Spacing.xs) {
+                            Image(systemName: "phone.fill")
+                                .font(.caption)
+                                .foregroundColor(Theme.Colors.textSecondary)
+                                .frame(width: 16)
+
+                            Text(phone)
+                                .font(Theme.Typography.caption)
+                                .foregroundColor(Theme.Colors.primary)
+                                .underline()
+                        }
+                    }
+                    .buttonStyle(.plain)
+                }
+
+                if let email = member.email, !email.isEmpty,
+                   let emailURL = URL(string: "mailto:\(email)") {
+                    Link(destination: emailURL) {
+                        HStack(spacing: Theme.Spacing.xs) {
+                            Image(systemName: "envelope.fill")
+                                .font(.caption)
+                                .foregroundColor(Theme.Colors.textSecondary)
+                                .frame(width: 16)
+
+                            Text(email)
+                                .font(Theme.Typography.caption)
+                                .foregroundColor(Theme.Colors.primary)
+                                .underline()
+                                .lineLimit(1)
+                        }
+                    }
+                }
+
+                if let notes = member.notes, !notes.isEmpty {
+                    HStack(alignment: .top, spacing: Theme.Spacing.xs) {
+                        Image(systemName: "note.text")
+                            .font(.caption)
+                            .foregroundColor(Theme.Colors.textSecondary)
+                            .frame(width: 16)
+
+                        Text(notes)
+                            .font(Theme.Typography.caption)
+                            .foregroundColor(Theme.Colors.text)
+                            .lineLimit(2)
+                    }
+                }
+            }
+        }
+        .padding(Theme.Spacing.md)
+        .frame(width: 240)
+        .background(Theme.Colors.cardBackground)
+        .cornerRadius(Theme.CornerRadius.md)
+        .shadow(
+            color: Theme.Shadows.card.color,
+            radius: Theme.Shadows.card.radius,
+            x: Theme.Shadows.card.x,
+            y: Theme.Shadows.card.y
+        )
     }
 }
 

@@ -68,7 +68,7 @@ struct MonitorApp: App {
         // Initialize SwiftData model container with migration support
         do {
             // Configure model container with explicit schema
-            let schema = Schema([MealEntry.self, UserSettings.self])
+            let schema = Schema([MealEntry.self, UserSettings.self, CareTeamMember.self])
             // Use a new database name to avoid migration conflicts from the old Untwist schema
             // This creates a fresh database for the Monitor app
             let databaseURL = URL.documentsDirectory.appending(path: "MonitorV2.sqlite")

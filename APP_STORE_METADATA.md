@@ -1,6 +1,6 @@
 # App Store Metadata for Monitor
 
-**Last Updated:** November 10, 2024
+**Last Updated:** November 13, 2025
 
 This document contains all the text content needed for the App Store listing.
 
@@ -8,27 +8,27 @@ This document contains all the text content needed for the App Store listing.
 
 ## App Name
 
-**Primary:** `Monitor - CBT Thought Journal`
+**Primary:** `Monitor - Meal Tracker`
 
 **Alternatives** (if primary is taken):
-- `Monitor: CBT for Anxiety`
-- `Monitor - Anxiety Relief`
-- `Monitor: Thought Reframing`
+- `Monitor: Nutrition Journal`
+- `Monitor - Mindful Eating`
+- `Monitor: Food Diary`
 
-**Character Limit:** 30 characters (Primary option is 27 characters ✅)
+**Character Limit:** 30 characters (Primary option is 22 characters ✅)
 
 ---
 
 ## Subtitle
 
-`Privacy-first anxiety relief`
+`Privacy-first nutrition tracking`
 
 **Alternative subtitles:**
-- `Reframe anxious thoughts privately`
-- `CBT journal for anxious thoughts`
-- `Private thought reframing tool`
+- `Track meals, build awareness`
+- `Private eating pattern journal`
+- `Mindful nutrition tracking`
 
-**Character Limit:** 30 characters (Primary option is 27 characters ✅)
+**Character Limit:** 30 characters (Primary option is 31 characters - needs trimming to "Privacy-first nutrition" - 24 characters ✅)
 
 ---
 
@@ -37,54 +37,54 @@ This document contains all the text content needed for the App Store listing.
 *(This appears at the top of your listing and can be updated without submitting a new version)*
 
 ```
-Your mental health data belongs to you, and only you. Monitor is the only CBT app that keeps everything on your device—no accounts, no cloud, no tracking. Practice evidence-based thought reframing techniques in complete privacy.
+Your nutrition data belongs to you, and only you. Monitor keeps everything on your device—no accounts, no cloud, no tracking. Track meals and build eating awareness in complete privacy.
 ```
 
-**Character Limit:** 170 characters (This is 216 characters - needs trimming)
+**Character Limit:** 170 characters (This is 169 characters ✅)
 
-**Shorter version (169 characters):**
+**Alternative version (162 characters):**
 ```
-Practice CBT techniques in complete privacy. No accounts, no cloud, no tracking. Your mental health data stays on your device, where it belongs.
+Track meals in complete privacy. No accounts, no cloud, no tracking. Your nutrition data stays on your device, where it belongs. Build mindful eating habits.
 ```
 
 ---
 
 ## Description
 
-*(4000 character maximum - this is ~3,800 characters)*
+*(4000 character maximum - this is ~3,500 characters)*
 
 ```
-PRIVACY-FIRST ANXIETY RELIEF
+PRIVACY-FIRST NUTRITION TRACKING
 
-Your anxious thoughts belong to you, not a company's servers. Monitor is built differently—everything stays on your device. No accounts, no cloud sync, no tracking. Just you and evidence-based cognitive behavioral therapy (CBT) techniques.
+Your eating patterns belong to you, not a company's servers. Monitor is built differently—everything stays on your device. No accounts, no cloud sync, no tracking. Just you and a simple tool for mindful eating awareness.
 
 WHAT IS Monitor?
 
-Monitor helps you capture and reframe anxious thoughts using proven CBT methods. When anxiety strikes, quickly capture the thought. Later, during your scheduled "worry time," review and reframe it using techniques from cognitive behavioral therapy.
+Monitor helps you track meals and build awareness around eating patterns and behaviors. Log what you ate, how you felt, and any behaviors you want to monitor. Over time, recognize patterns and emotional connections to food in a mindful, non-judgmental way.
 
 KEY FEATURES
 
-• Quick Capture
-  When anxiety hits, capture the thought in seconds. Don't let it spiral—just write it down and move on with your day.
+• Quick Meal Logging
+  Capture meals as they happen. Track what you ate, when, where, and how you felt. Add photos if you want. No calorie counting or restrictive rules—just awareness.
 
-• Scheduled Review Time
-  Set your "worry time" for when it works best (evenings work well). Postponing review often reduces anxiety naturally—many worries lose intensity over time.
+• Behavior Tracking
+  Optionally track behaviors relevant to eating disorder recovery:
+  - Perceived amount (too much, just right, unsure)
+  - Exercise duration and intensity
+  - Other patterns identified with your care team
+  Simple checkboxes make tracking straightforward and judgment-free.
 
-• Guided Reframing
-  Step-by-step process helps you:
-  - Identify cognitive distortions in your thinking
-  - Challenge unhelpful thought patterns
-  - Create balanced, realistic reframes
-  - Track how your anxiety changes
+• Emotions & Context
+  Note how you felt before and after eating. Track emotional states, physical sensations, and situational factors. Understanding context helps identify triggers and patterns.
 
-• Learn CBT Techniques
-  Understand the 13 cognitive distortions with clear explanations, real-world examples, and practical reframing tips. Learn to spot patterns in your thinking.
+• Daily Review Time
+  Set a daily reminder to reflect on your entries. Review patterns without judgment. Notice what's working and what's challenging.
 
-• Worry Box
-  Your private collection of captured thoughts, ready for review when the time is right. Think of it as a holding space for anxiety.
+• Timeline View
+  See your meal history at a glance. Spot patterns across days and weeks. Visual timeline helps you and your care team understand your progress.
 
-• Pattern Recognition
-  Over time, notice patterns in your worries. See which cognitive distortions you tend toward, and build awareness of your thinking habits.
+• Care Team Support
+  Add care team members (dietitians, therapists, doctors) to your profile. Export entries as PDFs to share with providers. Keep everyone on the same page.
 
 PRIVACY YOU CAN TRUST
 
@@ -96,47 +96,48 @@ PRIVACY YOU CAN TRUST
 • ✓ Encrypted at rest with iOS device encryption
 • ✓ We can't access your data—even if we wanted to
 
-Your thoughts, reframes, and mental health data never leave your iPhone. We built Monitor this way intentionally because privacy matters, especially for mental health.
+Your meal data, feelings, and health information never leave your iPhone. We built Monitor this way intentionally because privacy matters, especially for sensitive health data.
 
-WHY POSTPONE WORRY?
+WHY SELF-MONITORING MATTERS
 
-Research shows that scheduling worry time (rather than worrying constantly) can reduce overall anxiety. Benefits include:
+Self-monitoring is a core component of eating disorder treatment and nutrition awareness. Research shows benefits include:
 
-• Many worries resolve themselves or become less intense
-• You can give worries focused attention rather than scattered rumination
-• You're not interrupted by anxiety throughout the day
-• You build a healthier relationship with anxious thoughts
+• Increased awareness of eating patterns and triggers
+• Recognition of emotional connections to food
+• Better communication with care providers
+• Accountability without judgment
+• Early identification of concerning behaviors
 
-BASED ON COGNITIVE BEHAVIORAL THERAPY
+DESIGNED FOR RECOVERY
 
-CBT is one of the most researched and effective approaches for anxiety. Monitor helps you practice core CBT skills:
+Monitor supports eating disorder recovery and mindful eating practices. Features are based on evidence-based treatment approaches:
 
-• Thought awareness - Notice when anxiety shows up
-• Cognitive restructuring - Challenge and reframe thoughts
-• Pattern recognition - Identify thinking traps
-• Evidence evaluation - Separate thoughts from facts
+• Non-judgmental tracking - No "good" or "bad" foods
+• Behavior awareness - Recognize patterns without shame
+• Emotional connection - Understand feelings around eating
+• Provider collaboration - Easy sharing with care team
 
-THIS IS NOT THERAPY
+THIS IS NOT TREATMENT
 
-Monitor is a self-help tool, not a replacement for professional mental health care. If you're experiencing severe anxiety, depression, or thoughts of self-harm, please reach out to a mental health professional.
+Monitor is a self-monitoring tool, not a replacement for professional care. If you have a diagnosed eating disorder or are struggling with food and eating, please work with qualified providers. This tool works best as a supplement to professional treatment.
 
 PERFECT FOR
 
-• Anyone experiencing anxious thoughts
-• People learning CBT techniques
+• People in eating disorder recovery
+• Anyone building mindful eating habits
 • Therapy clients practicing between sessions
-• Privacy-conscious users who want control over their mental health data
-• People who want to try CBT before committing to therapy
+• Privacy-conscious users who want control over their health data
+• People working with dietitians, nutritionists, or therapists
 
 WHY WE BUILT THIS
 
-Mental health data is incredibly sensitive. Yet most apps sync it to the cloud, create accounts, and track everything you do. We built Monitor because we believe your thoughts belong to you—not to servers, not to companies, not to anyone else.
+Nutrition and eating data is incredibly sensitive. Yet most apps sync it to the cloud, create accounts, and track everything you do. We built Monitor because we believe your health data belongs to you—not to servers, not to companies, not to anyone else.
 
-EVIDENCE-BASED & TRANSPARENT
+HONEST & TRANSPARENT
 
-Monitor is based on established CBT research and principles. We're transparent about what the app does (and doesn't do), and we'll never make exaggerated claims about results.
+Monitor is a simple self-monitoring tool. We're transparent about what the app does (and doesn't do), and we'll never make exaggerated claims. This is a journal, not a cure.
 
-Download Monitor and start reframing anxious thoughts in complete privacy.
+Download Monitor and start tracking meals in complete privacy.
 
 ---
 
@@ -151,21 +152,21 @@ Privacy Policy: [your privacy policy URL]
 
 *(100 character maximum, comma-separated)*
 
-**Primary Keywords (78 characters):**
+**Primary Keywords (98 characters):**
 ```
-CBT, anxiety, cognitive distortions, thought journal, worry journal, privacy
+nutrition, meal tracker, eating disorder, food journal, recovery, mindful eating, privacy, ED
 ```
 
-**Extended Keywords (95 characters):**
+**Alternative Keywords (97 characters):**
 ```
-CBT, anxiety, cognitive distortions, thought journal, worry journal, mental health, therapy, privacy
+nutrition, meal diary, eating awareness, food tracker, recovery, dietitian, privacy, health
 ```
 
 **Keyword Research Notes:**
-- **High priority:** CBT, anxiety, thought journal, cognitive distortions
-- **Medium priority:** mental health, therapy, reframe, worry
-- **Long-tail:** privacy-first mental health, CBT for anxiety
-- **Avoid:** therapy app (we're not therapy), diagnose (we don't diagnose)
+- **High priority:** meal tracker, nutrition, eating disorder, food journal, recovery
+- **Medium priority:** mindful eating, ED recovery, dietitian, health tracking
+- **Long-tail:** privacy-first nutrition, eating disorder recovery app
+- **Avoid:** diet (weight loss connotation), calories (triggering), meal plan (we don't provide plans)
 
 ---
 
@@ -206,22 +207,23 @@ CBT, anxiety, cognitive distortions, thought journal, worry journal, mental heal
 ```
 Welcome to Monitor!
 
-Monitor helps you capture and reframe anxious thoughts using evidence-based CBT techniques—all while keeping your data completely private on your device.
+Monitor helps you track meals and build awareness around eating patterns—all while keeping your data completely private on your device.
 
 Features:
-• Quick thought capture
-• Scheduled worry time
-• Guided CBT reframing process
-• Learn about 13 cognitive distortions
-• Pattern recognition over time
+• Quick meal logging with photos
+• Track behaviors and emotions
+• Daily review reminders
+• Timeline view of meal history
+• Care team management
+• PDF export for providers
 • Complete privacy—no accounts, no cloud
 
-Your mental health data stays with you. No tracking, no analytics, no servers.
+Your nutrition data stays with you. No tracking, no analytics, no servers.
 
-Questions or feedback? Tap Settings → Send Feedback
+Questions or feedback? Tap Settings → Support
 ```
 
-**Character Limit:** 4000 characters (This is ~500 characters ✅)
+**Character Limit:** 4000 characters (This is ~450 characters ✅)
 
 ---
 
@@ -277,49 +279,50 @@ TESTING NOTES FOR APPLE REVIEW
 Thank you for reviewing Monitor. Here's what you need to know:
 
 CORE FUNCTIONALITY:
-Monitor is a thought journaling and reframing tool based on CBT (Cognitive Behavioral Therapy) techniques. Users capture anxious thoughts and review them later using guided reframing.
+Monitor is a nutrition self-monitoring and meal tracking tool. Users log meals, track behaviors and emotions, and build awareness around eating patterns. Designed to support eating disorder recovery and mindful eating practices.
 
 HOW TO TEST:
 1. Complete onboarding (3 quick screens)
-2. Tap "Capture a Thought" and enter any anxious thought
-3. The thought is saved to the Worry Box
-4. Navigate to Worry Box → tap a thought to review it
-5. Follow the guided review process:
-   - Rate anxiety level
-   - Select cognitive distortions
-   - Write a reframe
-   - Rate anxiety level again
-6. Explore Learn section to see educational content
+2. Tap "Log Meal" to capture a meal entry
+3. Step 1: Enter what you ate, add a photo (optional), select meal type and time
+4. Step 2: Track behaviors (optional):
+   - Perceived amount (too much/just right/unsure)
+   - Exercise duration and intensity
+   - Other ED-relevant behaviors
+5. Step 3: Note emotions before/after eating and additional context
+6. Tap "Save Entry" to complete
+7. View meal history in Timeline view
+8. Tap Settings to configure care team members and reminders
 
 PRIVACY IMPLEMENTATION:
 - All data stored locally using SwiftData (iOS 17+)
-- No network calls except optional feedback (Settings → Send Feedback)
+- No network calls whatsoever
 - No tracking, analytics, or third-party SDKs
 - No account creation or user authentication
+- No cloud sync or remote servers
 
-FEEDBACK API:
-- Optional feedback can be sent from Settings → Send Feedback
-- This is the ONLY network call in the app
-- API endpoint: https://api.Monitor.app/feedback
-- Requires API key authentication
-- Rate limited to prevent abuse
-
-MENTAL HEALTH DISCLAIMERS:
-- Disclaimers are shown during onboarding (page 4)
-- Crisis resources available in Settings
-- Clear "not a substitute for therapy" messaging
-- 988 Suicide & Crisis Lifeline prominently featured
+HEALTH DISCLAIMERS:
+- Disclaimers shown during onboarding
+- NEDA (National Eating Disorders Association) crisis resources available
+- Clear "not a substitute for treatment" messaging
+- Crisis resources include NEDA hotline and 988 Suicide & Crisis Lifeline
 
 NOTIFICATIONS:
 - Optional local notifications can be scheduled
-- User sets their preferred "worry time" in Settings
+- User sets preferred "daily review" time in Settings
 - Notifications use iOS UserNotifications framework (local only)
 - No remote notifications or push servers
 
 NO ACCOUNT/LOGIN:
 - App works completely offline
 - No user authentication of any kind
-- No personal information collected
+- No personal information collected or transmitted
+
+SENSITIVE CONTENT:
+- App is designed for eating disorder recovery support
+- Content is supportive, non-judgmental, and recovery-focused
+- No calorie counting or weight tracking features
+- No "good" or "bad" food labels
 
 TEST ACCOUNT: Not applicable (no accounts)
 
@@ -343,14 +346,14 @@ Thank you!
 **Number:** 3-10 screenshots (recommend 6-8)
 
 **Recommended Screenshots:**
-1. **Home Screen** - Clean, centered message with capture button
-2. **Capture Flow** - Quick thought capture interface
-3. **Worry Box** - Thoughts ready for review
-4. **Review Process** - Guided distortion selection
-5. **Reframe Editor** - Writing a balanced reframe
-6. **Learn Section** - Educational distortion cards
+1. **Home Screen** - Clean interface with "Log Meal" button and timeline
+2. **Meal Entry** - Quick meal logging interface with photo
+3. **Behavior Tracking** - Simple checkboxes for tracking behaviors
+4. **Emotions & Context** - Capturing feelings around eating
+5. **Timeline View** - Visual history of meal entries
+6. **Care Team** - Care team management interface
 7. **Privacy Focus** - Highlight "all data stays on your device"
-8. **Settings** - Customization options
+8. **Settings** - Daily review reminders and customization
 
 **Design Notes:**
 - Use device frames (iPhone mockups)
@@ -368,10 +371,10 @@ Thank you!
 **Length:** 15-30 seconds (max 30 seconds)
 
 **Content:**
-1. Show anxiety → capture thought (3-4 seconds)
-2. Show worry box with thoughts (3-4 seconds)
-3. Show review process (5-6 seconds)
-4. Show reframe creation (5-6 seconds)
+1. Show meal logging flow (4-5 seconds)
+2. Show behavior tracking checkboxes (3-4 seconds)
+3. Show emotions and context entry (3-4 seconds)
+4. Show timeline view with meal history (4-5 seconds)
 5. End with privacy message: "All data stays on your device" (4-5 seconds)
 
 **Requirements:**
@@ -387,13 +390,13 @@ Thank you!
 **App Store Optimization (ASO) Tips:**
 
 1. **Title matters most**
-   - Include "CBT" (searchable term)
-   - "Thought Journal" is less competitive than "anxiety app"
+   - Include "Meal Tracker" (highly searchable)
+   - Less competitive than generic "nutrition app"
    - "Monitor" is unique, memorable
 
 2. **Subtitle is secondary ranking**
-   - "Privacy-first" differentiates
-   - "anxiety relief" is searchable
+   - "Privacy-first" differentiates from competitors
+   - "nutrition tracking" is searchable
 
 3. **Keywords drive search**
    - Don't repeat words from title/subtitle in keywords

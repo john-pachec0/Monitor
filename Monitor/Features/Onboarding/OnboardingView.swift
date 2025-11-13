@@ -2,7 +2,7 @@
 //  OnboardingView.swift
 //  Monitor
 //
-//  First-launch onboarding explaining CBT and how the app works
+//  First-launch onboarding explaining self-monitoring and how the app works
 //
 
 import SwiftUI
@@ -105,14 +105,14 @@ struct WelcomePage: View {
                     .foregroundColor(Theme.Colors.text)
                     .multilineTextAlignment(.center)
 
-                Text("Your pocket CBT companion for transforming anxious thoughts")
+                Text("Your private companion for mindful eating and nutrition awareness")
                     .font(Theme.Typography.title3)
                     .foregroundColor(Theme.Colors.textSecondary)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, Theme.Spacing.xl)
 
-                Text("Evidence-based CBT techniques")
+                Text("Evidence-based self-monitoring techniques")
                     .font(Theme.Typography.subheadline)
                     .foregroundColor(Theme.Colors.textSecondary)
 
@@ -126,7 +126,7 @@ struct WelcomePage: View {
     }
 }
 
-// MARK: - Page 2: Combined How It Works + Worry Scheduling
+// MARK: - Page 2: Combined How It Works + Daily Review Scheduling
 
 struct CombinedHowItWorksPage: View {
     @Query private var settings: [UserSettings]
@@ -146,19 +146,19 @@ struct CombinedHowItWorksPage: View {
                     StepCard(
                         icon: "square.and.pencil",
                         title: "Capture",
-                        description: "When anxiety strikes, quickly capture the thought. We'll look at it together later."
+                        description: "Log meals as they happen. Track what you ate, how you felt, and any behaviors or context."
                     )
 
                     StepCard(
                         icon: "magnifyingglass",
                         title: "Notice",
-                        description: "Identify cognitive distortions - the thinking patterns that make anxiety worse."
+                        description: "Identify eating patterns and behaviors over time. Recognize triggers and emotional connections to food."
                     )
 
                     StepCard(
                         icon: "sparkles",
-                        title: "Reframe",
-                        description: "Create a more balanced perspective. With practice, this becomes second nature."
+                        title: "Reflect",
+                        description: "Review your entries to build awareness. With practice, mindful eating becomes second nature."
                     )
                 }
                 .padding(.horizontal, Theme.Spacing.lg)
@@ -167,18 +167,18 @@ struct CombinedHowItWorksPage: View {
                 Divider()
                     .padding(.vertical, Theme.Spacing.xs)
 
-                // Worry time scheduling section - this will peek at the bottom
+                // Daily review scheduling section - this will peek at the bottom
                 VStack(spacing: Theme.Spacing.md) {
                     Image(systemName: "calendar.badge.clock")
                         .font(.system(size: 50))
                         .foregroundColor(Theme.Colors.primary)
 
-                    Text("Schedule Your Worry Time")
+                    Text("Schedule Your Daily Review")
                         .font(Theme.Typography.title2)
                         .foregroundColor(Theme.Colors.text)
                         .multilineTextAlignment(.center)
 
-                    Text("Research shows that scheduling a specific time each day to review your worries reduces all-day anxiety. Outside this time, we'll gently remind you to wait—and you can always choose to review anyway if needed.")
+                    Text("Research shows that scheduling a specific time each day to review your eating patterns builds lasting awareness and supports behavior change. Set a consistent time to reflect on your meals and progress.")
                         .font(Theme.Typography.subheadline)
                         .foregroundColor(Theme.Colors.textSecondary)
                         .multilineTextAlignment(.center)
@@ -188,7 +188,7 @@ struct CombinedHowItWorksPage: View {
 
                 // Time picker section
                 if let userSettings = settings.first {
-                    WorryTimePickerSection(userSettings: userSettings)
+                    DailyReviewPickerSection(userSettings: userSettings)
                 }
 
                 Spacer().frame(height: Theme.Spacing.xl)
@@ -198,15 +198,15 @@ struct CombinedHowItWorksPage: View {
     }
 }
 
-// MARK: - Worry Time Picker Section
+// MARK: - Daily Review Time Picker Section
 
-struct WorryTimePickerSection: View {
+struct DailyReviewPickerSection: View {
     @Bindable var userSettings: UserSettings
     @State private var showPermissionDeniedAlert = false
 
     var body: some View {
         VStack(spacing: Theme.Spacing.sm) {
-            Text("Choose Your Worry Time")
+            Text("Choose Your Daily Review Time")
                 .font(Theme.Typography.headline)
                 .foregroundColor(Theme.Colors.text)
 
@@ -229,7 +229,7 @@ struct WorryTimePickerSection: View {
                         if newValue {
                             requestNotificationPermission()
                         } else {
-                            NotificationService.shared.cancelWorryTimeReminder()
+                            NotificationService.shared.cancelReviewTimeReminder()
                         }
                     }
                 )) {
@@ -261,7 +261,7 @@ struct WorryTimePickerSection: View {
             }
             Button("Not Now", role: .cancel) {}
         } message: {
-            Text("To receive reminders for your worry time, please enable notifications in Settings > Monitor > Notifications.")
+            Text("To receive reminders for your daily review, please enable notifications in Settings > Monitor > Notifications.")
         }
     }
 
@@ -270,7 +270,7 @@ struct WorryTimePickerSection: View {
             DispatchQueue.main.async {
                 if granted {
                     // Schedule the notification
-                    NotificationService.shared.scheduleWorryTimeReminder(at: self.userSettings.eveningCheckInTime)
+                    NotificationService.shared.scheduleReviewTimeReminder(at: self.userSettings.eveningCheckInTime)
                 } else {
                     // Permission denied, turn off toggle and show helpful alert
                     self.userSettings.notificationsEnabled = false
@@ -297,7 +297,7 @@ struct DisclaimerSheet: View {
                             .font(Theme.Typography.headline)
                             .foregroundColor(Theme.Colors.text)
 
-                        Text("Monitor is a journaling tool based on cognitive behavioral therapy strategies. It's designed to help you recognize and reframe anxious thought patterns.")
+                        Text("Monitor is a self-monitoring tool designed to help you track eating patterns, recognize behaviors, and build awareness around food and nutrition. It supports recovery and mindful eating practices.")
                             .font(Theme.Typography.body)
                             .foregroundColor(Theme.Colors.textSecondary)
                             .fixedSize(horizontal: false, vertical: true)
@@ -310,11 +310,11 @@ struct DisclaimerSheet: View {
                             .foregroundColor(Theme.Colors.text)
 
                         VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
-                            DisclaimerPoint(text: "A substitute for professional therapy or counseling")
-                            DisclaimerPoint(text: "Medical or mental health advice")
+                            DisclaimerPoint(text: "A substitute for professional treatment or counseling")
+                            DisclaimerPoint(text: "Medical, nutritional, or mental health advice")
                             DisclaimerPoint(text: "A diagnostic tool")
                             DisclaimerPoint(text: "Designed for crisis situations")
-                            DisclaimerPoint(text: "Suitable for treating serious mental health conditions")
+                            DisclaimerPoint(text: "Suitable for treating eating disorders or serious conditions without professional support")
                         }
                     }
 
@@ -325,7 +325,7 @@ struct DisclaimerSheet: View {
                                 .foregroundColor(Theme.Colors.primary)
                                 .font(.title3)
 
-                            Text("If you have a diagnosed mental health condition or are under professional care, please consult your provider before using this app.")
+                            Text("If you have a diagnosed eating disorder or are under professional care, please consult your provider before using this app. This tool works best as a supplement to professional treatment.")
                                 .font(Theme.Typography.subheadline)
                                 .foregroundColor(Theme.Colors.textSecondary)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -397,9 +397,9 @@ struct MentalHealthResourcesPage_Removed: View {
                 }
                 .padding(.horizontal, Theme.Spacing.md)
 
-                // Crisis Resources
+                // Support Resources
                 VStack(alignment: .leading, spacing: Theme.Spacing.md) {
-                    Text("If you're in crisis or experiencing suicidal thoughts:")
+                    Text("If you need support:")
                         .font(Theme.Typography.headline)
                         .foregroundColor(Theme.Colors.text)
 
@@ -407,13 +407,13 @@ struct MentalHealthResourcesPage_Removed: View {
                         CrisisResource(
                             icon: "phone.fill",
                             title: "Call 988",
-                            subtitle: "Suicide & Crisis Lifeline"
+                            subtitle: "Crisis Lifeline (24/7 support)"
                         )
 
                         CrisisResource(
                             icon: "message.fill",
-                            title: "Text \"HOME\" to 741741",
-                            subtitle: "Crisis Text Line"
+                            title: "Text \"NEDA\" to 741741",
+                            subtitle: "National Eating Disorders Association"
                         )
 
                         CrisisResource(
@@ -434,7 +434,7 @@ struct MentalHealthResourcesPage_Removed: View {
                         .font(Theme.Typography.headline)
                         .foregroundColor(Theme.Colors.text)
 
-                    Text("Monitor is a journaling tool based on cognitive behavioral therapy strategies. It's designed to help you recognize and reframe anxious thought patterns.")
+                    Text("Monitor is a self-monitoring tool for tracking eating patterns and building awareness around food and nutrition. It's designed to help you recognize patterns, behaviors, and emotional connections to eating in a mindful, non-judgmental way.")
                         .font(Theme.Typography.body)
                         .foregroundColor(Theme.Colors.textSecondary)
                         .fixedSize(horizontal: false, vertical: true)
@@ -557,7 +557,7 @@ struct PrivacyPage: View {
                     }
                     .padding(.horizontal, Theme.Spacing.xl)
 
-                    Text("Your mental health journey belongs to you")
+                    Text("Your nutrition journey belongs to you")
                         .font(Theme.Typography.subheadline)
                         .foregroundColor(Theme.Colors.textSecondary)
                         .multilineTextAlignment(.center)
@@ -583,7 +583,7 @@ struct PrivacyPage: View {
                             .font(Theme.Typography.headline)
                             .foregroundColor(Theme.Colors.text)
 
-                        Text("Monitor is a journaling tool based on cognitive behavioral therapy strategies. It's designed to help you recognize and reframe anxious thought patterns.")
+                        Text("Monitor is a self-monitoring tool designed to help you track eating patterns, recognize behaviors, and build awareness around food and nutrition. It supports recovery and mindful eating practices.")
                             .font(Theme.Typography.body)
                             .foregroundColor(Theme.Colors.textSecondary)
                             .fixedSize(horizontal: false, vertical: true)
@@ -596,11 +596,11 @@ struct PrivacyPage: View {
                             .foregroundColor(Theme.Colors.text)
 
                         VStack(alignment: .leading, spacing: Theme.Spacing.xs) {
-                            DisclaimerPoint(text: "A substitute for professional therapy or counseling")
-                            DisclaimerPoint(text: "Medical or mental health advice")
+                            DisclaimerPoint(text: "A substitute for professional treatment or counseling")
+                            DisclaimerPoint(text: "Medical, nutritional, or mental health advice")
                             DisclaimerPoint(text: "A diagnostic tool")
                             DisclaimerPoint(text: "Designed for crisis situations")
-                            DisclaimerPoint(text: "Suitable for treating serious mental health conditions")
+                            DisclaimerPoint(text: "Suitable for treating eating disorders or serious conditions without professional support")
                         }
                     }
 
@@ -611,7 +611,7 @@ struct PrivacyPage: View {
                                 .foregroundColor(Theme.Colors.primary)
                                 .font(.title3)
 
-                            Text("If you have a diagnosed mental health condition or are under professional care, please consult your provider before using this app.")
+                            Text("If you have a diagnosed eating disorder or are under professional care, please consult your provider before using this app. This tool works best as a supplement to professional treatment.")
                                 .font(Theme.Typography.subheadline)
                                 .foregroundColor(Theme.Colors.textSecondary)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -621,9 +621,9 @@ struct PrivacyPage: View {
                     .background(Theme.Colors.secondaryBackground)
                     .cornerRadius(Theme.CornerRadius.md)
 
-                    // Crisis Resources
+                    // Support Resources
                     VStack(alignment: .leading, spacing: Theme.Spacing.sm) {
-                        Text("If you're in crisis:")
+                        Text("If you need support:")
                             .font(Theme.Typography.headline)
                             .foregroundColor(Theme.Colors.text)
 
@@ -631,13 +631,13 @@ struct PrivacyPage: View {
                             CrisisResource(
                                 icon: "phone.fill",
                                 title: "Call 988",
-                                subtitle: "Suicide & Crisis Lifeline"
+                                subtitle: "Crisis Lifeline (24/7 support)"
                             )
 
                             CrisisResource(
                                 icon: "message.fill",
-                                title: "Text \"HOME\" to 741741",
-                                subtitle: "Crisis Text Line"
+                                title: "Text \"NEDA\" to 741741",
+                                subtitle: "National Eating Disorders Association"
                             )
                         }
                     }
@@ -659,28 +659,28 @@ struct PrivacyPage: View {
 struct TwistedLineGraphic: View {
     var body: some View {
         HStack(spacing: Theme.Spacing.lg) {
-            // Twisted line
+            // Disordered eating
             VStack(spacing: Theme.Spacing.xs) {
                 Image(systemName: "arrow.triangle.2.circlepath")
                     .font(.system(size: 50))
                     .foregroundColor(Theme.Colors.textTertiary)
-                
-                Text("Anxious")
+
+                Text("Unaware")
                     .font(Theme.Typography.caption)
                     .foregroundColor(Theme.Colors.textSecondary)
             }
-            
+
             Image(systemName: "arrow.right")
                 .font(.title)
                 .foregroundColor(Theme.Colors.primary)
-            
-            // Straight line
+
+            // Balanced eating
             VStack(spacing: Theme.Spacing.xs) {
                 Image(systemName: "arrow.up")
                     .font(.system(size: 50))
                     .foregroundColor(Theme.Colors.primary)
-                
-                Text("Balanced")
+
+                Text("Mindful")
                     .font(Theme.Typography.caption)
                     .foregroundColor(Theme.Colors.textSecondary)
             }

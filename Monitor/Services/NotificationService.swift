@@ -2,7 +2,7 @@
 //  NotificationService.swift
 //  Monitor
 //
-//  Handles scheduling and managing local notifications for worry time reminders
+//  Handles scheduling and managing local notifications for daily review reminders
 //
 
 import Foundation
@@ -12,7 +12,7 @@ class NotificationService {
     static let shared = NotificationService()
 
     private let notificationCenter = UNUserNotificationCenter.current()
-    private let notificationIdentifier = "worry-time-reminder"
+    private let notificationIdentifier = "review-time-reminder"
 
     private init() {}
 
@@ -31,16 +31,16 @@ class NotificationService {
 
     // MARK: - Scheduling
 
-    func scheduleWorryTimeReminder(at time: Date) {
+    func scheduleReviewTimeReminder(at time: Date) {
         // Cancel existing notification first
-        cancelWorryTimeReminder()
+        cancelReviewTimeReminder()
 
         // Create notification content
         let content = UNMutableNotificationContent()
-        content.title = "Worry Time"
-        content.body = "Time to review and reframe your captured thoughts"
+        content.title = "Daily Review"
+        content.body = "Time to reflect on your day's meals and eating patterns"
         content.sound = .default
-        content.categoryIdentifier = "WORRY_TIME"
+        content.categoryIdentifier = "REVIEW_TIME"
 
         // Extract hour and minute from the date
         let calendar = Calendar.current
@@ -61,14 +61,14 @@ class NotificationService {
             if let error = error {
                 print("Error scheduling notification: \(error)")
             } else {
-                print("Worry time reminder scheduled for \(components.hour ?? 0):\(String(format: "%02d", components.minute ?? 0))")
+                print("Review time reminder scheduled for \(components.hour ?? 0):\(String(format: "%02d", components.minute ?? 0))")
             }
         }
     }
 
-    func cancelWorryTimeReminder() {
+    func cancelReviewTimeReminder() {
         notificationCenter.removePendingNotificationRequests(withIdentifiers: [notificationIdentifier])
-        print("Worry time reminder cancelled")
+        print("Review time reminder cancelled")
     }
 
     // MARK: - Testing

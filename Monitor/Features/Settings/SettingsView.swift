@@ -2,7 +2,7 @@
 //  SettingsView.swift
 //  Monitor
 //
-//  Configure worry time notifications and review preferences
+//  Configure notifications, care team, and app preferences
 //
 
 import SwiftUI
@@ -98,7 +98,7 @@ struct SettingsForm: View {
                     if newValue {
                         requestNotificationPermission()
                     } else {
-                        NotificationService.shared.cancelWorryTimeReminder()
+                        NotificationService.shared.cancelReviewTimeReminder()
                     }
                 }
 
@@ -112,11 +112,6 @@ struct SettingsForm: View {
                         "Evening Check-In",
                         isOn: $userSettings.eveningCheckInEnabled
                     )
-
-                    Toggle(
-                        "Supportive Messages",
-                        isOn: $userSettings.supportiveMessagesEnabled
-                    )
                 }
             } header: {
                 Text("Notifications")
@@ -129,39 +124,43 @@ struct SettingsForm: View {
 
             // Care Team Section
             Section {
-                TextField("Therapist Name", text: Binding(
-                    get: { userSettings.therapistName ?? "" },
-                    set: { userSettings.therapistName = $0.isEmpty ? nil : $0 }
-                ))
+                NavigationLink {
+                    CareTeamView(settings: userSettings)
+                } label: {
+                    HStack {
+                        Label("Care Team", systemImage: "person.2.fill")
+                            .foregroundColor(Theme.Colors.text)
+                        Spacer()
+                        if !userSettings.careTeam.isEmpty {
+                            Text("\(userSettings.careTeam.count)")
+                                .foregroundColor(Theme.Colors.textSecondary)
+                        }
+                    }
+                }
 
-                TextField("Therapist Phone", text: Binding(
-                    get: { userSettings.therapistPhone ?? "" },
-                    set: { userSettings.therapistPhone = $0.isEmpty ? nil : $0 }
-                ))
-                .keyboardType(.phonePad)
+                if userSettings.careTeam.isEmpty {
+                    // Show quick emergency contact fields when no care team
+                    TextField("Emergency Contact", text: Binding(
+                        get: { userSettings.emergencyContact ?? "" },
+                        set: { userSettings.emergencyContact = $0.isEmpty ? nil : $0 }
+                    ))
 
-                TextField("Therapist Email", text: Binding(
-                    get: { userSettings.therapistEmail ?? "" },
-                    set: { userSettings.therapistEmail = $0.isEmpty ? nil : $0 }
-                ))
-                .keyboardType(.emailAddress)
-                .textInputAutocapitalization(.never)
-
-                TextField("Emergency Contact Name", text: Binding(
-                    get: { userSettings.emergencyContact ?? "" },
-                    set: { userSettings.emergencyContact = $0.isEmpty ? nil : $0 }
-                ))
-
-                TextField("Emergency Contact Phone", text: Binding(
-                    get: { userSettings.emergencyPhone ?? "" },
-                    set: { userSettings.emergencyPhone = $0.isEmpty ? nil : $0 }
-                ))
-                .keyboardType(.phonePad)
+                    TextField("Emergency Phone", text: Binding(
+                        get: { userSettings.emergencyPhone ?? "" },
+                        set: { userSettings.emergencyPhone = $0.isEmpty ? nil : $0 }
+                    ))
+                    .keyboardType(.phonePad)
+                }
             } header: {
-                Text("Care Team")
+                Text("Care Team & Emergency Contacts")
             } footer: {
-                Text("Optional: Store contact information for your therapist and emergency support. This information stays private on your device.")
-                    .font(Theme.Typography.footnote)
+                if userSettings.careTeam.isEmpty {
+                    Text("Add your care team members (dietitians, therapists, doctors) to keep their contact information handy. All information stays private on your device.")
+                        .font(Theme.Typography.footnote)
+                } else {
+                    Text("Your care team information is stored privately on your device and can be included in PDF exports.")
+                        .font(Theme.Typography.footnote)
+                }
             }
 
             // Display Preferences Section
@@ -369,7 +368,7 @@ struct SettingsForm: View {
             }
             Button("Not Now", role: .cancel) {}
         } message: {
-            Text("To receive reminders for your worry time, please enable notifications in Settings > Monitor > Notifications.")
+            Text("To receive reminders for your daily review, please enable notifications in Settings > Monitor > Notifications.")
         }
     }
 

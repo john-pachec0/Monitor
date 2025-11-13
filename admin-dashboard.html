@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Untwist Feedback Dashboard</title>
+  <title>Monitor Feedback Dashboard</title>
   <style>
     * {
       margin: 0;
@@ -194,7 +194,7 @@
 <body>
   <div class="container">
     <header>
-      <h1>Untwist Feedback Dashboard</h1>
+      <h1>Monitor Feedback Dashboard</h1>
       <p style="color: #8C8480; margin-top: 8px;">Monitor and manage user feedback</p>
     </header>
 
@@ -236,16 +236,16 @@
 
   <script>
     // CONFIGURATION
-    const API_ENDPOINT = 'https://api.untwist.app/admin/feedback';
+    const API_ENDPOINT = 'https://api.Monitor.app/admin/feedback';
 
     let allFeedback = [];
 
     // Get API key from prompt on first load
-    let apiKey = localStorage.getItem('untwist_admin_api_key');
+    let apiKey = localStorage.getItem('Monitor_admin_api_key');
     if (!apiKey) {
       apiKey = prompt('Enter your API key:');
       if (apiKey) {
-        localStorage.setItem('untwist_admin_api_key', apiKey);
+        localStorage.setItem('Monitor_admin_api_key', apiKey);
       }
     }
 
@@ -388,7 +388,7 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `untwist-feedback-${new Date().toISOString().slice(0,10)}.csv`;
+      a.download = `Monitor-feedback-${new Date().toISOString().slice(0,10)}.csv`;
       a.click();
     }
 

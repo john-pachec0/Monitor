@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide walks you through hosting `privacy.html` and `terms.html` on `untwist.app` using AWS S3 + CloudFront.
+This guide walks you through hosting `privacy.html` and `terms.html` on `Monitor.app` using AWS S3 + CloudFront.
 
 **Total Cost**: ~$0.50-1/month
 **Setup Time**: 30-45 minutes
@@ -13,9 +13,9 @@ This guide walks you through hosting `privacy.html` and `terms.html` on `untwist
 ## Architecture
 
 ```
-User Request: https://untwist.app/privacy
+User Request: https://Monitor.app/privacy
     ↓
-Route 53 DNS (untwist.app → CloudFront)
+Route 53 DNS (Monitor.app → CloudFront)
     ↓
 CloudFront Distribution (CDN + HTTPS + caching)
     ↓
@@ -27,7 +27,7 @@ S3 Bucket (stores privacy.html, terms.html)
 ## Prerequisites
 
 1. AWS Account (you already have one for your feedback API)
-2. Domain `untwist.app` registered (where is it registered?)
+2. Domain `Monitor.app` registered (where is it registered?)
 3. AWS CLI installed (optional, but helpful)
 
 ---
@@ -41,7 +41,7 @@ S3 Bucket (stores privacy.html, terms.html)
 
 2. **Create Bucket**
    - Click "Create bucket"
-   - **Bucket name**: `untwist-app-legal-docs` (must be globally unique)
+   - **Bucket name**: `Monitor-app-legal-docs` (must be globally unique)
    - **Region**: `us-east-1` (same as your existing infrastructure)
    - **Block Public Access**: UNCHECK "Block all public access"
      - ⚠️ You'll get a warning—this is expected. We need public access for the HTML files.
@@ -81,7 +81,7 @@ S3 Bucket (stores privacy.html, terms.html)
 
 5. **Test Direct S3 Access**
    - Click on `privacy.html` in your bucket
-   - Copy the "Object URL" (e.g., `https://untwist-app-legal-docs.s3.amazonaws.com/privacy.html`)
+   - Copy the "Object URL" (e.g., `https://Monitor-app-legal-docs.s3.amazonaws.com/privacy.html`)
    - Open it in a browser—you should see your privacy policy
 
 ---
@@ -99,9 +99,9 @@ S3 Bucket (stores privacy.html, terms.html)
    - Click "Next"
 
 3. **Domain Names**
-   - **Fully qualified domain name**: `untwist.app`
+   - **Fully qualified domain name**: `Monitor.app`
    - Click "Add another name to this certificate"
-   - Add: `*.untwist.app` (wildcard for subdomains)
+   - Add: `*.Monitor.app` (wildcard for subdomains)
    - Click "Next"
 
 4. **Validation Method**
@@ -125,7 +125,7 @@ S3 Bucket (stores privacy.html, terms.html)
    - Click "Create distribution"
 
 3. **Origin Settings**
-   - **Origin domain**: Select your S3 bucket from dropdown (e.g., `untwist-app-legal-docs.s3.amazonaws.com`)
+   - **Origin domain**: Select your S3 bucket from dropdown (e.g., `Monitor-app-legal-docs.s3.amazonaws.com`)
    - **Origin path**: Leave empty
    - **Name**: Auto-filled (leave as-is)
    - **Origin access**: Choose "Public"
@@ -138,7 +138,7 @@ S3 Bucket (stores privacy.html, terms.html)
 
 5. **Settings**
    - **Price class**: "Use all edge locations" (or "Use only North America and Europe" to save ~$0.10/month)
-   - **Alternate domain names (CNAMEs)**: Add `untwist.app`
+   - **Alternate domain names (CNAMEs)**: Add `Monitor.app`
    - **Custom SSL certificate**: Select the ACM certificate you created in Phase 2
    - **Default root object**: Leave empty (we'll use CloudFront Functions for routing)
 
@@ -212,7 +212,7 @@ We need to route `/privacy` → `/privacy.html` and `/terms` → `/terms.html`.
    https://console.aws.amazon.com/route53/
 
 2. **Select Hosted Zone**
-   - Click on `untwist.app`
+   - Click on `Monitor.app`
 
 3. **Create A Record**
    - Click "Create record"
@@ -226,7 +226,7 @@ We need to route `/privacy` → `/privacy.html` and `/terms` → `/terms.html`.
 #### If using another registrar (Namecheap, Google Domains, etc.):
 
 1. Log into your domain registrar
-2. Find DNS settings for `untwist.app`
+2. Find DNS settings for `Monitor.app`
 3. Add a CNAME record:
    - **Host**: `@` (or leave empty for root domain)
    - **Value**: Your CloudFront distribution domain (e.g., `d1234abcdef8.cloudfront.net`)
@@ -234,7 +234,7 @@ We need to route `/privacy` → `/privacy.html` and `/terms` → `/terms.html`.
 
    ⚠️ **Note**: Some registrars don't allow CNAME on root domain. If that's the case:
    - Use an A record pointing to CloudFront's IP (you'll need to look this up)
-   - OR use a subdomain like `www.untwist.app` or `legal.untwist.app`
+   - OR use a subdomain like `www.Monitor.app` or `legal.Monitor.app`
 
 ---
 
@@ -243,14 +243,14 @@ We need to route `/privacy` → `/privacy.html` and `/terms` → `/terms.html`.
 1. **Wait for DNS Propagation** (5-60 minutes)
 
 2. **Test URLs**
-   - Open: `https://untwist.app/privacy`
-   - Open: `https://untwist.app/terms`
+   - Open: `https://Monitor.app/privacy`
+   - Open: `https://Monitor.app/terms`
    - Verify HTTPS is working (look for padlock icon)
    - Test on mobile device
 
 3. **Verify in App**
-   - Update your app's Privacy Policy URL to: `https://untwist.app/privacy`
-   - Update your app's Terms URL to: `https://untwist.app/terms`
+   - Update your app's Privacy Policy URL to: `https://Monitor.app/privacy`
+   - Update your app's Terms URL to: `https://Monitor.app/terms`
    - Test links in your iOS app
 
 ---
@@ -272,7 +272,7 @@ When you need to update your legal documents:
 
 ```bash
 # Upload new file
-aws s3 cp privacy.html s3://untwist-app-legal-docs/privacy.html
+aws s3 cp privacy.html s3://Monitor-app-legal-docs/privacy.html
 
 # Invalidate CloudFront cache (immediate update)
 aws cloudfront create-invalidation \
@@ -297,7 +297,7 @@ If you need immediate updates:
 ## Cost Breakdown
 
 ### One-Time Costs
-- **Domain registration**: $12-15/year (you already own `untwist.app`)
+- **Domain registration**: $12-15/year (you already own `Monitor.app`)
 - **SSL Certificate (ACM)**: FREE ✅
 
 ### Monthly Costs
@@ -326,7 +326,7 @@ If you want a FREE option and don't mind another service:
 
 ### Pros:
 - **Free** (no cost at all)
-- Custom domain support (untwist.app)
+- Custom domain support (Monitor.app)
 - Free SSL certificate
 - Git-based updates (just push to update)
 - Simple to set up
@@ -340,18 +340,18 @@ If you want a FREE option and don't mind another service:
 
 1. **Create GitHub Repo**
    ```bash
-   cd /Users/japacheco/ios-development/Untwist/web
+   cd /Users/japacheco/ios-development/Monitor/web
    git init
    git add privacy.html terms.html
    git commit -m "Add legal documents"
-   git remote add origin https://github.com/YOUR-USERNAME/untwist-legal.git
+   git remote add origin https://github.com/YOUR-USERNAME/Monitor-legal.git
    git push -u origin main
    ```
 
 2. **Enable GitHub Pages**
    - Go to repo settings → Pages
    - Source: Deploy from `main` branch
-   - Custom domain: `untwist.app`
+   - Custom domain: `Monitor.app`
 
 3. **Update DNS**
    - Add A records for GitHub Pages IPs:
@@ -360,11 +360,11 @@ If you want a FREE option and don't mind another service:
      - `185.199.110.153`
      - `185.199.111.153`
 
-4. **Test**: Visit `https://untwist.app/privacy.html` after DNS propagates
+4. **Test**: Visit `https://Monitor.app/privacy.html` after DNS propagates
 
 **Note**: GitHub Pages serves files with `.html` extension, so you'd link to:
-- `https://untwist.app/privacy.html`
-- `https://untwist.app/terms.html`
+- `https://Monitor.app/privacy.html`
+- `https://Monitor.app/terms.html`
 
 ---
 
@@ -388,7 +388,7 @@ If you want a FREE option and don't mind another service:
 ### Issue: DNS not resolving
 
 **Cause**: DNS propagation delay or incorrect records
-**Solution**: Wait up to 48 hours, check records with `dig untwist.app`
+**Solution**: Wait up to 48 hours, check records with `dig Monitor.app`
 
 ### Issue: `/privacy` shows 404, but `/privacy.html` works
 
@@ -421,12 +421,12 @@ If you want a FREE option and don't mind another service:
 
 ### Deploy Script
 
-Create `/Users/japacheco/ios-development/Untwist/web/deploy.sh`:
+Create `/Users/japacheco/ios-development/Monitor/web/deploy.sh`:
 
 ```bash
 #!/bin/bash
 
-BUCKET_NAME="untwist-app-legal-docs"
+BUCKET_NAME="Monitor-app-legal-docs"
 DISTRIBUTION_ID="YOUR-CLOUDFRONT-DISTRIBUTION-ID"
 
 echo "Uploading files to S3..."
@@ -453,8 +453,8 @@ chmod +x deploy.sh
 
 1. **Deploy** using Phase 1-6 above
 2. **Update iOS App** with new URLs:
-   - Privacy Policy: `https://untwist.app/privacy`
-   - Terms of Service: `https://untwist.app/terms`
+   - Privacy Policy: `https://Monitor.app/privacy`
+   - Terms of Service: `https://Monitor.app/terms`
 3. **Test** thoroughly before App Store submission
 4. **Monitor Costs** in AWS Cost Explorer after 30 days
 

@@ -11,7 +11,7 @@ Use this checklist to track your progress when setting up static document hostin
 - [ ] Verify content accuracy (dates, contact info, etc.)
 - [ ] Test mobile rendering (Safari on iPhone)
 - [ ] Test dark mode (System Preferences → Appearance → Dark)
-- [ ] Confirm domain ownership (`untwist.app`)
+- [ ] Confirm domain ownership (`Monitor.app`)
 - [ ] Know where domain is registered (Route 53, Namecheap, etc.)
 - [ ] AWS account access confirmed
 - [ ] AWS CLI installed (optional, run: `aws --version`)
@@ -24,7 +24,7 @@ Use this checklist to track your progress when setting up static document hostin
 
 - [ ] Log into AWS Console
 - [ ] Navigate to S3 service
-- [ ] Create new bucket: `untwist-app-legal-docs`
+- [ ] Create new bucket: `Monitor-app-legal-docs`
 - [ ] Region: `us-east-1` (Virginia)
 - [ ] Uncheck "Block all public access"
 - [ ] Upload `privacy.html`
@@ -33,16 +33,16 @@ Use this checklist to track your progress when setting up static document hostin
 - [ ] Test S3 Object URLs (click files, copy URLs, open in browser)
 
 **S3 URLs should work**:
-- `https://untwist-app-legal-docs.s3.amazonaws.com/privacy.html`
-- `https://untwist-app-legal-docs.s3.amazonaws.com/terms.html`
+- `https://Monitor-app-legal-docs.s3.amazonaws.com/privacy.html`
+- `https://Monitor-app-legal-docs.s3.amazonaws.com/terms.html`
 
 ### Phase 2: SSL Certificate (5 minutes + wait)
 
 - [ ] Navigate to AWS Certificate Manager (ACM)
 - [ ] **IMPORTANT**: Confirm region is `us-east-1`
 - [ ] Request public certificate
-- [ ] Add domain: `untwist.app`
-- [ ] Add wildcard: `*.untwist.app`
+- [ ] Add domain: `Monitor.app`
+- [ ] Add wildcard: `*.Monitor.app`
 - [ ] Choose DNS validation
 - [ ] Create DNS validation records (auto or manual)
 - [ ] Wait for certificate status: "Issued" (5-30 minutes)
@@ -58,7 +58,7 @@ Use this checklist to track your progress when setting up static document hostin
 - [ ] Viewer protocol policy: "Redirect HTTP to HTTPS"
 - [ ] Allowed HTTP methods: "GET, HEAD"
 - [ ] Cache policy: "CachingOptimized"
-- [ ] Alternate domain names (CNAMEs): `untwist.app`
+- [ ] Alternate domain names (CNAMEs): `Monitor.app`
 - [ ] Custom SSL certificate: Select your ACM certificate
 - [ ] Click "Create distribution"
 - [ ] Wait for status: "Enabled" (5-15 minutes)
@@ -84,7 +84,7 @@ Use this checklist to track your progress when setting up static document hostin
 
 #### If using Route 53:
 - [ ] Navigate to Route 53 → Hosted zones
-- [ ] Select `untwist.app`
+- [ ] Select `Monitor.app`
 - [ ] Click "Create record"
 - [ ] Record name: (empty for root domain)
 - [ ] Record type: A
@@ -95,19 +95,19 @@ Use this checklist to track your progress when setting up static document hostin
 
 #### If using another registrar:
 - [ ] Log into domain registrar
-- [ ] Find DNS settings for `untwist.app`
+- [ ] Find DNS settings for `Monitor.app`
 - [ ] Add CNAME or A record pointing to CloudFront domain
 - [ ] Wait for DNS propagation (5-60 minutes)
 
-**Check DNS propagation**: `dig untwist.app` or https://dnschecker.org
+**Check DNS propagation**: `dig Monitor.app` or https://dnschecker.org
 
 ### Phase 6: Testing (5 minutes)
 
-- [ ] Open: `https://untwist.app/privacy`
+- [ ] Open: `https://Monitor.app/privacy`
 - [ ] Verify: HTTPS padlock icon present
 - [ ] Verify: Content loads correctly
 - [ ] Verify: No certificate warnings
-- [ ] Open: `https://untwist.app/terms`
+- [ ] Open: `https://Monitor.app/terms`
 - [ ] Verify: HTTPS padlock icon present
 - [ ] Verify: Content loads correctly
 - [ ] Test on mobile device (iPhone Safari)
@@ -130,9 +130,9 @@ Use this checklist to track your progress when setting up static document hostin
 
 ## iOS App Updates
 
-- [ ] Open Untwist Xcode project
-- [ ] Update Privacy Policy URL to: `https://untwist.app/privacy`
-- [ ] Update Terms of Service URL to: `https://untwist.app/terms`
+- [ ] Open Monitor Xcode project
+- [ ] Update Privacy Policy URL to: `https://Monitor.app/privacy`
+- [ ] Update Terms of Service URL to: `https://Monitor.app/terms`
 - [ ] Test links in iOS app (Simulator)
 - [ ] Test links on physical device
 - [ ] Verify URLs open correctly in Safari
@@ -145,8 +145,8 @@ Use this checklist to track your progress when setting up static document hostin
 - [ ] Log into App Store Connect
 - [ ] Navigate to your app
 - [ ] Go to "App Information" section
-- [ ] Update "Privacy Policy URL": `https://untwist.app/privacy`
-- [ ] Update "Terms of Service URL": `https://untwist.app/terms` (if applicable)
+- [ ] Update "Privacy Policy URL": `https://Monitor.app/privacy`
+- [ ] Update "Terms of Service URL": `https://Monitor.app/terms` (if applicable)
 - [ ] Save changes
 - [ ] Test URLs from App Store Connect (click to verify)
 
@@ -190,7 +190,7 @@ Use this checklist to track your progress when setting up static document hostin
 - [ ] Edit `privacy.html` or `terms.html` locally
 - [ ] Review changes in browser
 - [ ] Run `./deploy.sh` to upload
-- [ ] Verify changes live on `untwist.app`
+- [ ] Verify changes live on `Monitor.app`
 - [ ] Test on mobile device
 - [ ] Update "Last Updated" date in app (if needed)
 
@@ -224,7 +224,7 @@ See `DEPLOYMENT_GUIDE.md` → Troubleshooting section for detailed help.
 
 If something goes wrong:
 
-1. **S3 Issue**: Re-upload files from `/Users/japacheco/ios-development/Untwist/web/`
+1. **S3 Issue**: Re-upload files from `/Users/japacheco/ios-development/Monitor/web/`
 2. **CloudFront Issue**: Delete and recreate distribution
 3. **DNS Issue**: Revert DNS records to previous values
 4. **Certificate Issue**: Request new certificate, update CloudFront
@@ -237,8 +237,8 @@ If something goes wrong:
 
 You're done when:
 
-✅ `https://untwist.app/privacy` loads correctly
-✅ `https://untwist.app/terms` loads correctly
+✅ `https://Monitor.app/privacy` loads correctly
+✅ `https://Monitor.app/terms` loads correctly
 ✅ HTTPS works (padlock icon)
 ✅ Mobile rendering is perfect
 ✅ Dark mode works

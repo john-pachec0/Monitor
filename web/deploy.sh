@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ###############################################################################
-# Untwist Legal Documents Deployment Script
+# Monitor Legal Documents Deployment Script
 ###############################################################################
 #
 # This script uploads privacy.html and terms.html to S3 and invalidates
@@ -9,7 +9,7 @@
 #
 # Prerequisites:
 # - AWS CLI installed and configured
-# - S3 bucket created (e.g., untwist-app-legal-docs)
+# - S3 bucket created (e.g., Monitor-app-legal-docs)
 # - CloudFront distribution created
 #
 # Usage:
@@ -20,7 +20,7 @@
 set -e  # Exit on error
 
 # Configuration (CHANGE THESE VALUES)
-BUCKET_NAME="untwist-app-legal-docs"
+BUCKET_NAME="Monitor-app-legal-docs"
 DISTRIBUTION_ID=""  # Add your CloudFront distribution ID here (e.g., E1234ABCDEF)
 AWS_REGION="us-east-1"
 
@@ -101,6 +101,6 @@ echo ""
 echo -e "${GREEN}🎉 Deployment complete!${NC}"
 echo ""
 echo "Test your deployment:"
-echo "  https://untwist.app/privacy"
-echo "  https://untwist.app/terms"
+echo "  https://Monitor.app/privacy"
+echo "  https://Monitor.app/terms"
 echo ""

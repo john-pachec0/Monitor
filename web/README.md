@@ -1,11 +1,11 @@
-# Untwist Legal Documents
+# Monitor Legal Documents
 
 Static HTML hosting for Privacy Policy and Terms of Service, required by Apple App Store.
 
 ## Files
 
-- **`privacy.html`** - Privacy Policy (hosted at `https://untwist.app/privacy`)
-- **`terms.html`** - Terms of Service (hosted at `https://untwist.app/terms`)
+- **`privacy.html`** - Privacy Policy (hosted at `https://Monitor.app/privacy`)
+- **`terms.html`** - Terms of Service (hosted at `https://Monitor.app/terms`)
 - **`deploy.sh`** - Deployment script for AWS S3 + CloudFront
 - **`DEPLOYMENT_GUIDE.md`** - Comprehensive setup instructions (START HERE)
 - **`QUICK_START.md`** - Quick reference guide
@@ -25,7 +25,7 @@ When you need to update the legal documents:
 #### Option 1: Automated Deploy (Recommended)
 
 ```bash
-cd /Users/japacheco/ios-development/Untwist/web
+cd /Users/japacheco/ios-development/Monitor/web
 ./deploy.sh
 ```
 
@@ -43,8 +43,8 @@ This will:
 ### Testing
 
 After deployment, verify:
-- https://untwist.app/privacy
-- https://untwist.app/terms
+- https://Monitor.app/privacy
+- https://Monitor.app/terms
 
 Check:
 - ✅ HTTPS works (padlock icon)
@@ -55,7 +55,7 @@ Check:
 ## Design Notes
 
 The HTML files use:
-- **Warm color palette** matching the Untwist app (`#E07856` primary)
+- **Warm color palette** matching the Monitor app (`#E07856` primary)
 - **Responsive design** (mobile-first)
 - **Dark mode support** (automatic via `prefers-color-scheme`)
 - **Clean typography** (Apple system fonts)
@@ -64,8 +64,8 @@ The HTML files use:
 ## Markdown Source
 
 Original markdown files (for editing):
-- `/Users/japacheco/ios-development/Untwist/PRIVACY_POLICY.md`
-- `/Users/japacheco/ios-development/Untwist/TERMS_OF_SERVICE.md`
+- `/Users/japacheco/ios-development/Monitor/PRIVACY_POLICY.md`
+- `/Users/japacheco/ios-development/Monitor/TERMS_OF_SERVICE.md`
 
 If you update the markdown files, regenerate HTML with your preferred tool or ask Claude to update the HTML files.
 

@@ -1,9 +1,9 @@
-# Terraform Variables for Untwist Feedback Infrastructure
+# Terraform Variables for Monitor Feedback Infrastructure
 
 variable "project_name" {
   description = "Project name used for resource naming"
   type        = string
-  default     = "untwist"
+  default     = "Monitor"
 }
 
 variable "environment" {
@@ -19,9 +19,9 @@ variable "aws_region" {
 }
 
 variable "domain_name" {
-  description = "Root domain name (e.g., untwist.app)"
+  description = "Root domain name (e.g., Monitor.app)"
   type        = string
-  default     = "untwist.app"
+  default     = "Monitor.app"
 }
 
 variable "api_subdomain" {
@@ -94,7 +94,7 @@ variable "tags" {
   description = "Common tags to apply to all resources"
   type        = map(string)
   default = {
-    Project   = "Untwist"
+    Project   = "Monitor"
     ManagedBy = "Terraform"
     Purpose   = "Feedback API"
   }

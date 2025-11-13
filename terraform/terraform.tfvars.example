@@ -2,18 +2,18 @@
 # Copy this file to terraform.tfvars and fill in your values
 
 # Project Configuration
-project_name = "untwist"
+project_name = "Monitor"
 environment  = "prod"
 aws_region   = "us-east-1" # Must be us-east-1 for ACM certificates with API Gateway
 
 # Domain Configuration
-domain_name   = "untwist.app"
+domain_name   = "Monitor.app"
 api_subdomain = "api"
 use_route53   = false # Set to true if domain DNS is in Route 53, false for Namecheap
 
 # Email Configuration (REQUIRED)
 notification_email = "your-email@example.com"  # Email to receive feedback notifications
-from_email         = "noreply@untwist.app"     # Email address for sending (must be verified in SES)
+from_email         = "noreply@Monitor.app"     # Email address for sending (must be verified in SES)
 
 # API Gateway Configuration
 enable_api_key = true  # Require API key for requests (recommended)
@@ -36,7 +36,7 @@ enable_ses_notifications = false # Enable SNS notifications for email bounces
 
 # Tags
 tags = {
-  Project     = "Untwist"
+  Project     = "Monitor"
   ManagedBy   = "Terraform"
   Purpose     = "Feedback API"
   Environment = "prod"

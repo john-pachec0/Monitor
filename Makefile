@@ -1,11 +1,11 @@
-# Untwist Project Makefile
+# Monitor Project Makefile
 # Common development tasks
 
 .PHONY: help admin-dash admin-dash-open clean-admin-key terraform-output-keys
 
 # Default target
 help:
-	@echo "Untwist Development Commands"
+	@echo "Monitor Development Commands"
 	@echo "============================"
 	@echo ""
 	@echo "Admin Dashboard:"
@@ -40,7 +40,7 @@ clean-admin-key:
 	@echo "1. Open the admin dashboard in your browser"
 	@echo "2. Open Developer Tools (Cmd+Option+I)"
 	@echo "3. Go to Console tab"
-	@echo "4. Run: localStorage.removeItem('untwist_admin_api_key')"
+	@echo "4. Run: localStorage.removeItem('Monitor_admin_api_key')"
 	@echo "5. Refresh the page"
 
 # Show API keys from Terraform

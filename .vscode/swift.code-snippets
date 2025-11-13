@@ -1,6 +1,5 @@
 {
-  // SwiftUI + SwiftData Snippets for Untwist
-
+  // SwiftUI + SwiftData Snippets for Monitor
   "SwiftUI View": {
     "prefix": "view",
     "body": [
@@ -12,7 +11,6 @@
     ],
     "description": "SwiftUI View template"
   },
-
   "SwiftData Query": {
     "prefix": "query",
     "body": [
@@ -20,7 +18,6 @@
     ],
     "description": "SwiftData query property"
   },
-
   "Bindable Model": {
     "prefix": "bindable",
     "body": [
@@ -28,7 +25,6 @@
     ],
     "description": "Bindable model property"
   },
-
   "Theme Card Style": {
     "prefix": "card",
     "body": [
@@ -42,9 +38,8 @@
       "    y: Theme.Shadows.card.y",
       ")"
     ],
-    "description": "Untwist card styling"
+    "description": "Monitor card styling"
   },
-
   "Theme Button Style": {
     "prefix": "button",
     "body": [
@@ -55,9 +50,8 @@
       "}",
       ".primaryButtonStyle()"
     ],
-    "description": "Untwist primary button"
+    "description": "Monitor primary button"
   },
-
   "Navigation Link": {
     "prefix": "navlink",
     "body": [
@@ -68,7 +62,6 @@
     ],
     "description": "SwiftUI NavigationLink"
   },
-
   "State Property": {
     "prefix": "state",
     "body": [
@@ -76,7 +69,6 @@
     ],
     "description": "SwiftUI State property"
   },
-
   "Environment Property": {
     "prefix": "env",
     "body": [
@@ -84,31 +76,27 @@
     ],
     "description": "SwiftUI Environment property"
   },
-
   "Theme Typography": {
     "prefix": "font",
     "body": [
       ".font(Theme.Typography.${1|largeTitle,title,title2,title3,headline,subheadline,body,callout,caption,footnote|})"
     ],
-    "description": "Untwist theme typography"
+    "description": "Monitor theme typography"
   },
-
   "Theme Colors": {
     "prefix": "color",
     "body": [
       "Theme.Colors.${1|primary,secondary,text,textSecondary,textTertiary,background,cardBackground,error,warning,success|}"
     ],
-    "description": "Untwist theme colors"
+    "description": "Monitor theme colors"
   },
-
   "Theme Spacing": {
     "prefix": "spacing",
     "body": [
       "Theme.Spacing.${1|xs,sm,md,lg,xl,xxl|}"
     ],
-    "description": "Untwist theme spacing"
+    "description": "Monitor theme spacing"
   },
-
   "VStack with Theme Spacing": {
     "prefix": "vstack",
     "body": [
@@ -118,7 +106,6 @@
     ],
     "description": "VStack with theme spacing"
   },
-
   "HStack with Theme Spacing": {
     "prefix": "hstack",
     "body": [
@@ -128,7 +115,6 @@
     ],
     "description": "HStack with theme spacing"
   },
-
   "Alert": {
     "prefix": "alert",
     "body": [
@@ -143,7 +129,6 @@
     ],
     "description": "SwiftUI Alert modifier"
   },
-
   "Sheet": {
     "prefix": "sheet",
     "body": [
@@ -153,7 +138,6 @@
     ],
     "description": "SwiftUI Sheet modifier"
   },
-
   "Navigation Destination": {
     "prefix": "navdest",
     "body": [
@@ -163,7 +147,6 @@
     ],
     "description": "SwiftUI navigation destination"
   },
-
   "SwiftData Model": {
     "prefix": "model",
     "body": [
@@ -178,7 +161,6 @@
     ],
     "description": "SwiftData model class"
   },
-
   "Preview": {
     "prefix": "preview",
     "body": [

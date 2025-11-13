@@ -5,11 +5,11 @@
 
 ## Acceptance of Terms
 
-By downloading, installing, or using Untwist ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.
+By downloading, installing, or using Monitor ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.
 
 ## Description of Service
 
-Untwist is a personal journaling and thought-reframing tool based on Cognitive Behavioral Therapy (CBT) techniques. The App helps you:
+Monitor is a personal journaling and thought-reframing tool based on Cognitive Behavioral Therapy (CBT) techniques. The App helps you:
 - Capture anxious thoughts when they occur
 - Schedule time to review and reframe those thoughts
 - Learn about cognitive distortions
@@ -19,14 +19,14 @@ Untwist is a personal journaling and thought-reframing tool based on Cognitive B
 
 ### NOT A SUBSTITUTE FOR PROFESSIONAL CARE
 
-**Untwist is NOT:**
+**Monitor is NOT:**
 - A medical device or diagnostic tool
 - A replacement for therapy or professional mental health care
 - Clinical advice or treatment
 - A crisis intervention service
 - Monitored by healthcare professionals
 
-**Untwist IS:**
+**Monitor IS:**
 - A self-help tool for personal use
 - Based on established CBT principles
 - Designed to complement professional care (not replace it)
@@ -51,14 +51,14 @@ If you are experiencing any of the following, **please seek professional help im
 ### Your Responsibility
 
 You are responsible for:
-- Determining whether Untwist is appropriate for your situation
+- Determining whether Monitor is appropriate for your situation
 - Seeking professional medical advice when needed
-- Not relying solely on Untwist for mental health treatment
+- Not relying solely on Monitor for mental health treatment
 - Using the App as a complement to (not replacement for) professional care
 
 ## No Medical Advice
 
-Nothing in Untwist constitutes medical, psychiatric, psychological, or therapeutic advice. The App provides general information about CBT techniques but does not provide personalized medical advice.
+Nothing in Monitor constitutes medical, psychiatric, psychological, or therapeutic advice. The App provides general information about CBT techniques but does not provide personalized medical advice.
 
 **Always consult a licensed mental health professional:**
 - Before starting any new mental health practice
@@ -78,7 +78,7 @@ Your privacy is paramount. Please review our [Privacy Policy](PRIVACY_POLICY.md)
 
 ## User Conduct
 
-You agree to use Untwist:
+You agree to use Monitor:
 - **For personal, non-commercial use only**
 - In compliance with all applicable laws
 - Not to harm, harass, or violate rights of others
@@ -86,17 +86,17 @@ You agree to use Untwist:
 
 You agree NOT to:
 - Use the App to provide professional mental health services to others
-- Represent yourself as a mental health professional using Untwist
+- Represent yourself as a mental health professional using Monitor
 - Share your device's data with others without understanding the privacy implications
 - Use the App in any way that could harm yourself or others
 
 ## Intellectual Property
 
 ### Ownership
-Untwist and all its content (UI, text, graphics, code, designs) are owned by John Pacheco and protected by copyright, trademark, and other intellectual property laws.
+Monitor and all its content (UI, text, graphics, code, designs) are owned by John Pacheco and protected by copyright, trademark, and other intellectual property laws.
 
 ### License Grant
-We grant you a limited, non-exclusive, non-transferable, revocable license to use Untwist for personal, non-commercial purposes.
+We grant you a limited, non-exclusive, non-transferable, revocable license to use Monitor for personal, non-commercial purposes.
 
 ### What You Can Do:
 - Use the App on your personal devices
@@ -110,13 +110,13 @@ We grant you a limited, non-exclusive, non-transferable, revocable license to us
 - Sell, rent, lease, or sublicense the App
 
 ### Your Content
-You retain all rights to the thoughts, reframes, and content you create in Untwist. We don't claim any ownership over your personal data.
+You retain all rights to the thoughts, reframes, and content you create in Monitor. We don't claim any ownership over your personal data.
 
-If you send us feedback, you grant us the right to use that feedback to improve Untwist, but we won't share your personal information publicly.
+If you send us feedback, you grant us the right to use that feedback to improve Monitor, but we won't share your personal information publicly.
 
 ## Educational Content
 
-The educational content about cognitive distortions and CBT techniques in Untwist is:
+The educational content about cognitive distortions and CBT techniques in Monitor is:
 - Based on established psychological research and literature
 - Provided for informational purposes only
 - Not personalized advice or treatment
@@ -131,7 +131,7 @@ We strive for accuracy but make no guarantees that the content is:
 ## App Availability and Changes
 
 ### Availability
-We strive to keep Untwist available 24/7, but we make no guarantees. The App may be:
+We strive to keep Monitor available 24/7, but we make no guarantees. The App may be:
 - Temporarily unavailable due to maintenance
 - Modified or updated without notice
 - Discontinued at any time
@@ -161,13 +161,13 @@ We disclaim all warranties, express or implied, including but not limited to:
 - **Non-infringement** - We don't guarantee it doesn't violate anyone's rights
 - **Accuracy** - We don't guarantee the content is error-free
 - **Reliability** - We don't guarantee the App won't crash or have bugs
-- **Results** - We don't guarantee using Untwist will improve your mental health
+- **Results** - We don't guarantee using Monitor will improve your mental health
 
-**Use Untwist at your own risk.**
+**Use Monitor at your own risk.**
 
 ## Limitation of Liability
 
-**TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE ARE NOT LIABLE FOR ANY DAMAGES ARISING FROM YOUR USE OF UNTWIST.**
+**TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE ARE NOT LIABLE FOR ANY DAMAGES ARISING FROM YOUR USE OF Monitor.**
 
 This includes but is not limited to:
 - Direct, indirect, incidental, consequential, or punitive damages
@@ -195,7 +195,7 @@ Some jurisdictions don't allow limitation of liability for certain damages. In t
 ## Donations
 
 ### Voluntary Support
-Untwist is free to use, now and always. We accept voluntary donations via Ko-fi (ko-fi.com) to support development:
+Monitor is free to use, now and always. We accept voluntary donations via Ko-fi (ko-fi.com) to support development:
 - **No obligation** - You are never required to donate
 - **No additional features** - All app functionality is available to everyone, regardless of donation
 - **No special access** - Donors receive the same app experience as non-donors
@@ -211,7 +211,7 @@ Donations are processed by Ko-fi and subject to:
 Donations are voluntary contributions, not purchases:
 - **No refunds** - Donations are final and non-refundable
 - **Not tax-deductible** - We are not a registered charity; donations are gifts, not tax-deductible contributions
-- **Contact Ko-fi** - For donation transaction issues, contact Ko-fi support, not Untwist
+- **Contact Ko-fi** - For donation transaction issues, contact Ko-fi support, not Monitor
 
 ### What Donations Support
 Your donations help us:
@@ -228,11 +228,11 @@ While we appreciate donations:
 - Your donation is a gift to support ongoing development, not a purchase contract
 
 ### Thank You
-Donations help us keep Untwist free, private, and sustainable. Thank you for your support!
+Donations help us keep Monitor free, private, and sustainable. Thank you for your support!
 
 ## Indemnification
 
-You agree to indemnify and hold harmless John Pacheco, Untwist, and our affiliates from any claims, damages, losses, or expenses (including legal fees) arising from:
+You agree to indemnify and hold harmless John Pacheco, Monitor, and our affiliates from any claims, damages, losses, or expenses (including legal fees) arising from:
 - Your use of the App
 - Your violation of these Terms
 - Your violation of any law or rights of others
@@ -241,7 +241,7 @@ You agree to indemnify and hold harmless John Pacheco, Untwist, and our affiliat
 ## Termination
 
 ### Your Right to Terminate
-You can stop using Untwist at any time by:
+You can stop using Monitor at any time by:
 - Deleting the App from your device
 - Simply not opening it anymore
 
@@ -262,7 +262,7 @@ Upon termination:
 These Terms are governed by the laws of the State of Massachusetts, United States, without regard to conflict of law principles.
 
 ### Informal Resolution
-Before filing a claim, please email us at john@untwist.app to try to resolve the issue informally. We'll do our best to work it out.
+Before filing a claim, please email us at john@Monitor.app to try to resolve the issue informally. We'll do our best to work it out.
 
 ### Arbitration (US Users)
 Any disputes will be resolved through binding arbitration in accordance with the American Arbitration Association rules, rather than in court.
@@ -290,7 +290,7 @@ We appreciate your input and will consider all feedback, but we can't promise we
 
 ## App Store Terms
 
-Untwist is distributed through the Apple App Store. Your use is also subject to:
+Monitor is distributed through the Apple App Store. Your use is also subject to:
 - Apple's App Store Terms of Service
 - Apple's Licensed Application End User License Agreement (EULA)
 - iOS/iPadOS terms and conditions
@@ -309,7 +309,7 @@ If any provision of these Terms is found to be unenforceable or invalid, that pr
 
 ## Entire Agreement
 
-These Terms, together with our Privacy Policy, constitute the entire agreement between you and Untwist regarding use of the App.
+These Terms, together with our Privacy Policy, constitute the entire agreement between you and Monitor regarding use of the App.
 
 ## Contact Us
 
@@ -317,7 +317,7 @@ Questions about these Terms?
 
 **Developer:** John Pacheco
 **Location:** New Bedford, MA
-**Email:** john@untwist.app
+**Email:** john@Monitor.app
 **Response Time:** We aim to respond within 48 hours
 
 For legal notices or copyright issues, please use the email above with "LEGAL" in the subject line.
@@ -328,7 +328,7 @@ For legal notices or copyright issues, please use the email above with "LEGAL" i
 
 **What you need to know:**
 
-1. **Untwist is NOT therapy** - It's a self-help tool. Seek professional help for serious issues.
+1. **Monitor is NOT therapy** - It's a self-help tool. Seek professional help for serious issues.
 2. **Use at your own risk** - We can't guarantee it will help your mental health.
 3. **Your data is private** - We don't collect your thoughts. See Privacy Policy.
 4. **Don't misuse the App** - Use it for personal, non-commercial purposes only.
@@ -336,17 +336,17 @@ For legal notices or copyright issues, please use the email above with "LEGAL" i
 6. **Disputes go to arbitration** - If we have a legal disagreement, we'll arbitrate.
 7. **We can change these Terms** - We'll notify you of major changes.
 
-**Most important:** If you're in crisis, don't rely on Untwist. Call 988 or contact a mental health professional immediately.
+**Most important:** If you're in crisis, don't rely on Monitor. Call 988 or contact a mental health professional immediately.
 
 ---
 
 ## Acknowledgment
 
-By using Untwist, you acknowledge that:
+By using Monitor, you acknowledge that:
 - You have read and understood these Terms
 - You have read and understood the Privacy Policy
 - You agree to be bound by these Terms
-- You understand Untwist is not a substitute for professional mental health care
+- You understand Monitor is not a substitute for professional mental health care
 - You will seek professional help if needed
 
 **Last Updated:** November 10, 2025

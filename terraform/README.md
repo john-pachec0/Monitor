@@ -1,18 +1,18 @@
-# Untwist Feedback API - Terraform Infrastructure
+# Monitor Feedback API - Terraform Infrastructure
 
-This Terraform configuration deploys a complete serverless feedback API infrastructure on AWS for the Untwist iOS app.
+This Terraform configuration deploys a complete serverless feedback API infrastructure on AWS for the Monitor iOS app.
 
 ## Architecture
 
 ```
 ┌─────────────┐
 │  iOS App    │
-│  (Untwist)  │
+│  (Monitor)  │
 └──────┬──────┘
        │ HTTPS POST
        ▼
 ┌──────────────────────┐
-│  api.untwist.app     │
+│  api.Monitor.app     │
 │  (Custom Domain)     │
 └──────┬───────────────┘
        │
@@ -116,8 +116,8 @@ nano terraform.tfvars
 **Required variables to set:**
 ```hcl
 notification_email = "your-email@example.com"  # Your email
-from_email         = "noreply@untwist.app"     # Sender email
-domain_name        = "untwist.app"             # Your domain
+from_email         = "noreply@Monitor.app"     # Sender email
+domain_name        = "Monitor.app"             # Your domain
 ```
 
 ### Step 2: Initialize Terraform
@@ -160,7 +160,7 @@ After Terraform completes:
 1. **Check your email inbox** for verification emails from AWS
 2. **Click the verification link** in each email
 3. Verify both:
-   - `from_email` (e.g., noreply@untwist.app)
+   - `from_email` (e.g., noreply@Monitor.app)
    - `notification_email` (your email)
 
 ### Step 6: Configure DNS (Namecheap)
@@ -284,16 +284,16 @@ terraform apply
 
 ```bash
 # View Lambda logs
-aws logs tail /aws/lambda/untwist-feedback-handler-prod --follow
+aws logs tail /aws/lambda/Monitor-feedback-handler-prod --follow
 
 # Check DynamoDB items
-aws dynamodb scan --table-name untwist-feedback-prod --limit 10
+aws dynamodb scan --table-name Monitor-feedback-prod --limit 10
 
 # View API Gateway metrics
 aws cloudwatch get-metric-statistics \
   --namespace AWS/ApiGateway \
   --metric-name Count \
-  --dimensions Name=ApiName,Value=untwist-api-prod \
+  --dimensions Name=ApiName,Value=Monitor-api-prod \
   --start-time $(date -u -d '1 hour ago' +%Y-%m-%dT%H:%M:%S) \
   --end-time $(date -u +%Y-%m-%dT%H:%M:%S) \
   --period 3600 \
@@ -321,7 +321,7 @@ terraform destroy
 **Solution:**
 1. Check Namecheap DNS for validation CNAME record
 2. Wait 15-30 minutes for DNS propagation
-3. Verify record with: `dig _validation.api.untwist.app CNAME`
+3. Verify record with: `dig _validation.api.Monitor.app CNAME`
 
 ### Issue: SES Email Not Verified
 
@@ -342,7 +342,7 @@ terraform destroy
 **Solution:**
 1. Verify CNAME record in Namecheap
 2. Wait 30 minutes for propagation
-3. Test with: `dig api.untwist.app`
+3. Test with: `dig api.Monitor.app`
 4. Flush DNS cache: `sudo dscacheutil -flushcache`
 
 ### Issue: Terraform State Lock
@@ -417,7 +417,7 @@ enable_ses_notifications = true
 
 ```hcl
 # In lambda.tf - add environment variable
-METRICS_NAMESPACE = "Untwist/Feedback"
+METRICS_NAMESPACE = "Monitor/Feedback"
 ```
 
 ### Enable X-Ray Tracing
@@ -436,4 +436,4 @@ For issues with:
 
 ## License
 
-This Terraform configuration is part of the Untwist project.
+This Terraform configuration is part of the Monitor project.

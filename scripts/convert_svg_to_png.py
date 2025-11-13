@@ -39,7 +39,7 @@ if __name__ == '__main__':
         'tangled-dark-mode-v1.svg'
     ]
 
-    base_dir = '/Users/japacheco/ios-development/Untwist/AppIconDesigns'
+    base_dir = '/Users/japacheco/ios-development/Monitor/AppIconDesigns'
 
     for svg in svgs:
         svg_path = f'{base_dir}/{svg}'

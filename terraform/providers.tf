@@ -16,11 +16,11 @@ terraform {
 
   # Uncomment to use S3 backend for state storage
   # backend "s3" {
-  #   bucket         = "untwist-terraform-state"
+  #   bucket         = "Monitor-terraform-state"
   #   key            = "feedback-api/terraform.tfstate"
   #   region         = "us-east-1"
   #   encrypt        = true
-  #   dynamodb_table = "untwist-terraform-locks"
+  #   dynamodb_table = "Monitor-terraform-locks"
   # }
 }
 

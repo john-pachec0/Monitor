@@ -1,4 +1,4 @@
-# Quick Start: Host Legal Docs on untwist.app
+# Quick Start: Host Legal Docs on Monitor.app
 
 ## TL;DR - Recommended Solution
 
@@ -14,7 +14,7 @@
 ### 1. Create S3 Bucket (5 min)
 ```
 S3 Console → Create bucket
-- Name: untwist-app-legal-docs
+- Name: Monitor-app-legal-docs
 - Region: us-east-1
 - Uncheck "Block all public access"
 - Upload privacy.html and terms.html
@@ -24,7 +24,7 @@ S3 Console → Create bucket
 ### 2. Get SSL Certificate (5 min + wait)
 ```
 ACM Console (us-east-1 region!)
-- Request certificate for: untwist.app, *.untwist.app
+- Request certificate for: Monitor.app, *.Monitor.app
 - Validation: DNS (auto-create Route 53 records if possible)
 - Wait 5-30 min for validation
 ```
@@ -34,7 +34,7 @@ ACM Console (us-east-1 region!)
 CloudFront Console → Create distribution
 - Origin: Your S3 bucket
 - Viewer protocol: Redirect HTTP to HTTPS
-- CNAMEs: untwist.app
+- CNAMEs: Monitor.app
 - SSL: Your ACM certificate
 - Wait 5-15 min for deployment
 ```
@@ -50,14 +50,14 @@ CloudFront → Functions → Create function
 ### 5. Update DNS (5 min + wait)
 ```
 Route 53 (or your registrar)
-- Create A record (alias) for untwist.app → CloudFront
+- Create A record (alias) for Monitor.app → CloudFront
 - Wait 5-60 min for DNS propagation
 ```
 
 ### 6. Test
 ```
-https://untwist.app/privacy
-https://untwist.app/terms
+https://Monitor.app/privacy
+https://Monitor.app/terms
 ```
 
 ---
@@ -67,23 +67,23 @@ https://untwist.app/terms
 If you want zero cost and don't mind GitHub:
 
 ```bash
-cd /Users/japacheco/ios-development/Untwist/web
+cd /Users/japacheco/ios-development/Monitor/web
 git init
 git add privacy.html terms.html
 git commit -m "Add legal documents"
 
-# Create repo on GitHub: untwist-legal
-git remote add origin https://github.com/YOUR-USERNAME/untwist-legal.git
+# Create repo on GitHub: Monitor-legal
+git remote add origin https://github.com/YOUR-USERNAME/Monitor-legal.git
 git push -u origin main
 
 # Enable GitHub Pages in repo settings
-# Set custom domain: untwist.app
+# Set custom domain: Monitor.app
 # Update DNS with GitHub Pages IPs
 ```
 
 **URLs will be**:
-- `https://untwist.app/privacy.html`
-- `https://untwist.app/terms.html`
+- `https://Monitor.app/privacy.html`
+- `https://Monitor.app/terms.html`
 
 ---
 
@@ -125,8 +125,8 @@ git push -u origin main
 
 ## Files You Have
 
-- ✅ `/Users/japacheco/ios-development/Untwist/web/privacy.html` (ready to upload)
-- ✅ `/Users/japacheco/ios-development/Untwist/web/terms.html` (ready to upload)
+- ✅ `/Users/japacheco/ios-development/Monitor/web/privacy.html` (ready to upload)
+- ✅ `/Users/japacheco/ios-development/Monitor/web/terms.html` (ready to upload)
 - ✅ `DEPLOYMENT_GUIDE.md` (detailed step-by-step instructions)
 - ✅ `QUICK_START.md` (this file)
 
@@ -139,7 +139,7 @@ When you need to update legal docs:
 ```bash
 # 1. Edit privacy.html or terms.html
 # 2. Upload to S3
-aws s3 cp privacy.html s3://untwist-app-legal-docs/privacy.html
+aws s3 cp privacy.html s3://Monitor-app-legal-docs/privacy.html
 
 # 3. Invalidate CloudFront cache (immediate update)
 aws cloudfront create-invalidation \
@@ -167,11 +167,11 @@ Or use AWS Console:
 
 Before you start, confirm:
 
-1. **Where is untwist.app registered?**
+1. **Where is Monitor.app registered?**
    - Route 53? → Easier DNS setup
    - Namecheap/Google/etc? → Manual DNS configuration
 
-2. **Is untwist.app already in use?**
+2. **Is Monitor.app already in use?**
    - If yes, what's currently hosted there?
    - Do you need to preserve existing content?
 

@@ -1,6 +1,6 @@
 # Route 53 and Custom Domain Configuration
 
-# ACM Certificate for api.untwist.app (must be in us-east-1 for API Gateway)
+# ACM Certificate for api.Monitor.app (must be in us-east-1 for API Gateway)
 resource "aws_acm_certificate" "api" {
   domain_name       = "${var.api_subdomain}.${var.domain_name}"
   validation_method = "DNS"

@@ -21,9 +21,9 @@ This guide explains how to configure the feedback API key securely without commi
    ```
 
 4. **Configure Xcode project** (one-time setup):
-   - Open `Untwist.xcodeproj` in Xcode
-   - Select the Untwist project in the navigator
-   - Select the "Untwist" target
+   - Open `Monitor.xcodeproj` in Xcode
+   - Select the Monitor project in the navigator
+   - Select the "Monitor" target
    - Go to "Build Settings" tab
    - Search for "Info.plist Values"
    - Click the "+" button under "Info.plist Values"
@@ -34,7 +34,7 @@ This guide explains how to configure the feedback API key securely without commi
    - Go to the project's "Info" tab
    - Click "Configurations"
    - For both Debug and Release configurations:
-     - Expand the Untwist target
+     - Expand the Monitor target
      - Select "Secrets" from the dropdown (or click "+" to add Secrets.xcconfig)
 
 5. **Build and run** - The app will now use your API key!
@@ -90,8 +90,8 @@ This means `Secrets.xcconfig` hasn't been created or configured in Xcode.
 ### Can't find Secrets.xcconfig in Xcode
 
 **Fix:**
-1. Right-click on the Untwist project folder in Xcode
-2. Select "Add Files to Untwist..."
+1. Right-click on the Monitor project folder in Xcode
+2. Select "Add Files to Monitor..."
 3. Navigate to and select `Secrets.xcconfig`
 4. Uncheck "Copy items if needed"
 5. Click "Add"

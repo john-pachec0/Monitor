@@ -100,7 +100,7 @@ output "next_steps" {
   value       = <<-EOT
 
   ========================================
-  Untwist Feedback API - Deployment Complete!
+  Monitor Feedback API - Deployment Complete!
   ========================================
 
   API Endpoints:

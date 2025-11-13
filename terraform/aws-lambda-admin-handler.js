@@ -1,4 +1,4 @@
-// Untwist Admin Dashboard Handler Lambda Function
+// Monitor Admin Dashboard Handler Lambda Function
 // Runtime: Node.js 20.x
 // This provides a READ-ONLY endpoint for the admin dashboard
 
@@ -8,7 +8,7 @@ const { DynamoDBDocumentClient, ScanCommand, QueryCommand } = require('@aws-sdk/
 const dynamoClient = new DynamoDBClient({ region: process.env.AWS_REGION });
 const docClient = DynamoDBDocumentClient.from(dynamoClient);
 
-const TABLE_NAME = process.env.DYNAMODB_TABLE || 'untwist-feedback';
+const TABLE_NAME = process.env.DYNAMODB_TABLE || 'Monitor-feedback';
 
 exports.handler = async (event) => {
   console.log('Admin request:', JSON.stringify(event, null, 2));

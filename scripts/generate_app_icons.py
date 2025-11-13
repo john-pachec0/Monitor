@@ -90,7 +90,7 @@ def main():
     # Paths
     project_root = Path(__file__).parent.parent
     svg_path = project_root / 'appIcon.svg'
-    output_dir = project_root / 'Untwist' / 'Assets.xcassets' / 'AppIcon.appiconset'
+    output_dir = project_root / 'Monitor' / 'Assets.xcassets' / 'AppIcon.appiconset'
 
     # Validate SVG exists
     if not svg_path.exists():
@@ -137,8 +137,8 @@ def main():
 
     print()
     print("📌 Next steps:")
-    print("   1. Open Untwist.xcodeproj in Xcode")
-    print("   2. Select the Untwist target")
+    print("   1. Open Monitor.xcodeproj in Xcode")
+    print("   2. Select the Monitor target")
     print("   3. Go to 'General' tab")
     print("   4. Under 'App Icons and Launch Screen', select 'AppIcon'")
     print("   5. Build and run to see your new icon!")

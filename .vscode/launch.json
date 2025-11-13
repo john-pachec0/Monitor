@@ -4,18 +4,18 @@
     {
       "type": "lldb",
       "request": "launch",
-      "name": "Debug Untwist on Simulator",
-      "program": "${workspaceFolder}/build/Debug-iphonesimulator/Untwist.app",
+      "name": "Debug Monitor on Simulator",
+      "program": "${workspaceFolder}/build/Debug-iphonesimulator/Monitor.app",
       "args": [],
       "cwd": "${workspaceFolder}",
-      "preLaunchTask": "Build Untwist",
+      "preLaunchTask": "Build Monitor",
       "terminal": "integrated"
     },
     {
       "type": "lldb",
       "request": "attach",
-      "name": "Attach to Untwist Process",
-      "program": "${workspaceFolder}/build/Debug-iphonesimulator/Untwist.app",
+      "name": "Attach to Monitor Process",
+      "program": "${workspaceFolder}/build/Debug-iphonesimulator/Monitor.app",
       "waitFor": true
     }
   ]

@@ -1,11 +1,11 @@
-# Privacy Policy for Untwist
+# Privacy Policy for Monitor
 
 **Last Updated:** November 10, 2025
 **Effective Date:** November 10, 2025
 
 ## Our Privacy Commitment
 
-Untwist is built with your privacy as the foundation. This isn't just a policy—it's how we designed the app from the ground up. Your thoughts, feelings, and mental health data belong to you, and only you.
+Monitor is built with your privacy as the foundation. This isn't just a policy—it's how we designed the app from the ground up. Your thoughts, feelings, and mental health data belong to you, and only you.
 
 ## Information We Do NOT Collect
 
@@ -37,7 +37,7 @@ We want to be crystal clear about what we don't do:
 - Settings persist across app launches but never leave your device
 
 ### No Server, No Cloud
-- Untwist does not have a backend server for user data
+- Monitor does not have a backend server for user data
 - There is no cloud sync, no server-side storage, no remote access
 - Your data cannot be accessed by us, law enforcement, or anyone else
 - We cannot recover your data if you lose your device
@@ -69,13 +69,13 @@ If you navigate to Settings → Send Feedback and submit feedback, here's what w
 - We may quote anonymous feedback in marketing materials (e.g., "A user suggested...")
 
 **Feedback is Completely Optional:**
-- You never have to send feedback to use Untwist
+- You never have to send feedback to use Monitor
 - The app works perfectly without ever contacting our servers
 - There's no penalty or limitation if you never send feedback
 
 ## Ko-fi Donations (Optional)
 
-Untwist is free to use, now and always. We accept voluntary donations via Ko-fi to support development.
+Monitor is free to use, now and always. We accept voluntary donations via Ko-fi to support development.
 
 ### What Ko-fi Is
 We use Ko-fi (ko-fi.com) to accept voluntary donations:
@@ -92,7 +92,7 @@ When you choose to donate via Ko-fi:
 ### Ko-fi's Privacy
 Ko-fi donations are subject to Ko-fi's Privacy Policy: https://ko-fi.com/home/privacy
 
-Your payment information is never shared with us or stored by Untwist. Ko-fi uses Stripe and PayPal for secure payment processing.
+Your payment information is never shared with us or stored by Monitor. Ko-fi uses Stripe and PayPal for secure payment processing.
 
 ### How We Use Donation Information
 - We never sell or share donor information
@@ -100,7 +100,7 @@ Your payment information is never shared with us or stored by Untwist. Ko-fi use
 - Donation data is stored separately from app usage (they're not linked to your device or thoughts)
 
 ### Your Rights
-- Request deletion of your donation information: contact us at john@untwist.app
+- Request deletion of your donation information: contact us at john@Monitor.app
 - Ko-fi may retain transaction records for legal/tax compliance purposes
 - You can donate anonymously through Ko-fi's settings
 
@@ -143,7 +143,7 @@ While we don't collect data, we still take security seriously:
 
 ### Deletion
 - Delete individual thoughts: Swipe left on any thought in the Archive
-- Delete all data: Uninstall the app (Settings → General → iPhone Storage → Untwist → Delete App)
+- Delete all data: Uninstall the app (Settings → General → iPhone Storage → Monitor → Delete App)
 - Once deleted, data cannot be recovered (we don't have backups)
 
 ### Export (Coming in v1.1)
@@ -158,7 +158,7 @@ While we don't collect data, we still take security seriously:
 
 ## Children's Privacy
 
-Untwist is designed for general audiences and does not knowingly collect information from children under 13. However, since we don't collect any personal information at all, children can safely use the app with parental supervision.
+Monitor is designed for general audiences and does not knowingly collect information from children under 13. However, since we don't collect any personal information at all, children can safely use the app with parental supervision.
 
 If you are a parent and believe your child has used the feedback feature, please contact us and we'll delete any feedback data.
 
@@ -183,7 +183,7 @@ If we update this privacy policy:
 - You can always review this policy at [URL where you'll host it]
 
 We will never:
-- Change the fundamental privacy-first nature of Untwist
+- Change the fundamental privacy-first nature of Monitor
 - Start collecting personal data or mental health data
 - Introduce tracking or analytics without your explicit consent
 - Sell or share your data with third parties
@@ -195,7 +195,7 @@ We will never:
 
 ## Legal Basis (GDPR Compliance)
 
-While Untwist doesn't collect personal data, here's our legal basis if it did:
+While Monitor doesn't collect personal data, here's our legal basis if it did:
 
 - **Legitimate Interest:** Processing feedback to improve the app
 - **Consent:** You explicitly send feedback by tapping "Submit"
@@ -227,7 +227,7 @@ If you have questions about this privacy policy or your data:
 
 **Developer:** John Pacheco
 **Location:** New Bedford, MA
-**Email:** john@untwist.app
+**Email:** john@Monitor.app
 **Response Time:** We aim to respond within 48 hours
 
 For feedback data deletion requests, please include:
@@ -237,7 +237,7 @@ For feedback data deletion requests, please include:
 
 ## Disclaimer
 
-Untwist is not a medical device, clinical tool, or therapy replacement. It's a personal journaling and thought reframing tool based on cognitive behavioral therapy techniques.
+Monitor is not a medical device, clinical tool, or therapy replacement. It's a personal journaling and thought reframing tool based on cognitive behavioral therapy techniques.
 
 If you're experiencing a mental health crisis, please contact:
 - **988 Suicide & Crisis Lifeline:** Call or text 988 (US)
@@ -248,7 +248,7 @@ If you're experiencing a mental health crisis, please contact:
 
 ## Summary (TL;DR)
 
-**What makes Untwist different:**
+**What makes Monitor different:**
 - ✅ Your data never leaves your device (except optional feedback)
 - ✅ No accounts, no cloud, no tracking
 - ✅ We can't access your thoughts—even if we wanted to
@@ -260,7 +260,7 @@ Your mental health data belongs to you, and only you. Period.
 
 ---
 
-**Questions?** Email us at john@untwist.app. We're real humans who care about your privacy.
+**Questions?** Email us at john@Monitor.app. We're real humans who care about your privacy.
 
 **Last Updated:** November 10, 2025
 **Version:** 1.0

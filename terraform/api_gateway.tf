@@ -8,7 +8,7 @@ resource "aws_api_gateway_account" "main" {
 # REST API
 resource "aws_api_gateway_rest_api" "feedback" {
   name        = "${var.project_name}-api-${var.environment}"
-  description = "Untwist Feedback API"
+  description = "Monitor Feedback API"
 
   endpoint_configuration {
     types = ["REGIONAL"]

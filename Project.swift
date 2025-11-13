@@ -1,35 +1,35 @@
 import ProjectDescription
 
 let project = Project(
-    name: "Untwist",
+    name: "Monitor",
     settings: .settings(
         base: [
             "IPHONEOS_DEPLOYMENT_TARGET": "17.0",
-            "INFOPLIST_KEY_CFBundleDisplayName": "Untwist",
+            "INFOPLIST_KEY_CFBundleDisplayName": "Monitor",
             "DEVELOPMENT_TEAM": "UJ8692CVFW"  // John Pacheco (Personal Team)
         ]
     ),
     targets: [
         .target(
-            name: "Untwist",
+            name: "Monitor",
             destinations: .iOS,
             product: .app,
-            bundleId: "com.johnpacheco.Untwist",
+            bundleId: "com.johnpacheco.Monitor",
             deploymentTargets: .iOS("17.0"),
             infoPlist: .extendingDefault(with: [
                 "CFBundleGetInfoString": "",
                 "FEEDBACK_API_KEY": "$(FEEDBACK_API_KEY)",
-                "NSFaceIDUsageDescription": "Untwist uses Face ID to protect your private thoughts and mental health data.",
-                "NSUserNotificationsUsageDescription": "Untwist can send you optional daily reminders for your scheduled worry time to help you build a consistent practice.",
+                "NSFaceIDUsageDescription": "Monitor uses Face ID to protect your private thoughts and mental health data.",
+                "NSUserNotificationsUsageDescription": "Monitor can send you optional daily reminders for your scheduled worry time to help you build a consistent practice.",
                 "UILaunchScreen": [:],  // Modern launch screen (iOS 14+)
                 "UIRequiresFullScreen": false  // Supports all device sizes
             ]),
-            sources: ["Untwist/**/*.swift"],
+            sources: ["Monitor/**/*.swift"],
             resources: [
-                "Untwist/**/*.xcassets",
-                "Untwist/**/*.xib",
-                "Untwist/**/*.storyboard",
-                "Untwist/**/*.strings"
+                "Monitor/**/*.xcassets",
+                "Monitor/**/*.xib",
+                "Monitor/**/*.storyboard",
+                "Monitor/**/*.strings"
             ],
             dependencies: [],
             settings: .settings(
@@ -57,27 +57,27 @@ let project = Project(
             )
         ),
         .target(
-            name: "UntwistTests",
+            name: "MonitorTests",
             destinations: .iOS,
             product: .unitTests,
-            bundleId: "com.johnpacheco.UntwistTests",
+            bundleId: "com.johnpacheco.MonitorTests",
             deploymentTargets: .iOS("17.0"),
             infoPlist: .default,
-            sources: ["UntwistTests/**/*.swift"],
+            sources: ["MonitorTests/**/*.swift"],
             dependencies: [
-                .target(name: "Untwist")
+                .target(name: "Monitor")
             ]
         ),
         .target(
-            name: "UntwistUITests",
+            name: "MonitorUITests",
             destinations: .iOS,
             product: .uiTests,
-            bundleId: "com.johnpacheco.UntwistUITests",
+            bundleId: "com.johnpacheco.MonitorUITests",
             deploymentTargets: .iOS("17.0"),
             infoPlist: .default,
-            sources: ["UntwistUITests/**/*.swift"],
+            sources: ["MonitorUITests/**/*.swift"],
             dependencies: [
-                .target(name: "Untwist")
+                .target(name: "Monitor")
             ]
         )
     ]

@@ -1,4 +1,4 @@
-# VSCode Configuration for Untwist
+# VSCode Configuration for Monitor
 
 This directory contains VSCode workspace settings for iOS development with SweetPad.
 
@@ -14,10 +14,10 @@ Project-specific settings for:
 
 ### `tasks.json`
 Predefined tasks for common operations:
-- **Build Untwist** (Cmd+R) - Build the app
+- **Build Monitor** (Cmd+R) - Build the app
 - **Clean Build Folder** (Cmd+Shift+K) - Clean build artifacts
-- **Test Untwist** (Cmd+U) - Run tests
-- **Archive Untwist** - Create archive for distribution
+- **Test Monitor** (Cmd+U) - Run tests
+- **Archive Monitor** - Create archive for distribution
 - **Terraform Plan** - Preview infrastructure changes
 - **Terraform Apply** - Apply infrastructure changes
 - **Start Admin Dashboard** - Launch feedback dashboard
@@ -29,14 +29,14 @@ Run tasks via:
 
 ### `launch.json`
 Debug configurations for:
-- **Debug Untwist on Simulator** - Launch with debugger attached
-- **Attach to Untwist Process** - Attach debugger to running app
+- **Debug Monitor on Simulator** - Launch with debugger attached
+- **Attach to Monitor Process** - Attach debugger to running app
 
 Requires CodeLLDB extension.
 
 ### `keybindings.json`
 Custom keyboard shortcuts:
-- `Cmd+R` - Build Untwist
+- `Cmd+R` - Build Monitor
 - `Cmd+Shift+R` - Build & Run (SweetPad)
 - `Cmd+B` - Build Only (SweetPad)
 - `Cmd+Shift+K` - Clean Build
@@ -82,7 +82,7 @@ VSCode will prompt to install these when you open the project.
 4. **Build & Run**:
    - Press `Cmd+Shift+R` or
    - Click play button in SweetPad sidebar or
-   - Run task: `Build Untwist`
+   - Run task: `Build Monitor`
 
 5. **Select Simulator**:
    - Use SweetPad's Destination panel
@@ -118,7 +118,7 @@ xcode-select --install
 **Tuist/File detection issues**:
 - SweetPad handles Tuist automatically
 - If new files aren't detected, use Command Palette: `SweetPad: Clean Tuist Project`
-- Project.swift defines which directories are scanned (currently `Untwist/**/*.swift`)
+- Project.swift defines which directories are scanned (currently `Monitor/**/*.swift`)
 - Check that new files match the glob patterns in Project.swift
 
 ## Notes

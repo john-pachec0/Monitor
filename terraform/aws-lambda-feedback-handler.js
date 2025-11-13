@@ -1,4 +1,4 @@
-// Untwist Feedback Handler Lambda Function
+// Monitor Feedback Handler Lambda Function
 // Runtime: Node.js 20.x
 // Architecture: arm64
 // Memory: 256 MB
@@ -15,7 +15,7 @@ const docClient = DynamoDBDocumentClient.from(dynamoClient);
 const sesClient = new SESClient({ region: process.env.AWS_REGION });
 
 // Environment variables (set in Lambda console)
-const TABLE_NAME = process.env.DYNAMODB_TABLE || 'untwist-feedback';
+const TABLE_NAME = process.env.DYNAMODB_TABLE || 'Monitor-feedback';
 const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL; // Your email
 const FROM_EMAIL = process.env.FROM_EMAIL; // Verified SES email
 
@@ -121,12 +121,12 @@ Locale: ${diagnostic.locale || 'N/A'}`
     },
     Message: {
       Subject: {
-        Data: `[Untwist] New ${formatType(type)} - ${feedbackId.slice(0, 8)}`
+        Data: `[Monitor] New ${formatType(type)} - ${feedbackId.slice(0, 8)}`
       },
       Body: {
         Text: {
           Data: `
-New feedback received for Untwist app
+New feedback received for Monitor app
 
 Feedback ID: ${feedbackId}
 Type: ${formatType(type)}

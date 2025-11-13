@@ -2,14 +2,14 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Build Untwist",
+      "label": "Build Monitor",
       "type": "shell",
       "command": "xcodebuild",
       "args": [
         "-workspace",
-        "Untwist.xcworkspace",
+        "Monitor.xcworkspace",
         "-scheme",
-        "Untwist",
+        "Monitor",
         "-destination",
         "platform=iOS Simulator,name=iPhone 17",
         "build"
@@ -41,9 +41,9 @@
       "command": "xcodebuild",
       "args": [
         "-workspace",
-        "Untwist.xcworkspace",
+        "Monitor.xcworkspace",
         "-scheme",
-        "Untwist",
+        "Monitor",
         "-destination",
         "platform=iOS Simulator,name=iPhone 17",
         "clean"
@@ -54,14 +54,14 @@
       }
     },
     {
-      "label": "Test Untwist",
+      "label": "Test Monitor",
       "type": "shell",
       "command": "xcodebuild",
       "args": [
         "-workspace",
-        "Untwist.xcworkspace",
+        "Monitor.xcworkspace",
         "-scheme",
-        "Untwist",
+        "Monitor",
         "-destination",
         "platform=iOS Simulator,name=iPhone 17",
         "test"
@@ -90,18 +90,18 @@
       "problemMatcher": []
     },
     {
-      "label": "Archive Untwist",
+      "label": "Archive Monitor",
       "type": "shell",
       "command": "xcodebuild",
       "args": [
         "-workspace",
-        "Untwist.xcworkspace",
+        "Monitor.xcworkspace",
         "-scheme",
-        "Untwist",
+        "Monitor",
         "-destination",
         "generic/platform=iOS",
         "-archivePath",
-        "./build/Untwist.xcarchive",
+        "./build/Monitor.xcarchive",
         "archive",
         "CODE_SIGN_IDENTITY=Apple Development",
         "DEVELOPMENT_TEAM=YOUR_TEAM_ID"
@@ -117,13 +117,13 @@
       "command": "xcodebuild",
       "args": [
         "-workspace",
-        "Untwist.xcworkspace",
+        "Monitor.xcworkspace",
         "-scheme",
-        "Untwist",
+        "Monitor",
         "-destination",
         "generic/platform=iOS",
         "-archivePath",
-        "./build/Untwist.xcarchive",
+        "./build/Monitor.xcarchive",
         "archive",
         "-allowProvisioningUpdates"
       ],
@@ -137,7 +137,9 @@
       "label": "Terraform Plan",
       "type": "shell",
       "command": "terraform",
-      "args": ["plan"],
+      "args": [
+        "plan"
+      ],
       "options": {
         "cwd": "${workspaceFolder}/terraform"
       },
@@ -150,7 +152,9 @@
       "label": "Terraform Apply",
       "type": "shell",
       "command": "terraform",
-      "args": ["apply"],
+      "args": [
+        "apply"
+      ],
       "options": {
         "cwd": "${workspaceFolder}/terraform"
       },
@@ -163,7 +167,9 @@
       "label": "Start Admin Dashboard",
       "type": "shell",
       "command": "make",
-      "args": ["admin-dash-open"],
+      "args": [
+        "admin-dash-open"
+      ],
       "presentation": {
         "reveal": "always",
         "panel": "dedicated"

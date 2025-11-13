@@ -2,8 +2,8 @@
   // SweetPad iOS Development Settings
   // NOTE: SweetPad auto-detects Project.swift and uses Tuist for automatic file management
   "sweetpad.tuist.path": "/Users/japacheco/.local/share/mise/installs/tuist/4.102.0/bin/tuist",
-  "sweetpad.workspacePath": "Untwist.xcworkspace",
-  "sweetpad.build.scheme": "Untwist",
+  "sweetpad.workspacePath": "Monitor.xcworkspace",
+  "sweetpad.build.scheme": "Monitor",
   "sweetpad.build.derivedDataPath": "~/Library/Developer/Xcode/DerivedData",
   "sweetpad.build.configuration": "Debug",
   "sweetpad.build.args": [],

@@ -2,17 +2,17 @@
 
 ## What You Asked For
 
-Host Privacy Policy and Terms of Service on `untwist.app` for Apple App Store requirements.
+Host Privacy Policy and Terms of Service on `Monitor.app` for Apple App Store requirements.
 
 ## What I Delivered
 
 ### ✅ Production-Ready HTML Files
 
-**Location**: `/Users/japacheco/ios-development/Untwist/web/`
+**Location**: `/Users/japacheco/ios-development/Monitor/web/`
 
 1. **`privacy.html`** (22 KB)
    - Full Privacy Policy converted from markdown
-   - Matches Untwist app design (warm colors, rounded fonts)
+   - Matches Monitor app design (warm colors, rounded fonts)
    - Responsive (mobile-friendly)
    - Dark mode support
    - No external dependencies (self-contained)
@@ -66,7 +66,7 @@ Host Privacy Policy and Terms of Service on `untwist.app` for Apple App Store re
 ### Architecture
 
 ```
-User: https://untwist.app/privacy
+User: https://Monitor.app/privacy
   ↓
 Route 53 (DNS)
   ↓
@@ -117,8 +117,8 @@ If you prefer zero cost:
 
 ### Phase 1: Review Files (5 minutes)
 
-1. Open `/Users/japacheco/ios-development/Untwist/web/privacy.html` in a browser
-2. Open `/Users/japacheco/ios-development/Untwist/web/terms.html` in a browser
+1. Open `/Users/japacheco/ios-development/Monitor/web/privacy.html` in a browser
+2. Open `/Users/japacheco/ios-development/Monitor/web/terms.html` in a browser
 3. Verify content is correct
 4. Test on mobile device
 
@@ -143,24 +143,24 @@ Follow `DEPLOYMENT_GUIDE.md` Phase 1-6:
 
 5. **Update DNS** (5 min + wait)
    - Route 53 or your registrar
-   - Point `untwist.app` to CloudFront
+   - Point `Monitor.app` to CloudFront
 
 6. **Test** (5 min)
-   - Visit `https://untwist.app/privacy`
+   - Visit `https://Monitor.app/privacy`
    - Verify HTTPS, mobile, dark mode
 
 ### Phase 3: Update iOS App (10 minutes)
 
 Update your app to link to:
-- Privacy Policy: `https://untwist.app/privacy`
-- Terms of Service: `https://untwist.app/terms`
+- Privacy Policy: `https://Monitor.app/privacy`
+- Terms of Service: `https://Monitor.app/terms`
 
 ### Phase 4: Future Updates (2 minutes)
 
 When you need to update documents:
 
 ```bash
-cd /Users/japacheco/ios-development/Untwist/web
+cd /Users/japacheco/ios-development/Monitor/web
 ./deploy.sh
 ```
 
@@ -215,7 +215,7 @@ Your HTML files include:
 
 1. **Read `DEPLOYMENT_GUIDE.md`** (comprehensive instructions)
 2. **Answer these questions**:
-   - Where is `untwist.app` registered? (Route 53, Namecheap, etc.)
+   - Where is `Monitor.app` registered? (Route 53, Namecheap, etc.)
    - Is the domain already in use? (root domain or subdomain?)
    - Do you have AWS CLI installed? (`aws --version`)
 
@@ -230,14 +230,14 @@ Your HTML files include:
    - Test links from iOS app
 
 5. **Update App Store metadata**:
-   - Privacy Policy URL: `https://untwist.app/privacy`
-   - Terms of Service URL: `https://untwist.app/terms`
+   - Privacy Policy URL: `https://Monitor.app/privacy`
+   - Terms of Service URL: `https://Monitor.app/terms`
 
 ---
 
 ## File Locations (Summary)
 
-All files are in: `/Users/japacheco/ios-development/Untwist/web/`
+All files are in: `/Users/japacheco/ios-development/Monitor/web/`
 
 | File | Size | Purpose |
 |------|------|---------|
@@ -283,4 +283,4 @@ Good luck with your app launch! 🚀
 ---
 
 *Generated on November 10, 2025*
-*For Untwist iOS App by John Pacheco*
+*For Monitor iOS App by John Pacheco*

@@ -1,4 +1,4 @@
-# App Store Metadata for Untwist
+# App Store Metadata for Monitor
 
 **Last Updated:** November 10, 2024
 
@@ -8,12 +8,12 @@ This document contains all the text content needed for the App Store listing.
 
 ## App Name
 
-**Primary:** `Untwist - CBT Thought Journal`
+**Primary:** `Monitor - CBT Thought Journal`
 
 **Alternatives** (if primary is taken):
-- `Untwist: CBT for Anxiety`
-- `Untwist - Anxiety Relief`
-- `Untwist: Thought Reframing`
+- `Monitor: CBT for Anxiety`
+- `Monitor - Anxiety Relief`
+- `Monitor: Thought Reframing`
 
 **Character Limit:** 30 characters (Primary option is 27 characters ✅)
 
@@ -37,7 +37,7 @@ This document contains all the text content needed for the App Store listing.
 *(This appears at the top of your listing and can be updated without submitting a new version)*
 
 ```
-Your mental health data belongs to you, and only you. Untwist is the only CBT app that keeps everything on your device—no accounts, no cloud, no tracking. Practice evidence-based thought reframing techniques in complete privacy.
+Your mental health data belongs to you, and only you. Monitor is the only CBT app that keeps everything on your device—no accounts, no cloud, no tracking. Practice evidence-based thought reframing techniques in complete privacy.
 ```
 
 **Character Limit:** 170 characters (This is 216 characters - needs trimming)
@@ -56,11 +56,11 @@ Practice CBT techniques in complete privacy. No accounts, no cloud, no tracking.
 ```
 PRIVACY-FIRST ANXIETY RELIEF
 
-Your anxious thoughts belong to you, not a company's servers. Untwist is built differently—everything stays on your device. No accounts, no cloud sync, no tracking. Just you and evidence-based cognitive behavioral therapy (CBT) techniques.
+Your anxious thoughts belong to you, not a company's servers. Monitor is built differently—everything stays on your device. No accounts, no cloud sync, no tracking. Just you and evidence-based cognitive behavioral therapy (CBT) techniques.
 
-WHAT IS UNTWIST?
+WHAT IS Monitor?
 
-Untwist helps you capture and reframe anxious thoughts using proven CBT methods. When anxiety strikes, quickly capture the thought. Later, during your scheduled "worry time," review and reframe it using techniques from cognitive behavioral therapy.
+Monitor helps you capture and reframe anxious thoughts using proven CBT methods. When anxiety strikes, quickly capture the thought. Later, during your scheduled "worry time," review and reframe it using techniques from cognitive behavioral therapy.
 
 KEY FEATURES
 
@@ -96,7 +96,7 @@ PRIVACY YOU CAN TRUST
 • ✓ Encrypted at rest with iOS device encryption
 • ✓ We can't access your data—even if we wanted to
 
-Your thoughts, reframes, and mental health data never leave your iPhone. We built Untwist this way intentionally because privacy matters, especially for mental health.
+Your thoughts, reframes, and mental health data never leave your iPhone. We built Monitor this way intentionally because privacy matters, especially for mental health.
 
 WHY POSTPONE WORRY?
 
@@ -109,7 +109,7 @@ Research shows that scheduling worry time (rather than worrying constantly) can 
 
 BASED ON COGNITIVE BEHAVIORAL THERAPY
 
-CBT is one of the most researched and effective approaches for anxiety. Untwist helps you practice core CBT skills:
+CBT is one of the most researched and effective approaches for anxiety. Monitor helps you practice core CBT skills:
 
 • Thought awareness - Notice when anxiety shows up
 • Cognitive restructuring - Challenge and reframe thoughts
@@ -118,7 +118,7 @@ CBT is one of the most researched and effective approaches for anxiety. Untwist 
 
 THIS IS NOT THERAPY
 
-Untwist is a self-help tool, not a replacement for professional mental health care. If you're experiencing severe anxiety, depression, or thoughts of self-harm, please reach out to a mental health professional.
+Monitor is a self-help tool, not a replacement for professional mental health care. If you're experiencing severe anxiety, depression, or thoughts of self-harm, please reach out to a mental health professional.
 
 PERFECT FOR
 
@@ -130,13 +130,13 @@ PERFECT FOR
 
 WHY WE BUILT THIS
 
-Mental health data is incredibly sensitive. Yet most apps sync it to the cloud, create accounts, and track everything you do. We built Untwist because we believe your thoughts belong to you—not to servers, not to companies, not to anyone else.
+Mental health data is incredibly sensitive. Yet most apps sync it to the cloud, create accounts, and track everything you do. We built Monitor because we believe your thoughts belong to you—not to servers, not to companies, not to anyone else.
 
 EVIDENCE-BASED & TRANSPARENT
 
-Untwist is based on established CBT research and principles. We're transparent about what the app does (and doesn't do), and we'll never make exaggerated claims about results.
+Monitor is based on established CBT research and principles. We're transparent about what the app does (and doesn't do), and we'll never make exaggerated claims about results.
 
-Download Untwist and start reframing anxious thoughts in complete privacy.
+Download Monitor and start reframing anxious thoughts in complete privacy.
 
 ---
 
@@ -204,9 +204,9 @@ CBT, anxiety, cognitive distortions, thought journal, worry journal, mental heal
 *(Version 1.0 - Initial Release)*
 
 ```
-Welcome to Untwist!
+Welcome to Monitor!
 
-Untwist helps you capture and reframe anxious thoughts using evidence-based CBT techniques—all while keeping your data completely private on your device.
+Monitor helps you capture and reframe anxious thoughts using evidence-based CBT techniques—all while keeping your data completely private on your device.
 
 Features:
 • Quick thought capture
@@ -227,10 +227,10 @@ Questions or feedback? Tap Settings → Send Feedback
 
 ## Support URL
 
-`https://yourdomain.com/untwist/support`
+`https://yourdomain.com/Monitor/support`
 
 **Or use GitHub repo:**
-`https://github.com/yourusername/untwist`
+`https://github.com/yourusername/Monitor`
 
 **Must be live before submission.**
 
@@ -238,7 +238,7 @@ Questions or feedback? Tap Settings → Send Feedback
 
 ## Marketing URL (Optional)
 
-`https://yourdomain.com/untwist`
+`https://yourdomain.com/Monitor`
 
 **Could include:**
 - Overview of the app
@@ -251,7 +251,7 @@ Questions or feedback? Tap Settings → Send Feedback
 
 ## Privacy Policy URL (Required)
 
-`https://yourdomain.com/untwist/privacy`
+`https://yourdomain.com/Monitor/privacy`
 
 **Must be:**
 - Publicly accessible (no login required)
@@ -274,10 +274,10 @@ Questions or feedback? Tap Settings → Send Feedback
 ```
 TESTING NOTES FOR APPLE REVIEW
 
-Thank you for reviewing Untwist. Here's what you need to know:
+Thank you for reviewing Monitor. Here's what you need to know:
 
 CORE FUNCTIONALITY:
-Untwist is a thought journaling and reframing tool based on CBT (Cognitive Behavioral Therapy) techniques. Users capture anxious thoughts and review them later using guided reframing.
+Monitor is a thought journaling and reframing tool based on CBT (Cognitive Behavioral Therapy) techniques. Users capture anxious thoughts and review them later using guided reframing.
 
 HOW TO TEST:
 1. Complete onboarding (3 quick screens)
@@ -300,7 +300,7 @@ PRIVACY IMPLEMENTATION:
 FEEDBACK API:
 - Optional feedback can be sent from Settings → Send Feedback
 - This is the ONLY network call in the app
-- API endpoint: https://api.untwist.app/feedback
+- API endpoint: https://api.Monitor.app/feedback
 - Requires API key authentication
 - Rate limited to prevent abuse
 
@@ -389,7 +389,7 @@ Thank you!
 1. **Title matters most**
    - Include "CBT" (searchable term)
    - "Thought Journal" is less competitive than "anxiety app"
-   - "Untwist" is unique, memorable
+   - "Monitor" is unique, memorable
 
 2. **Subtitle is secondary ranking**
    - "Privacy-first" differentiates
@@ -455,8 +455,8 @@ Thank you!
 ## Notes for App Store Connect
 
 **Build Number:** 1.0.0 (update based on actual build)
-**Bundle ID:** com.johnpacheco.Untwist
-**SKU:** untwist-ios-app
+**Bundle ID:** com.johnpacheco.Monitor
+**SKU:** Monitor-ios-app
 
 **Content Rights:** You own the rights to all content
 

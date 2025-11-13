@@ -1,4 +1,4 @@
-# Untwist CBT Educational Content
+# Monitor CBT Educational Content
 ## Comprehensive Learning Module Content & Recommendations
 
 ---
@@ -20,7 +20,7 @@ The beautiful thing about CBT is that it's skills-based. Like learning to play a
 
 And it works. Decades of research show that CBT significantly reduces anxiety and helps people develop lasting coping strategies. The skills you build become second nature.
 
-That's what Untwist is here for: to help you practice these skills in real time, when anxious thoughts strike. Not to replace therapy (if you need professional support, please seek it), but to give you a pocket companion for the daily work of recognizing and reframing unhelpful thinking patterns.
+That's what Monitor is here for: to help you practice these skills in real time, when anxious thoughts strike. Not to replace therapy (if you need professional support, please seek it), but to give you a pocket companion for the daily work of recognizing and reframing unhelpful thinking patterns.
 
 Let's look at how this actually works.
 ```
@@ -84,7 +84,7 @@ Here are a few you might recognize:
 
 The tricky thing about distortions is that they feel true in the moment. Your anxious brain presents them as facts, not interpretations. That's why learning to recognize them is so powerful—it's like turning on a light in a dark room. Suddenly, you can see what's actually there instead of what your anxiety is telling you is there.
 
-In the Learn tab, we've organized 13 of the most common cognitive distortions into categories. Each one includes examples, reflection questions, and reframing strategies. You don't need to memorize them all at once. As you use Untwist to capture and review your thoughts, you'll start to notice patterns. "Oh, I do that catastrophizing thing a lot." "I always assume people are judging me—that's mind reading."
+In the Learn tab, we've organized 13 of the most common cognitive distortions into categories. Each one includes examples, reflection questions, and reframing strategies. You don't need to memorize them all at once. As you use Monitor to capture and review your thoughts, you'll start to notice patterns. "Oh, I do that catastrophizing thing a lot." "I always assume people are judging me—that's mind reading."
 
 Recognition is the first step. Once you spot a distortion, you can start to challenge it.
 ```
@@ -96,7 +96,7 @@ Recognition is the first step. Once you spot a distortion, you can start to chal
 **Body Content (311 words, ~2.5 min read):**
 
 ```
-Untwist is designed around the way anxiety actually works—it strikes when you're stressed, and the last thing you need is a complicated process. Here's how to make this toolkit work for you.
+Monitor is designed around the way anxiety actually works—it strikes when you're stressed, and the last thing you need is a complicated process. Here's how to make this toolkit work for you.
 
 **1. Capture Quickly, Review Later**
 
@@ -437,7 +437,7 @@ That's normal at first. You're not trying to convince yourself immediately. You'
 
 ## Content Tone & Voice Guidelines Followed
 
-All content above maintains Untwist's warm, accessible tone:
+All content above maintains Monitor's warm, accessible tone:
 - ✅ Conversational ("Let's look at this together")
 - ✅ Normalizing ("Everyone experiences this")
 - ✅ Non-judgmental ("You're not broken")
@@ -451,7 +451,7 @@ All content above maintains Untwist's warm, accessible tone:
 
 ## Final Notes
 
-The existing content in Untwist is excellent—the distortion guides are comprehensive, warm, and clinically sound. The recommendations above are enhancements to make an already strong foundation even more educational and engaging.
+The existing content in Monitor is excellent—the distortion guides are comprehensive, warm, and clinically sound. The recommendations above are enhancements to make an already strong foundation even more educational and engaging.
 
 The CBTIntroduction content is ready to implement directly. The enhancement recommendations can be prioritized based on development capacity and user feedback.
 

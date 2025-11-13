@@ -1,4 +1,4 @@
-# Untwist App Store Launch Plan
+# Monitor App Store Launch Plan
 
 **Version:** 1.0
 **Created:** 2025-11-10
@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-Untwist is **remarkably close to App Store launch**. The core CBT functionality is solid, privacy architecture is genuine, and UX is thoughtful. With focused effort on critical items, the app can be submission-ready in 4-5 weeks.
+Monitor is **remarkably close to App Store launch**. The core CBT functionality is solid, privacy architecture is genuine, and UX is thoughtful. With focused effort on critical items, the app can be submission-ready in 4-5 weeks.
 
 **Current State:**
 - ✅ All 13 cognitive distortions with quality educational content
@@ -40,7 +40,7 @@ These are user-identified improvements that should be completed before other lau
 
 **Files to Modify:**
 
-#### File 1: [`Untwist/Features/Onboarding/OnboardingView.swift`](Untwist/Features/Onboarding/OnboardingView.swift#L112-L120)
+#### File 1: [`Monitor/Features/Onboarding/OnboardingView.swift`](Monitor/Features/Onboarding/OnboardingView.swift#L112-L120)
 **Lines 112-120** (WelcomePage)
 
 **Current:**
@@ -66,7 +66,7 @@ Text("Evidence-based CBT techniques")
 
 ---
 
-#### File 2: [`Untwist/Features/Settings/SettingsView.swift`](Untwist/Features/Settings/SettingsView.swift#L116-L122)
+#### File 2: [`Monitor/Features/Settings/SettingsView.swift`](Monitor/Features/Settings/SettingsView.swift#L116-L122)
 **Lines 116-122** (About section)
 
 **Current:**
@@ -120,19 +120,19 @@ HStack {
 
 **Files to Modify/Delete:**
 
-#### DELETE: [`Untwist/Features/Review/DistortionLearningCardView.swift`](Untwist/Features/Review/DistortionLearningCardView.swift)
+#### DELETE: [`Monitor/Features/Review/DistortionLearningCardView.swift`](Monitor/Features/Review/DistortionLearningCardView.swift)
 **Lines 1-353** - Entire swipe card UI component
 - Remove from project
 
-#### DELETE: [`Untwist/Features/Review/DistortionCardContent.swift`](Untwist/Features/Review/DistortionCardContent.swift)
+#### DELETE: [`Monitor/Features/Review/DistortionCardContent.swift`](Monitor/Features/Review/DistortionCardContent.swift)
 **Lines 1-162** - Card content with swipe instructions
 - Remove from project
 
-#### DELETE: [`Untwist/Features/Review/DistortionLearningViewModel.swift`](Untwist/Features/Review/DistortionLearningViewModel.swift)
+#### DELETE: [`Monitor/Features/Review/DistortionLearningViewModel.swift`](Monitor/Features/Review/DistortionLearningViewModel.swift)
 **Lines 1-99** - Card stack state management
 - Remove from project
 
-#### MODIFY: [`Untwist/Features/Review/ReviewThoughtView.swift`](Untwist/Features/Review/ReviewThoughtView.swift)
+#### MODIFY: [`Monitor/Features/Review/ReviewThoughtView.swift`](Monitor/Features/Review/ReviewThoughtView.swift)
 **Changes needed:**
 1. **Line 25:** Remove `@State private var showLearningMode = false`
 2. **Lines 65-67:** Remove `shouldUseLearningMode` computed property
@@ -151,7 +151,7 @@ HStack {
 - Cleaner, faster review flow
 - Learning section remains for dedicated education
 
-#### CLEANUP: `Untwist.xcodeproj/project.pbxproj`
+#### CLEANUP: `Monitor.xcodeproj/project.pbxproj`
 - Remove file references for deleted files (may auto-update with Tuist)
 
 ---
@@ -231,7 +231,7 @@ HStack {
    - Use iOS Simulator, clean data, light & dark modes
 
 5. ✅ Write App Store Metadata (4 hours) - **BLOCKER**
-   - App name: "Untwist - CBT Thought Journal"
+   - App name: "Monitor - CBT Thought Journal"
    - Subtitle: "Privacy-first anxiety relief"
    - Description (4000 char max):
      - Privacy-first CBT for anxious thoughts
@@ -762,10 +762,10 @@ When Apple approves the app:
 ## Resources & Links
 
 ### Development
-- **Project:** `/Users/japacheco/ios-development/Untwist`
+- **Project:** `/Users/japacheco/ios-development/Monitor`
 - **Tuist Config:** `Project.swift`
 - **Secrets:** `Secrets.xcconfig` (not in git)
-- **Feedback API:** `https://api.untwist.app`
+- **Feedback API:** `https://api.Monitor.app`
 - **Admin Dashboard:** `admin-dashboard.html`
 
 ### Documentation
@@ -794,22 +794,22 @@ When Apple approves the app:
 ### Week 1: Priority Fixes
 
 **Remove David Burns References:**
-1. `Untwist/Features/Onboarding/OnboardingView.swift:112-120`
-2. `Untwist/Features/Settings/SettingsView.swift:116-122`
+1. `Monitor/Features/Onboarding/OnboardingView.swift:112-120`
+2. `Monitor/Features/Settings/SettingsView.swift:116-122`
 
 **Deprecate Swipe Cards:**
-1. DELETE: `Untwist/Features/Review/DistortionLearningCardView.swift`
-2. DELETE: `Untwist/Features/Review/DistortionCardContent.swift`
-3. DELETE: `Untwist/Features/Review/DistortionLearningViewModel.swift`
-4. MODIFY: `Untwist/Features/Review/ReviewThoughtView.swift:25,65-67,247-300`
+1. DELETE: `Monitor/Features/Review/DistortionLearningCardView.swift`
+2. DELETE: `Monitor/Features/Review/DistortionCardContent.swift`
+3. DELETE: `Monitor/Features/Review/DistortionLearningViewModel.swift`
+4. MODIFY: `Monitor/Features/Review/ReviewThoughtView.swift:25,65-67,247-300`
 
 **Remove Debug Features:**
-1. `Untwist/Features/Home/HomeView.swift:156-188,203-204`
+1. `Monitor/Features/Home/HomeView.swift:156-188,203-204`
 
 ### Week 2: Legal + Assets
 
 **Add Privacy Links:**
-1. `Untwist/Features/Settings/SettingsView.swift` (add two new rows in About section)
+1. `Monitor/Features/Settings/SettingsView.swift` (add two new rows in About section)
 
 **Assets to Create:**
 - Privacy policy document (host externally)
@@ -842,7 +842,7 @@ When Apple approves the app:
 
 **Developer:** John Pacheco
 **Email:** [Your support email]
-**Feedback API:** https://api.untwist.app
+**Feedback API:** https://api.Monitor.app
 
 ---
 

@@ -152,56 +152,51 @@ struct ExerciseDurationPicker: View {
                     }
                 }
 
-                // Custom duration adjuster
-                HStack {
-                    Text("Custom:")
-                        .font(Theme.Typography.body)
-                        .foregroundColor(Theme.Colors.text)
-
-                    Spacer()
-
-                    // Stepper-style control
-                    HStack(spacing: Theme.Spacing.sm) {
-                        // Decrement button
-                        Button(action: {
-                            if duration > 5 {
-                                duration = max(5, duration - 5)
-                            }
-                        }) {
-                            Image(systemName: "minus.circle.fill")
-                                .font(.system(size: 24))
-                                .foregroundColor(duration > 5 ? Theme.Colors.primary : Theme.Colors.textTertiary)
+                // Custom duration adjuster - centered layout
+                HStack(spacing: Theme.Spacing.md) {
+                    // Decrement button
+                    Button(action: {
+                        if duration > 5 {
+                            duration = max(5, duration - 5)
                         }
-                        .disabled(duration <= 5)
+                    }) {
+                        Image(systemName: "minus.circle.fill")
+                            .font(.system(size: 28))
+                            .foregroundColor(duration > 5 ? Theme.Colors.primary : Theme.Colors.textTertiary)
+                    }
+                    .disabled(duration <= 5)
 
-                        // Duration display
+                    // Duration display with label
+                    HStack(spacing: 6) {
                         Text("\(duration)")
                             .font(Theme.Typography.title3)
                             .foregroundColor(Theme.Colors.text)
-                            .frame(minWidth: 40, alignment: .center)
-                            .padding(.horizontal, Theme.Spacing.xs)
-                            .padding(.vertical, 4)
-                            .background(
-                                RoundedRectangle(cornerRadius: Theme.CornerRadius.sm)
-                                    .fill(Theme.Colors.primaryLight)
-                            )
+                            .frame(minWidth: 50, alignment: .trailing)
 
                         Text("min")
                             .font(Theme.Typography.body)
                             .foregroundColor(Theme.Colors.textSecondary)
-
-                        // Increment button
-                        Button(action: {
-                            duration = min(180, duration + 5)
-                        }) {
-                            Image(systemName: "plus.circle.fill")
-                                .font(.system(size: 24))
-                                .foregroundColor(duration < 180 ? Theme.Colors.primary : Theme.Colors.textTertiary)
-                        }
-                        .disabled(duration >= 180)
+                            .frame(width: 30, alignment: .leading)
                     }
+                    .padding(.horizontal, Theme.Spacing.sm)
+                    .padding(.vertical, 6)
+                    .background(
+                        RoundedRectangle(cornerRadius: Theme.CornerRadius.sm)
+                            .fill(Theme.Colors.primaryLight)
+                    )
+
+                    // Increment button
+                    Button(action: {
+                        duration = min(180, duration + 5)
+                    }) {
+                        Image(systemName: "plus.circle.fill")
+                            .font(.system(size: 28))
+                            .foregroundColor(duration < 180 ? Theme.Colors.primary : Theme.Colors.textTertiary)
+                    }
+                    .disabled(duration >= 180)
                 }
-                .padding(Theme.Spacing.sm)
+                .frame(maxWidth: .infinity)
+                .padding(Theme.Spacing.md)
                 .background(Theme.Colors.secondaryBackground)
                 .cornerRadius(Theme.CornerRadius.sm)
             }

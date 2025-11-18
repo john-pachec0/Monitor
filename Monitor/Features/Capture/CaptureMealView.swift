@@ -36,6 +36,7 @@ struct CaptureMealView: View {
 
     // Context (Step 3)
     @State private var emotionsBefore = ""
+    @State private var emotionsDuring = ""
     @State private var emotionsAfter = ""
     @State private var thoughtsAndFeelings = ""
 
@@ -97,14 +98,14 @@ struct CaptureMealView: View {
                         withAnimation {
                             currentStep = 3
                         }
-                    },
-                    onSave: saveMealEntry
+                    }
                 )
                 .tag(2)
 
                 // Step 3: Context & Emotions
                 ContextStep(
                     emotionsBefore: $emotionsBefore,
+                    emotionsDuring: $emotionsDuring,
                     emotionsAfter: $emotionsAfter,
                     comments: $thoughtsAndFeelings,
                     onBack: {
@@ -157,6 +158,7 @@ struct CaptureMealView: View {
 
         // Load context
         emotionsBefore = entry.emotionsBefore ?? ""
+        emotionsDuring = entry.emotionsDuring ?? ""
         emotionsAfter = entry.emotionsAfter ?? ""
         thoughtsAndFeelings = entry.thoughtsAndFeelings ?? ""
     }
@@ -183,6 +185,7 @@ struct CaptureMealView: View {
             entry.exerciseDuration = exerciseDuration
             entry.exerciseIntensity = exerciseIntensity
             entry.emotionsBefore = emotionsBefore.isEmpty ? nil : emotionsBefore
+            entry.emotionsDuring = emotionsDuring.isEmpty ? nil : emotionsDuring
             entry.emotionsAfter = emotionsAfter.isEmpty ? nil : emotionsAfter
             entry.thoughtsAndFeelings = thoughtsAndFeelings.isEmpty ? nil : thoughtsAndFeelings
         } else {
@@ -202,6 +205,7 @@ struct CaptureMealView: View {
             entry.exerciseDuration = exerciseDuration
             entry.exerciseIntensity = exerciseIntensity
             entry.emotionsBefore = emotionsBefore.isEmpty ? nil : emotionsBefore
+            entry.emotionsDuring = emotionsDuring.isEmpty ? nil : emotionsDuring
             entry.emotionsAfter = emotionsAfter.isEmpty ? nil : emotionsAfter
             entry.thoughtsAndFeelings = thoughtsAndFeelings.isEmpty ? nil : thoughtsAndFeelings
             modelContext.insert(entry)

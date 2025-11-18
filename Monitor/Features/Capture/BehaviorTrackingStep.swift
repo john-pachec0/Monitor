@@ -1,5 +1,30 @@
 import SwiftUI
 
+// Local enum for clear belief state tracking
+private enum BeliefState: Equatable {
+    case yes
+    case no
+    case unsure
+    case notSet
+
+    init(from optional: Bool?) {
+        if let value = optional {
+            self = value ? .yes : .no
+        } else {
+            self = .notSet
+        }
+    }
+
+    var toBool: Bool? {
+        switch self {
+        case .yes: return true
+        case .no: return false
+        case .unsure: return nil
+        case .notSet: return nil
+        }
+    }
+}
+
 struct BehaviorTrackingStep: View {
     @Binding var believedExcessive: Bool?
     @Binding var vomited: Bool
@@ -9,10 +34,9 @@ struct BehaviorTrackingStep: View {
     @Binding var exerciseIntensity: ExerciseIntensity?
     let onBack: () -> Void
     let onContinue: () -> Void
-    let onSave: () -> Void
 
     @State private var showExerciseDetails = false
-    @State private var hasInteracted = false
+    @State private var beliefState: BeliefState = .notSet
 
     var body: some View {
         VStack(spacing: Theme.Spacing.lg) {
@@ -39,31 +63,31 @@ struct BehaviorTrackingStep: View {
                         HStack(spacing: Theme.Spacing.sm) {
                             BeliefButton(
                                 title: "Yes",
-                                isSelected: believedExcessive == true,
+                                isSelected: beliefState == .yes,
                                 color: .orange,
                                 action: {
+                                    beliefState = .yes
                                     believedExcessive = true
-                                    hasInteracted = true
                                 }
                             )
 
                             BeliefButton(
                                 title: "No",
-                                isSelected: believedExcessive == false,
+                                isSelected: beliefState == .no,
                                 color: Theme.Colors.success,
                                 action: {
+                                    beliefState = .no
                                     believedExcessive = false
-                                    hasInteracted = true
                                 }
                             )
 
                             BeliefButton(
                                 title: "Unsure",
-                                isSelected: believedExcessive == nil && hasInteracted,
+                                isSelected: beliefState == .unsure,
                                 color: Theme.Colors.textSecondary,
                                 action: {
+                                    beliefState = .unsure
                                     believedExcessive = nil
-                                    hasInteracted = true
                                 }
                             )
                         }
@@ -198,24 +222,10 @@ struct BehaviorTrackingStep: View {
                     )
                 }
 
-                // Save button
-                Button(action: onSave) {
-                    Text("Save")
-                        .font(Theme.Typography.headline)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(Theme.Spacing.md)
-                        .background(
-                            RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
-                                .fill(Theme.Colors.success)
-                        )
-                }
-
-                // Continue button
+                // Continue button (primary)
                 Button(action: onContinue) {
-                    HStack(spacing: 6) {
+                    HStack {
                         Text("Continue")
-                            .lineLimit(1)
                         Image(systemName: "arrow.right")
                     }
                     .font(Theme.Typography.headline)
@@ -233,10 +243,8 @@ struct BehaviorTrackingStep: View {
         }
         .animation(.easeInOut(duration: 0.2), value: showExerciseDetails)
         .onAppear {
-            // Set hasInteracted if we already have a value from editing
-            if believedExcessive != nil || believedExcessive == false || believedExcessive == true {
-                hasInteracted = true
-            }
+            // Initialize belief state from binding when view appears
+            beliefState = BeliefState(from: believedExcessive)
         }
     }
 }

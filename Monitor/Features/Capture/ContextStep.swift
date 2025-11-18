@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContextStep: View {
     @Binding var emotionsBefore: String
+    @Binding var emotionsDuring: String
     @Binding var emotionsAfter: String
     @Binding var comments: String
     let onBack: () -> Void
@@ -10,7 +11,7 @@ struct ContextStep: View {
     @FocusState private var focusedField: Field?
 
     enum Field {
-        case before, after, comments
+        case before, during, after, comments
     }
 
     var body: some View {
@@ -47,6 +48,26 @@ struct ContextStep: View {
                             .cornerRadius(Theme.CornerRadius.md)
                             .lineLimit(3...6)
                             .focused($focusedField, equals: .before)
+                    }
+
+                    // Emotions during
+                    VStack(alignment: .leading, spacing: Theme.Spacing.sm) {
+                        Label("How did you feel during eating?", systemImage: "heart.circle")
+                            .font(Theme.Typography.subheadline)
+                            .foregroundColor(Theme.Colors.text)
+
+                        Text("Notice your experience while eating")
+                            .font(Theme.Typography.caption)
+                            .foregroundColor(Theme.Colors.textSecondary)
+
+                        TextField("e.g., Rushed, guilty, enjoyed the taste, distracted", text: $emotionsDuring, axis: .vertical)
+                            .font(Theme.Typography.body)
+                            .foregroundColor(Theme.Colors.text)
+                            .padding(Theme.Spacing.sm)
+                            .background(Theme.Colors.cardBackground)
+                            .cornerRadius(Theme.CornerRadius.md)
+                            .lineLimit(3...6)
+                            .focused($focusedField, equals: .during)
                     }
 
                     // Emotions after

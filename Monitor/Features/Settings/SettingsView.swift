@@ -52,39 +52,39 @@ struct SettingsForm: View {
 
     var body: some View {
         Form {
-            // Meal Reminders Section
+            // Reminders Section
             Section {
                 DatePicker(
-                    "Breakfast",
+                    "Morning",
                     selection: $userSettings.breakfastReminderTime,
                     displayedComponents: .hourAndMinute
                 )
                 .datePickerStyle(.compact)
 
                 DatePicker(
-                    "Lunch",
+                    "Midday",
                     selection: $userSettings.lunchReminderTime,
                     displayedComponents: .hourAndMinute
                 )
                 .datePickerStyle(.compact)
 
                 DatePicker(
-                    "Dinner",
+                    "Evening",
                     selection: $userSettings.dinnerReminderTime,
                     displayedComponents: .hourAndMinute
                 )
                 .datePickerStyle(.compact)
 
                 DatePicker(
-                    "Evening Check-In",
+                    "Night Check-In",
                     selection: $userSettings.eveningCheckInTime,
                     displayedComponents: .hourAndMinute
                 )
                 .datePickerStyle(.compact)
             } header: {
-                Text("Meal Reminders")
+                Text("Reminders")
             } footer: {
-                Text("Set times for gentle meal reminders and evening reflection.")
+                Text("Set times for gentle meal reminders and nightly reflection.")
                     .font(Theme.Typography.footnote)
             }
 
@@ -104,12 +104,12 @@ struct SettingsForm: View {
 
                 if userSettings.notificationsEnabled {
                     Toggle(
-                        "Meal Reminders",
+                        "Reminders",
                         isOn: $userSettings.mealRemindersEnabled
                     )
 
                     Toggle(
-                        "Evening Check-In",
+                        "Night Check-In",
                         isOn: $userSettings.eveningCheckInEnabled
                     )
                 }
@@ -399,4 +399,5 @@ struct SettingsForm: View {
 #Preview {
     SettingsView()
         .modelContainer(for: [UserSettings.self])
+        .environmentObject(BiometricAuthService())
 }

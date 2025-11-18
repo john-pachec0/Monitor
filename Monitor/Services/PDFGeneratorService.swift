@@ -177,7 +177,7 @@ class PDFGeneratorService {
 
         let titleAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 18, weight: .semibold),
-            .foregroundColor: UIColor.label
+            .foregroundColor: UIColor.black
         ]
 
         let subtitle = "\(dateString) (\(entryCount) \(entryCount == 1 ? "entry" : "entries"))"
@@ -185,7 +185,7 @@ class PDFGeneratorService {
         currentY += 30
 
         // Draw line under day header
-        context.cgContext.setStrokeColor(UIColor.separator.cgColor)
+        context.cgContext.setStrokeColor(UIColor.lightGray.cgColor)
         context.cgContext.setLineWidth(1.0)
         context.cgContext.move(to: CGPoint(x: margin, y: currentY))
         context.cgContext.addLine(to: CGPoint(x: pageWidth - margin, y: currentY))
@@ -207,7 +207,7 @@ class PDFGeneratorService {
         // Title
         let titleAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 24, weight: .bold),
-            .foregroundColor: UIColor.label
+            .foregroundColor: UIColor.black
         ]
         let title = "Food & Behavior Log"
         title.draw(at: CGPoint(x: margin, y: currentY), withAttributes: titleAttributes)
@@ -220,7 +220,7 @@ class PDFGeneratorService {
 
         let subtitleAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 14),
-            .foregroundColor: UIColor.secondaryLabel
+            .foregroundColor: UIColor.darkGray
         ]
         dateRangeText.draw(at: CGPoint(x: margin, y: currentY), withAttributes: subtitleAttributes)
         currentY += 25
@@ -256,7 +256,7 @@ class PDFGeneratorService {
     ) -> CGFloat {
         let headerAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 12, weight: .semibold),
-            .foregroundColor: UIColor.label
+            .foregroundColor: UIColor.black
         ]
 
         let columns = [
@@ -275,7 +275,7 @@ class PDFGeneratorService {
         }
 
         // Draw line under header
-        context.cgContext.setStrokeColor(UIColor.separator.cgColor)
+        context.cgContext.setStrokeColor(UIColor.lightGray.cgColor)
         context.cgContext.setLineWidth(0.5)
         context.cgContext.move(to: CGPoint(x: margin, y: y + 20))
         context.cgContext.addLine(to: CGPoint(x: pageWidth - margin, y: y + 20))
@@ -294,7 +294,7 @@ class PDFGeneratorService {
     ) -> CGFloat {
         let textAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 11),
-            .foregroundColor: UIColor.label
+            .foregroundColor: UIColor.black
         ]
 
         var currentY = y
@@ -338,7 +338,7 @@ class PDFGeneratorService {
             )
 
             // Draw border around image
-            context.cgContext.setStrokeColor(UIColor.separator.cgColor)
+            context.cgContext.setStrokeColor(UIColor.lightGray.cgColor)
             context.cgContext.setLineWidth(0.5)
             context.cgContext.stroke(imageRect)
 
@@ -392,42 +392,137 @@ class PDFGeneratorService {
             )
         }
 
-        // Behaviors (V/L/D/E)
-        var behaviors = ""
-        if entry.vomited { behaviors += "V " }
-        if entry.laxativesAmount > 0 { behaviors += "L(\(entry.laxativesAmount)) " }
-        if entry.diureticsAmount > 0 { behaviors += "D(\(entry.diureticsAmount)) " }
-        if let exercise = entry.exerciseDuration { behaviors += "E(\(exercise)m) " }
+        // Behaviors (V/L/D/E) - each on new line
+        let behaviorX = margin + 370
+        let behaviorWidth: CGFloat = 60
+        var behaviorY = currentY
+        let behaviorLineHeight: CGFloat = 14
 
-        behaviors.draw(
-            in: CGRect(x: margin + 370, y: currentY, width: 60, height: 40),
-            withAttributes: textAttributes
-        )
+        if entry.vomited {
+            "V".draw(
+                in: CGRect(x: behaviorX, y: behaviorY, width: behaviorWidth, height: behaviorLineHeight),
+                withAttributes: textAttributes
+            )
+            behaviorY += behaviorLineHeight
+        }
 
-        // Context (emotions/comments)
-        var contextText = ""
+        if entry.laxativesAmount > 0 {
+            "L(\(entry.laxativesAmount))".draw(
+                in: CGRect(x: behaviorX, y: behaviorY, width: behaviorWidth, height: behaviorLineHeight),
+                withAttributes: textAttributes
+            )
+            behaviorY += behaviorLineHeight
+        }
+
+        if entry.diureticsAmount > 0 {
+            "D(\(entry.diureticsAmount))".draw(
+                in: CGRect(x: behaviorX, y: behaviorY, width: behaviorWidth, height: behaviorLineHeight),
+                withAttributes: textAttributes
+            )
+            behaviorY += behaviorLineHeight
+        }
+
+        if let exercise = entry.exerciseDuration {
+            "E(\(exercise)m)".draw(
+                in: CGRect(x: behaviorX, y: behaviorY, width: behaviorWidth, height: behaviorLineHeight),
+                withAttributes: textAttributes
+            )
+            behaviorY += behaviorLineHeight
+        }
+
+        let behaviorHeight = behaviorY - currentY
+
+        // Context (emotions/comments) - each field on new line with bold labels
+        let contextX = margin + 430
+        let contextWidth: CGFloat = 100
+        var contextY = currentY
+        let lineSpacing: CGFloat = 2
+
+        let boldAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: 11, weight: .semibold),
+            .foregroundColor: UIColor.black
+        ]
+
+        // Before emotions
         if let emotionsBefore = entry.emotionsBefore, !emotionsBefore.isEmpty {
-            contextText += "Before: \(emotionsBefore) "
+            let label = NSAttributedString(string: "Before: ", attributes: boldAttributes)
+            let text = NSAttributedString(string: emotionsBefore, attributes: textAttributes)
+            let combined = NSMutableAttributedString()
+            combined.append(label)
+            combined.append(text)
+
+            let textHeight = combined.boundingRect(
+                with: CGSize(width: contextWidth, height: CGFloat.greatestFiniteMagnitude),
+                options: [.usesLineFragmentOrigin, .usesFontLeading],
+                context: nil
+            ).height
+
+            combined.draw(in: CGRect(x: contextX, y: contextY, width: contextWidth, height: textHeight))
+            contextY += textHeight + lineSpacing
         }
+
+        // During emotions
+        if let emotionsDuring = entry.emotionsDuring, !emotionsDuring.isEmpty {
+            let label = NSAttributedString(string: "During: ", attributes: boldAttributes)
+            let text = NSAttributedString(string: emotionsDuring, attributes: textAttributes)
+            let combined = NSMutableAttributedString()
+            combined.append(label)
+            combined.append(text)
+
+            let textHeight = combined.boundingRect(
+                with: CGSize(width: contextWidth, height: CGFloat.greatestFiniteMagnitude),
+                options: [.usesLineFragmentOrigin, .usesFontLeading],
+                context: nil
+            ).height
+
+            combined.draw(in: CGRect(x: contextX, y: contextY, width: contextWidth, height: textHeight))
+            contextY += textHeight + lineSpacing
+        }
+
+        // After emotions
         if let emotionsAfter = entry.emotionsAfter, !emotionsAfter.isEmpty {
-            contextText += "After: \(emotionsAfter) "
+            let label = NSAttributedString(string: "After: ", attributes: boldAttributes)
+            let text = NSAttributedString(string: emotionsAfter, attributes: textAttributes)
+            let combined = NSMutableAttributedString()
+            combined.append(label)
+            combined.append(text)
+
+            let textHeight = combined.boundingRect(
+                with: CGSize(width: contextWidth, height: CGFloat.greatestFiniteMagnitude),
+                options: [.usesLineFragmentOrigin, .usesFontLeading],
+                context: nil
+            ).height
+
+            combined.draw(in: CGRect(x: contextX, y: contextY, width: contextWidth, height: textHeight))
+            contextY += textHeight + lineSpacing
         }
+
+        // Additional notes
         if let thoughts = entry.thoughtsAndFeelings, !thoughts.isEmpty {
-            contextText += "Notes: \(thoughts)"
+            let label = NSAttributedString(string: "Notes: ", attributes: boldAttributes)
+            let text = NSAttributedString(string: thoughts, attributes: textAttributes)
+            let combined = NSMutableAttributedString()
+            combined.append(label)
+            combined.append(text)
+
+            let textHeight = combined.boundingRect(
+                with: CGSize(width: contextWidth, height: CGFloat.greatestFiniteMagnitude),
+                options: [.usesLineFragmentOrigin, .usesFontLeading],
+                context: nil
+            ).height
+
+            combined.draw(in: CGRect(x: contextX, y: contextY, width: contextWidth, height: textHeight))
+            contextY += textHeight + lineSpacing
         }
 
-        let contextHeight = calculateTextHeight(text: contextText, width: 100, attributes: textAttributes)
-        contextText.draw(
-            in: CGRect(x: margin + 430, y: currentY, width: 100, height: max(60, contextHeight)),
-            withAttributes: textAttributes
-        )
+        let contextHeight = contextY - currentY
 
-        // Calculate height needed (considering image + text + context)
-        let maxHeight = max(40, max(foodContentHeight, contextHeight))
+        // Calculate height needed (considering image + text + behaviors + context)
+        let maxHeight = max(40, max(foodContentHeight, max(behaviorHeight, contextHeight)))
         currentY += maxHeight + 5
 
         // Draw separator line
-        context.cgContext.setStrokeColor(UIColor.separator.withAlphaComponent(0.3).cgColor)
+        context.cgContext.setStrokeColor(UIColor.lightGray.withAlphaComponent(0.5).cgColor)
         context.cgContext.setLineWidth(0.25)
         context.cgContext.move(to: CGPoint(x: margin, y: currentY))
         context.cgContext.addLine(to: CGPoint(x: pageWidth - margin, y: currentY))
@@ -447,12 +542,12 @@ class PDFGeneratorService {
 
         let titleAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 16, weight: .semibold),
-            .foregroundColor: UIColor.label
+            .foregroundColor: UIColor.black
         ]
 
         let textAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 12),
-            .foregroundColor: UIColor.secondaryLabel
+            .foregroundColor: UIColor.darkGray
         ]
 
         "Summary".draw(at: CGPoint(x: margin, y: currentY), withAttributes: titleAttributes)
@@ -519,7 +614,7 @@ class PDFGeneratorService {
         currentY += 20
         let footerAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 10),
-            .foregroundColor: UIColor.tertiaryLabel
+            .foregroundColor: UIColor.gray
         ]
 
         let dateFormatter = DateFormatter()
@@ -531,10 +626,29 @@ class PDFGeneratorService {
         )
 
         currentY += 15
-        "Monitor - Self-Monitoring Tool".draw(
-            at: CGPoint(x: margin, y: currentY),
-            withAttributes: footerAttributes
-        )
+
+        // Draw lightning bolt logo + app name
+        let logoSize: CGFloat = 12
+        let logoConfig = UIImage.SymbolConfiguration(pointSize: logoSize, weight: .semibold)
+        if let boltImage = UIImage(systemName: "bolt.fill", withConfiguration: logoConfig) {
+            // Draw teal lightning bolt
+            let tealColor = UIColor(red: 0.2, green: 0.7, blue: 0.7, alpha: 1.0) // Teal
+            let boltRect = CGRect(x: margin, y: currentY - 2, width: logoSize, height: logoSize)
+            tealColor.setFill()
+            boltImage.withTintColor(tealColor, renderingMode: .alwaysOriginal).draw(in: boltRect)
+
+            // Draw app name next to bolt
+            "Monitor - Self-Monitoring, Simplified".draw(
+                at: CGPoint(x: margin + logoSize + 6, y: currentY),
+                withAttributes: footerAttributes
+            )
+        } else {
+            // Fallback if symbol fails to load
+            "Monitor - Self-Monitoring, Simplified".draw(
+                at: CGPoint(x: margin, y: currentY),
+                withAttributes: footerAttributes
+            )
+        }
 
         // Legend
         currentY += 25

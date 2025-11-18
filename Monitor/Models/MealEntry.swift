@@ -37,6 +37,7 @@ final class MealEntry {
 
     // Emotional tracking
     var emotionsBefore: String? // Emotions before the meal
+    var emotionsDuring: String? // Emotions during eating
     var emotionsAfter: String? // Emotions after the meal
     var thoughtsAndFeelings: String? // Additional context
 
@@ -61,6 +62,7 @@ final class MealEntry {
         exerciseIntensity: ExerciseIntensity? = nil,
         exerciseType: String? = nil,
         emotionsBefore: String? = nil,
+        emotionsDuring: String? = nil,
         emotionsAfter: String? = nil,
         thoughtsAndFeelings: String? = nil,
         isReviewed: Bool = false,
@@ -82,6 +84,7 @@ final class MealEntry {
         self.exerciseIntensity = exerciseIntensity
         self.exerciseType = exerciseType
         self.emotionsBefore = emotionsBefore
+        self.emotionsDuring = emotionsDuring
         self.emotionsAfter = emotionsAfter
         self.thoughtsAndFeelings = thoughtsAndFeelings
         self.isReviewed = isReviewed

@@ -10,6 +10,7 @@ import SwiftData
 
 struct HomeView: View {
     @Environment(\.modelContext) private var modelContext
+    @EnvironmentObject private var biometricService: BiometricAuthService
     @Query private var entries: [MealEntry]
     @Query private var settings: [UserSettings]
 
@@ -74,6 +75,7 @@ struct HomeView: View {
             }
             .sheet(isPresented: $showingSettings) {
                 SettingsView()
+                    .environmentObject(biometricService)
             }
             .navigationDestination(isPresented: $showingJournal) {
                 MealHistoryView()
@@ -318,4 +320,5 @@ struct CareTeamCard: View {
 #Preview {
     HomeView()
         .modelContainer(for: MealEntry.self, inMemory: true)
+        .environmentObject(BiometricAuthService())
 }

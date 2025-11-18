@@ -6,7 +6,9 @@ let project = Project(
         base: [
             "IPHONEOS_DEPLOYMENT_TARGET": "17.0",
             "INFOPLIST_KEY_CFBundleDisplayName": "Monitor",
-            "DEVELOPMENT_TEAM": "UJ8692CVFW"  // John Pacheco (Personal Team)
+            "DEVELOPMENT_TEAM": "UJ8692CVFW",  // John Pacheco (Personal Team)
+            "MARKETING_VERSION": "1.0",
+            "CURRENT_PROJECT_VERSION": "9"
         ]
     ),
     targets: [
@@ -18,10 +20,18 @@ let project = Project(
             deploymentTargets: .iOS("17.0"),
             infoPlist: .extendingDefault(with: [
                 "CFBundleGetInfoString": "",
+                "CFBundleShortVersionString": "$(MARKETING_VERSION)",
+                "CFBundleVersion": "$(CURRENT_PROJECT_VERSION)",
                 "FEEDBACK_API_KEY": "$(FEEDBACK_API_KEY)",
+                "ITSAppUsesNonExemptEncryption": false,  // No custom encryption beyond iOS standard
+                "NSCameraUsageDescription": "Monitor needs camera access to take photos of your meals for your personal recovery journal.",
                 "NSFaceIDUsageDescription": "Monitor uses Face ID to protect your private thoughts and mental health data.",
+                "NSPhotoLibraryUsageDescription": "Monitor needs photo library access to select photos of your meals for your personal recovery journal.",
                 "NSUserNotificationsUsageDescription": "Monitor can send you optional daily reminders for your scheduled worry time to help you build a consistent practice.",
-                "UILaunchScreen": [:],  // Modern launch screen (iOS 14+)
+                "UILaunchScreen": [
+                    "UIColorName": "",
+                    "UIImageRespectsSafeAreaInsets": true
+                ],
                 "UIRequiresFullScreen": false  // Supports all device sizes
             ]),
             sources: ["Monitor/**/*.swift"],
